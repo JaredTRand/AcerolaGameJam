@@ -1,21 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4r6ifs4lgynx"]
+[gd_scene load_steps=6 format=3 uid="uid://b4r6ifs4lgynx"]
 
 [ext_resource type="PackedScene" uid="uid://b3am2a0bka858" path="res://test_room_1/testroom1.blend" id="1_7ikgs"]
 [ext_resource type="PackedScene" uid="uid://bw7w8oxmfq7w7" path="res://test_room_1/testblock.blend" id="2_rl1sa"]
+[ext_resource type="Script" path="res://addons/Basic FPS Player/Src/basic_player_startup.gd" id="3_hylfm"]
+[ext_resource type="PackedScene" uid="uid://kmyakts4l64t" path="res://addons/Basic FPS Player/Src/basic_player_head.tscn" id="4_ct8pv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0456e"]
 
 [node name="testroom1" instance=ExtResource("1_7ikgs")]
 
+[node name="house" parent="." index="0"]
+transform = Transform3D(8.1, 0, 0, 0, 0.27, 0, 0, 0, 8.1, 0.582147, -1.1409, 1.69513)
+
+[node name="floor" parent="." index="1"]
+transform = Transform3D(8.24992, 0, 0, 0, 0.274997, 0, 0, 0, 8.24992, 0.582147, -1.33599, 1.69513)
+
 [node name="testblock3" parent="." index="2" instance=ExtResource("2_rl1sa")]
-transform = Transform3D(3.00878, 0, 0, 0, 11.4079, 0, 0, 0, 2.43051, 13.1852, -6.66969, 18.9894)
+transform = Transform3D(0.812371, 0, 0, 0, 3.08012, 0, 0, 0, 0.656237, 4.14216, -2.86681, 6.82228)
 
 [node name="testblock5" parent="." index="3" instance=ExtResource("2_rl1sa")]
-transform = Transform3D(2.74165, 0, 1.00119, 0, 11.4079, 0, -1.2394, 0, 2.21472, 10.6925, -6.66969, -8.31433)
+transform = Transform3D(0.740246, 0, 0.270322, 0, 3.08012, 0, -0.334639, 0, 0.597974, 3.46912, -2.86681, -0.549743)
 
 [node name="testblock4" parent="." index="4" instance=ExtResource("2_rl1sa")]
-transform = Transform3D(3.00878, 0, 0, 0, 9.274, 1.41537, 0, -6.6432, 1.97588, -8.90613, 4.39503, 0.189017)
+transform = Transform3D(0.812371, 0, 0, 0, 2.50398, 0.38215, 0, -1.79366, 0.533487, -1.82251, 0.12067, 1.74616)
 
 [node name="testblock" parent="." index="5" instance=ExtResource("2_rl1sa")]
-transform = Transform3D(0.820192, 0, 4.55399, 0, 5.71344, 0, -0.572089, 0, 6.52897, -4.72145, 0, 25.0898)
+transform = Transform3D(0.221452, 0, 1.22958, 0, 1.54263, 0, -0.154464, 0, 1.76282, -0.692644, -1.06599, 8.46936)
 
 [node name="testblock2" parent="." index="6" instance=ExtResource("2_rl1sa")]
-transform = Transform3D(3.00878, 0, 0, 0, 11.4079, 0, 0, 0, 2.43051, -4.66788, 1.90735e-06, -19.6993)
+transform = Transform3D(0.812371, 0, 0, 0, 3.08012, 0, 0, 0, 0.656237, -0.678181, -1.06599, -3.62368)
+
+[node name="Basic FPS Player" type="CharacterBody3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7137, 0.887624, 1.41253)
+script = ExtResource("3_hylfm")
+
+[node name="Head" type="Node3D" parent="Basic FPS Player" index="0" instance=ExtResource("4_ct8pv")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basic FPS Player" index="1"]
+shape = SubResource("CapsuleShape3D_0456e")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="8"]
+transform = Transform3D(0.475985, -0.457335, 0.751188, -0.878885, -0.278068, 0.387607, 0.0316153, -0.844703, -0.534301, 11.4953, 20.6946, 0)
+light_color = Color(1, 1, 0.733333, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11471, 3.80921, 1.04614)
+omni_range = 52.09
+omni_attenuation = 1.10957

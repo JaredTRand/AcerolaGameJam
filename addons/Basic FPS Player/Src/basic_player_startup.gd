@@ -108,6 +108,7 @@ func _input(event):
 	if Engine.is_editor_hint():
 		return
 		
+		
 	# Listen for mouse movement and check if mouse is captured
 	if event is InputEventMouseMotion && Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		set_rotation_target(event.relative)
