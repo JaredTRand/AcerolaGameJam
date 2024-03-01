@@ -21,6 +21,13 @@ transform = Transform3D(0.740246, 0, 0.270322, 0, 3.08012, 0, -0.334639, 0, 0.59
 [node name="testblock4" parent="." index="4" instance=ExtResource("2_rl1sa")]
 transform = Transform3D(0.812371, 0, 0, 0, 2.50398, 0.38215, 0, -1.79366, 0.533487, -1.82251, 0.12067, 1.74616)
 
+[node name="Cube" parent="testblock4" index="0"]
+layers = 16
+
+[node name="StaticBody3D" parent="testblock4/Cube" index="0"]
+collision_layer = 16
+collision_mask = 0
+
 [node name="testblock" parent="." index="5" instance=ExtResource("2_rl1sa")]
 transform = Transform3D(0.221452, 0, 1.22958, 0, 1.54263, 0, -0.154464, 0, 1.76282, -0.692644, -1.06599, 8.46936)
 
@@ -42,3 +49,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1732, 0, 0)
 floor_max_angle = 1.0472
 SPEED = 4.0
 KEY_BIND_MOUSE_SENS = 0.002
+
+[editable path="testblock4"]

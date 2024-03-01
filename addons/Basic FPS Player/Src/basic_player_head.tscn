@@ -5,12 +5,6 @@
 [node name="Head" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-cull_mask = 1048063
+cull_mask = 1048559
 
 [node name="player_cam" parent="." instance=ExtResource("1_clgpc")]
-transform = Transform3D(-1.94059e-09, 0, -0.0443956, 0, 0.0443956, 0, 0.0443956, 0, -1.94059e-09, -0.145203, -0.125787, -0.43488)
-
-[node name="handheld_viewport_cam" parent="player_cam/SubViewport/ROOT" index="0"]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.00109634, -0.150656, -0.612425)
-
-[editable path="player_cam"]
