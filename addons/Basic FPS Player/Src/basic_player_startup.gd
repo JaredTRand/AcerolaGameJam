@@ -52,6 +52,7 @@ func _enter_tree():
 @export_category("Advanced")
 @export var UPDATE_PLAYER_ON_PHYS_STEP := true	# When check player is moved and rotated in _physics_process (fixed fps)
 												# Otherwise player is updated in _process (uncapped)
+												
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -108,7 +109,6 @@ func _input(event):
 	if Engine.is_editor_hint():
 		return
 		
-		
 	# Listen for mouse movement and check if mouse is captured
 	if event is InputEventMouseMotion && Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		set_rotation_target(event.relative)
@@ -145,6 +145,9 @@ func move_player(delta):
 		# Set speed and accel to defualt
 		speed = SPEED
 		accel = ACCEL
+
+	if Input.is_action_pressed("sprint"):
+		speed = SPEED * 2
 
 	# Handle Jump.
 	if Input.is_action_just_pressed(KEY_BIND_JUMP) and is_on_floor():

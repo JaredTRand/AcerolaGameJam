@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwhki3j2u48hu"]
 
-[ext_resource type="PackedScene" uid="uid://cogvfxjwoixss" path="res://addons/Basic FPS Player/Src/player_cam.blend" id="1_7ke0y"]
+[ext_resource type="PackedScene" uid="uid://cogvfxjwoixss" path="res://player/player_cam.blend" id="1_7ke0y"]
 
 [node name="player_cam" instance=ExtResource("1_7ke0y")]
 

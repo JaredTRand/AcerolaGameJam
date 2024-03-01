@@ -62,6 +62,7 @@ environment = SubResource("Environment_4mccc")
 [node name="Basic FPS Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("1_fpauf")
+SPEED = 0.1
 KEY_BIND_UP = "ui_up"
 KEY_BIND_LEFT = "ui_left"
 KEY_BIND_RIGHT = "ui_right"
@@ -69,6 +70,7 @@ KEY_BIND_DOWN = "ui_down"
 KEY_BIND_JUMP = "ui_accept"
 
 [node name="Head" parent="Basic FPS Player" instance=ExtResource("2_uri1i")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.412659, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Basic FPS Player"]

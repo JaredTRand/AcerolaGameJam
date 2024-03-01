@@ -1,10 +1,16 @@
 [gd_scene load_steps=2 format=3 uid="uid://kmyakts4l64t"]
 
-[ext_resource type="PackedScene" uid="uid://cbghrmmreds0r" path="res://player_cam_2.tscn" id="1_clgpc"]
+[ext_resource type="PackedScene" uid="uid://cbghrmmreds0r" path="res://player/player_cam_2.tscn" id="1_clgpc"]
 
 [node name="Head" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
+cull_mask = 1048063
 
 [node name="player_cam" parent="." instance=ExtResource("1_clgpc")]
-transform = Transform3D(-9.656e-09, 0, -0.220904, 0, 0.220904, 0, 0.220904, 0, -9.656e-09, -0.782017, -0.930937, -1.5689)
+transform = Transform3D(-1.94059e-09, 0, -0.0443956, 0, 0.0443956, 0, 0.0443956, 0, -1.94059e-09, -0.145203, -0.125787, -0.43488)
+
+[node name="handheld_viewport_cam" parent="player_cam/SubViewport/ROOT" index="0"]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.00109634, -0.150656, -0.612425)
+
+[editable path="player_cam"]
