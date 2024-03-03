@@ -16,6 +16,11 @@ script = ExtResource("1_xe8ql")
 [node name="Head" parent="." instance=ExtResource("2_4hhew")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.566418, 0)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Head"]
+light_energy = 0.25
+omni_range = 15.0
+omni_attenuation = 2.14355
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_d35w2")
 
