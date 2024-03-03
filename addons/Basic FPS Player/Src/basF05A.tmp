@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://kmyakts4l64t"]
+
+[ext_resource type="PackedScene" uid="uid://cbghrmmreds0r" path="res://player/cam/player_cam_2.tscn" id="1_exhrd"]
+
+[node name="Head" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000702381, 0)
+cull_mask = 1048559
+
+[node name="player_cam" parent="." instance=ExtResource("1_exhrd")]
+ads_pos = Vector3(-0.17, 0.032, -0.12)
