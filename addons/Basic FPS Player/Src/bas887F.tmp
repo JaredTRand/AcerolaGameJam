@@ -5,8 +5,9 @@
 [node name="Head" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.000702381, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.688086, 0)
 cull_mask = 1048559
 
 [node name="player_cam" parent="." instance=ExtResource("1_exhrd")]
-ads_pos = Vector3(-0.17, 0.032, -0.12)
+default_pos = Vector3(-0.195, 0.509, -0.394)
+ads_pos = Vector3(-0.165, 0.721, -0.119)

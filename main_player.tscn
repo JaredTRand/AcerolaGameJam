@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpmurlitcdsi7"]
+[gd_scene load_steps=6 format=3 uid="uid://dpmurlitcdsi7"]
 
 [ext_resource type="Script" path="res://addons/Basic FPS Player/Src/basic_player_startup.gd" id="1_xe8ql"]
 [ext_resource type="PackedScene" uid="uid://kmyakts4l64t" path="res://addons/Basic FPS Player/Src/basic_player_head.tscn" id="2_4hhew"]
-[ext_resource type="Script" path="res://player/playerhead.gd" id="3_6wnx5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d35w2"]
 
@@ -15,16 +14,16 @@ radius = 0.275
 script = ExtResource("1_xe8ql")
 
 [node name="Head" parent="." instance=ExtResource("2_4hhew")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.490685, 0)
-script = ExtResource("3_6wnx5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_d35w2")
 
 [node name="headshape" type="MeshInstance3D" parent="CollisionShape3D"]
 transform = Transform3D(0.828906, 0, 0, 0, 0.828906, 0, 0, 0, 0.828906, 0, 0.581518, 0)
+layers = 2
 mesh = SubResource("SphereMesh_vvi5h")
 
 [node name="bodyshape" type="MeshInstance3D" parent="CollisionShape3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00403237, 0)
+layers = 2
 mesh = SubResource("CapsuleMesh_cx1k7")

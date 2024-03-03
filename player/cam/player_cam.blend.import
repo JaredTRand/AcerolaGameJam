@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cogvfxjwoixss"
-path="res://.godot/imported/player_cam.blend-28811dc5ec7f604460e7e421c0814020.scn"
+path="res://.godot/imported/player_cam.blend-1002cbafc12fc71b3f08944103e58a20.scn"
 
 [deps]
 
-source_file="res://player/player_cam.blend"
-dest_files=["res://.godot/imported/player_cam.blend-28811dc5ec7f604460e7e421c0814020.scn"]
+source_file="res://player/cam/player_cam.blend"
+dest_files=["res://.godot/imported/player_cam.blend-1002cbafc12fc71b3f08944103e58a20.scn"]
 
 [params]
 
