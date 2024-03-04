@@ -1,6 +1,6 @@
-Acerola Game Jam 
+# Acerola Game Jam 
 
-#Day 1 ##2/28 
+# Day 1 ## 2/28 
 
 First day, not so bad!  
 
