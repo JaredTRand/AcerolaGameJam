@@ -6,3 +6,5 @@ class_name Aberration_Image
 
 var prev_img:Aberration_Image
 var next_img:Aberration_Image
+
+var aberrations_pictured:Array

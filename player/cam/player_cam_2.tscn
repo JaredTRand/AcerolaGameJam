@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://cbghrmmreds0r"]
 
 [ext_resource type="PackedScene" uid="uid://cogvfxjwoixss" path="res://player/cam/player_cam.blend" id="1_tj4hb"]
-[ext_resource type="Texture2D" uid="uid://bnmdhej4cbhb6" path="res://player/cam/black.png" id="2_ayq22"]
 [ext_resource type="Script" path="res://player/cam/handheld_cam.gd" id="2_fwxil"]
 [ext_resource type="AudioStream" uid="uid://b80uhcgplgc38" path="res://player/cam/sounds/camera-shutter.wav" id="2_niyvt"]
+[ext_resource type="Texture2D" uid="uid://4cp4keildw7t" path="res://player/cam/black2.png" id="4_27h8v"]
 [ext_resource type="Texture2D" uid="uid://cr084m836tl3m" path="res://player/starred.png" id="5_280qy"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_iibmc"]
@@ -32,14 +32,14 @@ pitch_scale = 1.05
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="sprites" index="0"]
-transform = Transform3D(-5.43764e-08, -2.71883e-08, -0.956557, -2.71883e-08, 0.621996, -4.18121e-08, 0.621996, 2.71883e-08, -8.36245e-08, 0.166846, -0.600487, -2.97363)
+transform = Transform3D(-6.61685e-09, -3.30844e-09, -0.1164, -3.30844e-09, 0.0756882, -5.08795e-09, 0.0756882, 3.30844e-09, -1.01759e-08, 0.166846, -0.600487, -2.97363)
 double_sided = false
 texture = SubResource("ViewportTexture_iibmc")
 
 [node name="spriteScreen" type="Sprite3D" parent="sprites" index="1"]
-transform = Transform3D(-1.43885e-13, -2.58298e-08, 0.908761, 2.66165e-08, 0.590917, 3.97235e-08, -0.608914, 2.58298e-08, -2.98428e-13, 0.529001, -0.6, -2.974)
+transform = Transform3D(-2.93099e-14, -7.495e-09, 0.263694, 7.72326e-09, 0.171466, 1.15265e-08, -0.176688, 7.495e-09, -6.92779e-14, 0.529003, -0.6, -2.974)
 double_sided = false
-texture = ExtResource("2_ayq22")
+texture = ExtResource("4_27h8v")
 
 [node name="starred" type="Sprite3D" parent="sprites" index="2"]
 transform = Transform3D(-1.29674e-13, -2.58298e-08, 0.908761, 2.66165e-08, 0.590917, 3.97235e-08, -0.608914, 2.58298e-08, -2.98428e-13, 0.528, 0.218899, -4.32615)
@@ -49,7 +49,7 @@ render_priority = 1
 texture = ExtResource("5_280qy")
 
 [node name="SubViewport" type="SubViewport" parent="." index="11"]
-size = Vector2i(512, 340)
+size = Vector2i(1775, 1175)
 
 [node name="ROOT" type="Node3D" parent="SubViewport" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133908, 0.475291, -0.51968)

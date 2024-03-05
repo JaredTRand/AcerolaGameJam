@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6amenil043m5"]
+
+[ext_resource type="PackedScene" uid="uid://dpmurlitcdsi7" path="res://main_player.tscn" id="1_46x6s"]
+[ext_resource type="ArrayOccluder3D" uid="uid://cacwl1jsr8c01" path="res://testroom2/testroom2.occ" id="2_8v2oe"]
+[ext_resource type="PackedScene" uid="uid://bw7w8oxmfq7w7" path="res://test_room_1/testblock.blend" id="2_fsh7b"]
+[ext_resource type="Script" path="res://test_room_1/sdasadsaa.gd" id="4_jwu08"]
+[ext_resource type="PackedScene" uid="uid://4cjqosgik5we" path="res://testroom2/house.tscn" id="4_ql7tu"]
+[ext_resource type="Script" path="res://testroom2/VisibleOnScreenNotifier3D.gd" id="4_vqrex"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frm4m"]
+transparency = 1
+emission_enabled = true
+emission = Color(0.27451, 0.486275, 0.988235, 1)
+emission_energy_multiplier = 64.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_xq7w5"]
+material = SubResource("StandardMaterial3D_frm4m")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.475985, -0.457335, 0.751188, -0.878885, -0.278068, 0.387607, 0.0316153, -0.844703, -0.534301, 11.4953, 20.6946, 0)
+light_color = Color(1, 1, 0.733333, 1)
+shadow_enabled = true
+
+[node name="Basic FPS Player" parent="." instance=ExtResource("1_46x6s")]
+transform = Transform3D(0.693678, 0, 0.720285, 0, 1, 0, -0.720285, 0, 0.693678, 17.1606, 0, 0)
+floor_max_angle = 1.0472
+SPEED = 4.0
+KEY_BIND_MOUSE_SENS = 0.002
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("2_8v2oe")
+
+[node name="testblock3" parent="." instance=ExtResource("2_fsh7b")]
+transform = Transform3D(0.812371, 0, 0, 0, 3.08012, 0, 0, 0, 0.656237, 4.14216, -2.86681, 6.82228)
+
+[node name="testblock5" parent="." instance=ExtResource("2_fsh7b")]
+transform = Transform3D(0.740246, 0, 0.270322, 0, 3.08012, 0, -0.334639, 0, 0.597974, 3.46912, -2.86681, -0.549743)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["Aberration"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.83491, 1.14018, -5.15792)
+layers = 16
+mesh = SubResource("SphereMesh_xq7w5")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="MeshInstance3D"]
+transform = Transform3D(0.470608, 0, 0, 0, 0.470608, 0, 0, 0, 0.470608, 0, 0, 0)
+layers = 16
+
+[node name="testblock4" parent="." groups=["Aberration"] instance=ExtResource("2_fsh7b")]
+transform = Transform3D(0.812371, 0, 0, 0, 2.50398, 0.38215, 0, -1.79366, 0.533487, -4.99405, 0.166329, 1.64576)
+script = ExtResource("4_jwu08")
+
+[node name="Cube" parent="testblock4" index="0"]
+layers = 16
+
+[node name="StaticBody3D" parent="testblock4/Cube" index="0"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="testblock4/Cube" index="1"]
+layers = 16
+script = ExtResource("4_vqrex")
+
+[node name="testblock" parent="." instance=ExtResource("2_fsh7b")]
+transform = Transform3D(0.221452, 0, 1.22958, 0, 1.54263, 0, -0.154464, 0, 1.76282, -0.692644, -1.06599, 8.46936)
+
+[node name="testblock2" parent="." instance=ExtResource("2_fsh7b")]
+transform = Transform3D(0.812371, 0, 0, 0, 3.08012, 0, 0, 0, 0.656237, -0.678181, -1.06599, -3.62368)
+
+[node name="testroom1" parent="." instance=ExtResource("4_ql7tu")]
+transform = Transform3D(0.360842, 0, 0, 0, 0.360842, 0, 0, 0, 0.360842, 1.05123, -1.08547, 0.57597)
+
+[editable path="testblock3"]
+[editable path="testblock4"]
