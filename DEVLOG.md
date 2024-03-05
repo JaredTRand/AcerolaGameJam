@@ -142,4 +142,7 @@ Got quite a bit of work done yesterday! I managed to get images to save to an ar
 
 Didn’t  really get much work done yesterday, but i got some! So I have it set up to tell when an aberattion is captured in an image. The only issue is, is that it works through walls at the moment. So I can just walk up to a wall and take a pic and get every aberattion. Obviously not something we want 
 
- 
+## Day 6 3/5
+
+Not so much forward movement yeserday either. I somewhat got occular culling working so that anything behind a wall would not get seen by the camera, yadda yadda yadda. But occular culling doesn't work great for moving nodes, and I wanted some aberrations to move, so that option might be out.
+BUT I am looking into using raycasting to tell what is in front of the camera. I'm hoping to be able to cast a few rays out from the camera, and a few at an angle to match the cameras fov. And since rays get stopped by walls and stuff, I think it aught to work. 
