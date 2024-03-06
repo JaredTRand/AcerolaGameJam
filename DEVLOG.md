@@ -146,3 +146,11 @@ Didn’t  really get much work done yesterday, but i got some! So I have it set 
 
 Not so much forward movement yeserday either. I somewhat got occular culling working so that anything behind a wall would not get seen by the camera, yadda yadda yadda. But occular culling doesn't work great for moving nodes, and I wanted some aberrations to move, so that option might be out.
 BUT I am looking into using raycasting to tell what is in front of the camera. I'm hoping to be able to cast a few rays out from the camera, and a few at an angle to match the cameras fov. And since rays get stopped by walls and stuff, I think it aught to work. 
+
+
+## Day 7 3/6
+I stayed up a bit too late last night, but I got some good work done! I got raytracing more or less completed. It's a bit janky, I added like 100 ray tracing nodes on to the front of the camera in a camera shape, and had them all shoot off at the same time, tell me how many of them hit an aberration, and then return if 5 or more hit one. Thinking about it right now, I never checked if it could hit more than one at a time 😅, but that's something for me to check later!
+Right now I'm working on an improved method for casting these rays. I'm hoping I can just make a method that loops a bunch, and will update a single ray's rotation, and just shoot a bunch within the viewport. Might be a little cleaner and more manageable.
+After this is working, I'll be moving on to game finish logic. Right now i'lll just have an area you walk into that will submit your favorited pics and calculate your total payday.
+After that, I'll try to get a basic enemy AI working to act as the agressive aberrations. Something that follows you slowly, and if the player comes within it's area node, it'll start a timer (will need to make some sort of visual effect) and when the timer runs out, you'll black out, lose a percentage of pics, and get put out to the front of the area.
+Then when that's done, I'll make a bit of a larger test area, and try my hand at dynamically adding aberrations to the scene. So that everything is not in the same position every time you play, and that different types of aberrations will appear.
