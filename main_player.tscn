@@ -27,9 +27,11 @@ shape = SubResource("CapsuleShape3D_d35w2")
 [node name="headshape" type="MeshInstance3D" parent="CollisionShape3D"]
 transform = Transform3D(0.828906, 0, 0, 0, 0.828906, 0, 0, 0, 0.828906, 0, 0.581518, 0)
 layers = 2
+ignore_occlusion_culling = true
 mesh = SubResource("SphereMesh_vvi5h")
 
 [node name="bodyshape" type="MeshInstance3D" parent="CollisionShape3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00403237, 0)
 layers = 2
+ignore_occlusion_culling = true
 mesh = SubResource("CapsuleMesh_cx1k7")

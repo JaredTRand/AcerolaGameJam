@@ -1,7 +1,10 @@
 extends Node3D
 
-@onready var lens = get_node("camera_lens_loc")
+@onready var handheld_camera:Camera3D = get_node("SubViewport/ROOT/handheld_viewport_cam")
+
+
 @onready var cam_flash:SpotLight3D     = get_node("CameraFLash")
+@onready var camera_loc:Node3D = get_node("camera_lens_loc")
 @onready var cam_follow_movement:Node3D = get_node("SubViewport/ROOT")
 @onready var cam_sound_player:AudioStreamPlayer3D = get_node("AudioStreamPlayer3D")
 
@@ -14,8 +17,9 @@ extends Node3D
 
 @onready var black_screen:Image = load("res://player/cam/black2.png").get_image()
 
-@export var flash_brightness:float
+@onready var all_cam_raycasts:Node3D = get_node("raycasts")
 
+@export var flash_brightness:float
 const ADS_LERP:int = 20
 @export var default_pos:Vector3
 @export var ads_pos:Vector3
@@ -25,17 +29,17 @@ var current_image:Aberration_Image
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	all_cam_raycasts.global_position = camera_loc.global_position
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	cam_follow_movement.global_transform = lens.global_transform # make handheld_viewport_cam follow with cam mesh
-		
+func _physics_process(delta):
 	# take a pic
 	if Input.is_action_pressed("main_action"):
 		if cam_cooldown_timer.is_stopped():
 			take_pic()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	cam_follow_movement.global_transform = camera_loc.global_transform # make handheld_viewport_cam follow with cam mesh
 	
 	#bring camera close
 	if Input.is_action_pressed("secondary_action"):
@@ -101,6 +105,7 @@ func take_pic():
 	await get_tree().process_frame
 	var image:Image = cam_sprite.get_texture().get_image()
 	#image.flip_x()
+	
 	save_img(image)
 	cam_flash.light_energy = 0
 	
@@ -119,15 +124,27 @@ func save_img(cam_img:Image):
 		images_array[images_array.size()-1].next_img = new_ab_img
 		new_ab_img.prev_img = images_array[images_array.size()-1]
 	
-	var all_aberrations = get_tree().get_nodes_in_group("Aberration")
-	for aberration in all_aberrations:
-		for child in aberration.get_children():
-			if child is VisibleOnScreenNotifier3D:
-				if child.is_on_screen():
-					new_ab_img.aberrations_pictured.append(aberration)
+	raycast_camera()
 	
 	current_image = new_ab_img
 	images_array.push_back(new_ab_img)
+	
+func raycast_camera():
+	var all_collisions:Array
+	var unique_collisions:Array
+	for ray_group in all_cam_raycasts.get_children():
+		for ray in ray_group.get_children():
+			ray.enabled = true
+			ray.force_raycast_update()
+			var collision = ray.get_collider()
+			
+			if collision.is_in_group("Aberration"):
+				all_collisions.append(collision)
+				
+				if collision not in unique_collisions:
+					unique_collisions.append(collision)
+	pass
+
 	
 func set_cam_screen_ab(cam_img:Aberration_Image):
 	if(cam_img.starred):
@@ -149,7 +166,6 @@ func _on_cam_preview_image_cooldown_timeout():
 		current_image = images_array[images_array.size()-1]
 	set_cam_screen(black_screen)
 	starred.visible = false
-	#cam_sprite_Screen.set_texture(ImageTexture.create_from_image())
 
 func play_sound(sound, max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:bool = false):
 	if skip_wait_for_done or !cam_sound_player.is_playing(): 

@@ -1,11 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6amenil043m5"]
+[gd_scene load_steps=12 format=3 uid="uid://b6amenil043m5"]
 
 [ext_resource type="PackedScene" uid="uid://dpmurlitcdsi7" path="res://main_player.tscn" id="1_46x6s"]
-[ext_resource type="ArrayOccluder3D" uid="uid://cacwl1jsr8c01" path="res://testroom2/testroom2.occ" id="2_8v2oe"]
 [ext_resource type="PackedScene" uid="uid://bw7w8oxmfq7w7" path="res://test_room_1/testblock.blend" id="2_fsh7b"]
-[ext_resource type="Script" path="res://test_room_1/sdasadsaa.gd" id="4_jwu08"]
 [ext_resource type="PackedScene" uid="uid://4cjqosgik5we" path="res://testroom2/house.tscn" id="4_ql7tu"]
-[ext_resource type="Script" path="res://testroom2/VisibleOnScreenNotifier3D.gd" id="4_vqrex"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frm4m"]
 transparency = 1
@@ -16,6 +13,51 @@ emission_energy_multiplier = 64.0
 [sub_resource type="SphereMesh" id="SphereMesh_xq7w5"]
 material = SubResource("StandardMaterial3D_frm4m")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60b2g"]
+resource_name = "Material"
+cull_mode = 2
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5lgou"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2.00001, 2.00001, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 6, 0, 4, 0, 0, 0, 2, 0, 6, 0, 3, 0, 6, 0, 2, 0, 3, 0, 7, 0, 6, 0, 7, 0, 4, 0, 6, 0, 7, 0, 5, 0, 4, 0, 5, 0, 3, 0, 1, 0, 5, 0, 7, 0, 3, 0, 1, 0, 2, 0, 0, 0, 1, 0, 3, 0, 2, 0, 5, 0, 0, 0, 4, 0, 5, 0, 1, 0, 0, 0),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(254, 255, 254, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 254, 255, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t5agh"]
+resource_name = "testblock_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2.00001, 2.00001, 2),
+"attribute_data": PackedByteArray(255, 159, 255, 127, 255, 159, 255, 127, 255, 159, 255, 127, 255, 95, 255, 127, 255, 95, 255, 127, 255, 95, 255, 127, 255, 159, 255, 63, 255, 159, 255, 63, 255, 159, 255, 63, 255, 95, 255, 63, 255, 95, 255, 63, 255, 95, 255, 63, 255, 159, 255, 191, 255, 159, 255, 191, 255, 223, 255, 127, 255, 95, 255, 191, 255, 31, 255, 127, 255, 95, 255, 191, 255, 159, 255, 255, 255, 159, 0, 0, 255, 223, 255, 63, 255, 95, 255, 255, 255, 31, 255, 63, 255, 95, 0, 0),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(1, 0, 20, 0, 14, 0, 1, 0, 7, 0, 20, 0, 10, 0, 19, 0, 6, 0, 10, 0, 23, 0, 19, 0, 21, 0, 12, 0, 18, 0, 21, 0, 15, 0, 12, 0, 16, 0, 9, 0, 3, 0, 16, 0, 22, 0, 9, 0, 5, 0, 8, 0, 2, 0, 5, 0, 11, 0, 8, 0, 17, 0, 0, 0, 13, 0, 17, 0, 4, 0, 0, 0),
+"material": SubResource("StandardMaterial3D_60b2g"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(254, 255, 254, 255, 0, 0, 255, 255, 254, 255, 254, 255, 0, 0, 255, 255, 254, 255, 254, 255, 0, 0, 84, 213, 254, 255, 0, 0, 0, 0, 255, 191, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 84, 213, 254, 255, 254, 255, 255, 255, 255, 191, 254, 255, 254, 255, 255, 255, 255, 255, 254, 255, 254, 255, 255, 255, 84, 213, 254, 255, 0, 0, 255, 255, 255, 191, 254, 255, 0, 0, 255, 255, 255, 191, 254, 255, 0, 0, 255, 255, 84, 213, 0, 0, 254, 255, 0, 0, 84, 213, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 255, 255, 84, 213, 0, 0, 254, 255, 255, 255, 255, 191, 0, 0, 254, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 84, 213, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 255, 191, 255, 191, 255, 127, 255, 191, 170, 42, 170, 42, 0, 0, 255, 127, 255, 191, 255, 191, 170, 42, 170, 42, 255, 255, 255, 255, 255, 127, 255, 191, 170, 42, 170, 42, 0, 0, 255, 127, 255, 255, 255, 255, 170, 42, 170, 42, 84, 213, 84, 213, 255, 191, 255, 191, 255, 127, 255, 191, 84, 213, 84, 213, 0, 0, 255, 127, 255, 191, 255, 191, 84, 213, 84, 213, 255, 255, 255, 255, 255, 127, 255, 191, 84, 213, 84, 213, 0, 0, 255, 127, 255, 255, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5lgou")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vc8va"]
+data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gmlm4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nocfv"]
+
 [node name="Node3D" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -24,13 +66,10 @@ light_color = Color(1, 1, 0.733333, 1)
 shadow_enabled = true
 
 [node name="Basic FPS Player" parent="." instance=ExtResource("1_46x6s")]
-transform = Transform3D(0.693678, 0, 0.720285, 0, 1, 0, -0.720285, 0, 0.693678, 17.1606, 0, 0)
+transform = Transform3D(0.693678, 0, 0.720285, 0, 1, 0, -0.720285, 0, 0.693678, 19.8948, 0, -0.09832)
 floor_max_angle = 1.0472
 SPEED = 4.0
 KEY_BIND_MOUSE_SENS = 0.002
-
-[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
-occluder = ExtResource("2_8v2oe")
 
 [node name="testblock3" parent="." instance=ExtResource("2_fsh7b")]
 transform = Transform3D(0.812371, 0, 0, 0, 3.08012, 0, 0, 0, 0.656237, 4.14216, -2.86681, 6.82228)
@@ -47,20 +86,21 @@ mesh = SubResource("SphereMesh_xq7w5")
 transform = Transform3D(0.470608, 0, 0, 0, 0.470608, 0, 0, 0, 0.470608, 0, 0, 0)
 layers = 16
 
-[node name="testblock4" parent="." groups=["Aberration"] instance=ExtResource("2_fsh7b")]
+[node name="testblock4" type="Node3D" parent="." groups=["Aberration"]]
 transform = Transform3D(0.812371, 0, 0, 0, 2.50398, 0.38215, 0, -1.79366, 0.533487, -4.99405, 0.166329, 1.64576)
-script = ExtResource("4_jwu08")
 
-[node name="Cube" parent="testblock4" index="0"]
+[node name="Cube" type="MeshInstance3D" parent="testblock4"]
 layers = 16
+mesh = SubResource("ArrayMesh_t5agh")
+skeleton = NodePath("")
 
-[node name="StaticBody3D" parent="testblock4/Cube" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="testblock4/Cube" groups=["Aberration"]]
+transform = Transform3D(1, 0, 0, 0, 1, -7.45058e-09, 0, 0, 1, 0, 0, 0)
 collision_layer = 16
 collision_mask = 0
 
-[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="testblock4/Cube" index="1"]
-layers = 16
-script = ExtResource("4_vqrex")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="testblock4/Cube/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_vc8va")
 
 [node name="testblock" parent="." instance=ExtResource("2_fsh7b")]
 transform = Transform3D(0.221452, 0, 1.22958, 0, 1.54263, 0, -0.154464, 0, 1.76282, -0.692644, -1.06599, 8.46936)
@@ -71,5 +111,17 @@ transform = Transform3D(0.812371, 0, 0, 0, 3.08012, 0, 0, 0, 0.656237, -0.678181
 [node name="testroom1" parent="." instance=ExtResource("4_ql7tu")]
 transform = Transform3D(0.360842, 0, 0, 0, 0.360842, 0, 0, 0, 0.360842, 1.05123, -1.08547, 0.57597)
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.15738, 0, 0, 0, 2.15738, 0, 0, 0, 2.15738, 14.52, 0, -5.15558)
+layers = 16
+mesh = SubResource("CapsuleMesh_gmlm4")
+skeleton = NodePath("StaticBody3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.52, 0, 5.15558)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5219, -2.21026e-07, -5.1396)
+shape = SubResource("CapsuleShape3D_nocfv")
+
 [editable path="testblock3"]
-[editable path="testblock4"]

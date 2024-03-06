@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbghrmmreds0r"]
+
+[ext_resource type="PackedScene" uid="uid://cogvfxjwoixss" path="res://player/cam/player_cam.blend" id="1_tj4hb"]
+[ext_resource type="Script" path="res://player/cam/handheld_cam.gd" id="2_fwxil"]
+[ext_resource type="AudioStream" uid="uid://b80uhcgplgc38" path="res://player/cam/sounds/camera-shutter.wav" id="2_niyvt"]
+[ext_resource type="Texture2D" uid="uid://4cp4keildw7t" path="res://player/cam/black2.png" id="4_27h8v"]
+[ext_resource type="Texture2D" uid="uid://cr084m836tl3m" path="res://player/starred.png" id="5_280qy"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_iibmc"]
+viewport_path = NodePath("SubViewport")
+
+[node name="player_cam" instance=ExtResource("1_tj4hb")]
+transform = Transform3D(-2.4611e-09, 0, -0.0563033, 0, 0.0563033, 0, 0.0563033, 0, -2.4611e-09, -0.195, -0.17, -0.394)
+script = ExtResource("2_fwxil")
+flash_brightness = 4.0
+default_pos = Vector3(-0.195, -0.17, -0.394)
+
+[node name="CameraFLash" type="SpotLight3D" parent="." index="8"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.576685, 0.993742, -3.29924)
+light_energy = 0.0
+shadow_enabled = true
+spot_range = 320.767
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="9"]
+transform = Transform3D(-1.55271e-06, -7.76356e-07, -17.7609, -7.76356e-07, 17.7609, -7.76356e-07, 17.7609, 7.76356e-07, -1.55271e-06, -0.254168, -0.600487, -2.97363)
+stream = ExtResource("2_niyvt")
+attenuation_model = 1
+max_db = -2.51
+pitch_scale = 1.05
+
+[node name="sprites" type="Node3D" parent="." index="10"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="sprites" index="0"]
+transform = Transform3D(-6.61685e-09, -3.30844e-09, -0.1164, -3.30844e-09, 0.0756882, -5.08795e-09, 0.0756882, 3.30844e-09, -1.01759e-08, 0.166846, -0.600487, -2.97363)
+double_sided = false
+texture = SubResource("ViewportTexture_iibmc")
+
+[node name="spriteScreen" type="Sprite3D" parent="sprites" index="1"]
+transform = Transform3D(-2.93099e-14, -7.495e-09, 0.263694, 7.72326e-09, 0.171466, 1.15265e-08, -0.176688, 7.495e-09, -6.92779e-14, 0.529003, -0.6, -2.974)
+double_sided = false
+texture = ExtResource("4_27h8v")
+
+[node name="starred" type="Sprite3D" parent="sprites" index="2"]
+transform = Transform3D(-1.29674e-13, -2.58298e-08, 0.908761, 2.66165e-08, 0.590917, 3.97235e-08, -0.608914, 2.58298e-08, -2.98428e-13, 0.528, 0.218899, -4.32615)
+visible = false
+double_sided = false
+render_priority = 1
+texture = ExtResource("5_280qy")
+
+[node name="SubViewport" type="SubViewport" parent="." index="11"]
+size = Vector2i(1775, 1175)
+
+[node name="ROOT" type="Node3D" parent="SubViewport" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0133908, 0.475291, -0.51968)
+
+[node name="handheld_viewport_cam" type="Camera3D" parent="SubViewport/ROOT" index="0"]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0.00143743, -0.000623524, -0.0214777)
+fov = 60.0
+
+[node name="timers" type="Node3D" parent="." index="12"]
+
+[node name="cam_cooldown" type="Timer" parent="timers" index="0"]
+one_shot = true
+
+[node name="cam_preview_image_cooldown" type="Timer" parent="timers" index="1"]
+wait_time = 4.0
+one_shot = true
+
+[node name="camera_lens_loc" type="Node3D" parent="." index="13"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.91647, -0.677773, -3.28617)
+
+[node name="raycasts" type="Node3D" parent="." index="14"]
+
+[node name="RayCast3D1" type="RayCast3D" parent="raycasts" index="0"]
+transform = Transform3D(-4.37114e-08, 1, -2.13163e-14, -1, -4.37114e-08, 0, -6.35275e-22, 2.13163e-14, 1, -1.99656, -0.616206, -3.25379)
+enabled = false
+debug_shape_thickness = 4
+
+[connection signal="timeout" from="timers/cam_preview_image_cooldown" to="." method="_on_cam_preview_image_cooldown_timeout"]
