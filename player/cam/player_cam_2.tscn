@@ -61,6 +61,9 @@ fov = 60.0
 [node name="camera_lens_loc" type="Node3D" parent="." index="12"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.83668, -0.61124, -3.25501)
 
+[node name="raycast_loc" type="Node3D" parent="camera_lens_loc" index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
 [node name="timers" type="Node3D" parent="." index="13"]
 
 [node name="cam_cooldown" type="Timer" parent="timers" index="0"]
@@ -72,6 +75,7 @@ one_shot = true
 
 [node name="raycasts" type="Node3D" parent="." index="14"]
 transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, -1.837, -0.611, -3.255)
+visible = false
 
 [node name="U1" type="Node3D" parent="raycasts" index="0"]
 transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, 0, 0, 0)
@@ -91,7 +95,7 @@ collision_mask = 17
 debug_shape_thickness = 4
 
 [node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U1" index="2"]
-transform = Transform3D(-4.09782e-08, 0.984808, -0.173648, -1, -4.84288e-08, -9.31323e-10, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
+transform = Transform3D(-4.29849e-08, 0.984808, -0.173648, -1, -4.37114e-08, -3.59304e-10, -7.94424e-09, 0.173648, 0.984808, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
@@ -2892,5 +2896,8 @@ enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
+
+[node name="RayCast3D_main" type="RayCast3D" parent="." index="15"]
+collision_mask = 17
 
 [connection signal="timeout" from="timers/cam_preview_image_cooldown" to="." method="_on_cam_preview_image_cooldown_timeout"]
