@@ -1,3 +1,3 @@
-# Acerola Game Jam
+# Snapshot
  
 [DEV LOG](DEVLOG.md)
