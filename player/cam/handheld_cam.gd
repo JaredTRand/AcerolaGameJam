@@ -29,7 +29,7 @@ var current_image:Aberration_Image
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	all_cam_raycasts.global_position = camera_loc.global_position
+	pass
 
 func _physics_process(delta):
 	# take a pic
@@ -124,14 +124,19 @@ func save_img(cam_img:Image):
 		images_array[images_array.size()-1].next_img = new_ab_img
 		new_ab_img.prev_img = images_array[images_array.size()-1]
 	
-	raycast_camera()
+	var aberrations_pictured:Array = raycast_camera(5)
+	if aberrations_pictured:
+		for abb in raycast_camera(5):
+			new_ab_img.aberrations_pictured.append(abb)
 	
 	current_image = new_ab_img
 	images_array.push_back(new_ab_img)
 	
-func raycast_camera():
+func raycast_camera(amount:int):
 	var all_collisions:Array
 	var unique_collisions:Array
+	var return_collisions:Array
+	
 	for ray_group in all_cam_raycasts.get_children():
 		for ray in ray_group.get_children():
 			ray.enabled = true
@@ -143,7 +148,11 @@ func raycast_camera():
 				
 				if collision not in unique_collisions:
 					unique_collisions.append(collision)
-	pass
+	
+	for col in unique_collisions:
+		if all_collisions.count(col) > amount:
+			return_collisions.append(col)
+	return return_collisions
 
 	
 func set_cam_screen_ab(cam_img:Aberration_Image):
