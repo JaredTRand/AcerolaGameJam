@@ -154,3 +154,19 @@ Right now I'm working on an improved method for casting these rays. I'm hoping I
 After this is working, I'll be moving on to game finish logic. Right now i'lll just have an area you walk into that will submit your favorited pics and calculate your total payday.
 After that, I'll try to get a basic enemy AI working to act as the agressive aberrations. Something that follows you slowly, and if the player comes within it's area node, it'll start a timer (will need to make some sort of visual effect) and when the timer runs out, you'll black out, lose a percentage of pics, and get put out to the front of the area.
 Then when that's done, I'll make a bit of a larger test area, and try my hand at dynamically adding aberrations to the scene. So that everything is not in the same position every time you play, and that different types of aberrations will appear.
+
+## Day 8 3/7
+Spent a liiiitle too much time yesterday trying to get fancy with the raycasting. It didn't quite pan out, but I have a few ideas of how to improve it if I have more time later on, or if I wanna keep working on this after the jam.
+Besides that, got it set up to have a scoring system in place! so at the end of the game -- which is whenever you think you've gotten all abberations, or just want to leave -- Your score will get added up and you'll get a certain amount of money! So far, the score is determined by
+<ul>
+ <li>Number of aberrations captured in pictures</li>
+ <li>minus the number of aberrations not captured</li>
+ <li>minus the number of images submitted that do not contain aberrations</li>
+ <li>A bonus amount based on the time it took to complete the level</li>
+</ul>
+
+I think im going to start working a bit on enemy AI today. Since the agressive AI are aberrations, it might be okay for them to just move through walls. Well, maybe not all of them, but at least the slow one. I think the one that moves whenever you take a pic should move pretty fast. Like that mofo scp-173.
+I think it's gonna work something like this: You start the level, and go into the location and start lookin for aberrations. If you either: take a pic of a certain percentage of the aberrations OR are inside for ~2 minutes, then the aggressive aberrations will spawn.
+I think I want the slow aberration to have three areas attached to it. One that is pretty large, that will start some kind of creepy ambiance noise. Another one that will blink out your flashlight. maybe some other noises. And one that is the closest to it's body, that will just mess you up if you're in it for a more than a second or two maybe.
+I'll get this one working, then will move on to other aspects of the game until later on. Don't wanna run out of time making to many enemies just yet!
+
