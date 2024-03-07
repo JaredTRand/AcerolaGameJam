@@ -170,3 +170,5 @@ I think it's gonna work something like this: You start the level, and go into th
 I think I want the slow aberration to have three areas attached to it. One that is pretty large, that will start some kind of creepy ambiance noise. Another one that will blink out your flashlight. maybe some other noises. And one that is the closest to it's body, that will just mess you up if you're in it for a more than a second or two maybe.
 I'll get this one working, then will move on to other aspects of the game until later on. Don't wanna run out of time making to many enemies just yet!
 
+OH! One thing I do need to work on is some freakin UI. Other UI elements can come around later, but the important one is UI that list out the buttons you can press. So if you have the cam up to your face, you know how to navigate through. 
+
