@@ -72,9 +72,11 @@ func _process(delta):
 		
 	if Input.is_action_just_pressed("cam_favorite_img"):
 		if(current_image.starred):
+			play_sound(load("res://player/cam/sounds/star_image_remove.wav"), [-9.0, -7.5], [.90, 1.1])
 			current_image.starred = false
 			starred.visible = false
 		else: 
+			play_sound(load("res://player/cam/sounds/star_fav.wav"), [-15.0, -13.5], [.90, 1.1])
 			current_image.starred = true
 			starred.visible = true
 	elif Input.is_action_just_pressed("cam_delete_image"):
@@ -113,7 +115,7 @@ func take_pic():
 	play_sound(load("res://player/cam/sounds/camera-shutter.wav"), [-3.0, -1.5], [.90, 1.1])
 	
 	await get_tree().create_timer(.05).timeout
-	set_cam_screen(image)
+	
 
 	
 func save_img(cam_img:Image):
@@ -133,6 +135,7 @@ func save_img(cam_img:Image):
 	
 	current_image = new_ab_img
 	AllImages.images.push_back(new_ab_img)
+	set_cam_screen_ab(new_ab_img)
 	
 func raycast_camera(amount:int):
 	var all_collisions:Array

@@ -45,7 +45,7 @@ func _on_body_entered(body):
 		print_debug("abs Pictured " + str(aberrations_pictured.size()) + " out of total " + str(all_aberrations.size()) )
 		print_debug("Time Elapsed: " + str(total_time.get("minute")) + "mins, " + str(total_time.get("second")) + " secs")
 	
-		var abs_img_score = 100 * aberrations_pictured.size()
+		var abs_img_score = 500 * aberrations_pictured.size()
 		var miss_abs_penalty = 20 * (all_aberrations.size() - aberrations_pictured.size())
 		var blank_img_penalty = 10 * images_wo_ab.size()
 		var time_bonus = 1000 - ( (total_time.get("minute") * 60) + total_time.get("second") )
