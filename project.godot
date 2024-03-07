@@ -15,6 +15,10 @@ run/main_scene="res://test_room_1/testroom_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AllImages="*res://player/cam/all_image.gd"
+
 [display]
 
 window/size/mode=3

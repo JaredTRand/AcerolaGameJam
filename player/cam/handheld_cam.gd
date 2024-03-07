@@ -51,7 +51,7 @@ func _process(delta):
 		
 		if(current_image != null):
 			set_cam_screen_ab(current_image)
-		if(images_array.size() > 0):
+		if(AllImages.images.size() > 0):
 			if Input.is_action_just_pressed("cam_prev_image"):
 				if(current_image.prev_img != null):
 					play_sound(load("res://player/cam/sounds/camera_next_image.wav"), [-10, -7], [1,1], true)
@@ -90,7 +90,7 @@ func _process(delta):
 		else:
 			set_cam_screen(black_screen)
 			
-		images_array.remove_at(images_array.find(current_image))
+		AllImages.images.remove_at(AllImages.images.find(current_image))
 
 func take_pic():
 	cam_cooldown_timer.start()
@@ -121,9 +121,9 @@ func save_img(cam_img:Image):
 	new_ab_img.ab_image = cam_img
 	
 	# Set next image var for previous image, and prev image var for new img
-	if(images_array.size() > 0):
-		images_array[images_array.size()-1].next_img = new_ab_img
-		new_ab_img.prev_img = images_array[images_array.size()-1]
+	if(AllImages.images.size() > 0):
+		AllImages.images[AllImages.images.size()-1].next_img = new_ab_img
+		new_ab_img.prev_img = AllImages.images[AllImages.images.size()-1]
 	
 	var aberrations_pictured:Array = raycast_camera(5)
 	#var aberrations_pictured:Array = raycast_camera2([-17.5,17.5], [30,-30], 1.0, 5)
@@ -132,7 +132,7 @@ func save_img(cam_img:Image):
 			new_ab_img.aberrations_pictured.append(abb)
 	
 	current_image = new_ab_img
-	images_array.push_back(new_ab_img)
+	AllImages.images.push_back(new_ab_img)
 	
 func raycast_camera(amount:int):
 	var all_collisions:Array
@@ -229,8 +229,8 @@ func set_cam_screen(cam_img:Image):
 	cam_preview_image_cooldown.start()
 
 func _on_cam_preview_image_cooldown_timeout():
-	if(images_array.size() > 0):
-		current_image = images_array[images_array.size()-1]
+	if(AllImages.images.size() > 0):
+		current_image = AllImages.images[AllImages.images.size()-1]
 	set_cam_screen(black_screen)
 	starred.visible = false
 
