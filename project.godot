@@ -90,6 +90,7 @@ cam_favorite_img={
 [layer_names]
 
 3d_render/layer_5="Abberations"
+3d_physics/layer_5="Aberrations"
 
 [rendering]
 

@@ -18,7 +18,7 @@ extends Node3D
 @onready var black_screen:Image = load("res://player/cam/black2.png").get_image()
 
 @onready var all_cam_raycasts:Node3D = get_node("raycasts")
-@onready var raycast_main:RayCast3D = get_node("RayCast3D_main")
+#@onready var raycast_main:RayCast3D = get_node("RayCast3D_main")
 
 @export var flash_brightness:float
 const ADS_LERP:int = 20
@@ -125,8 +125,8 @@ func save_img(cam_img:Image):
 		images_array[images_array.size()-1].next_img = new_ab_img
 		new_ab_img.prev_img = images_array[images_array.size()-1]
 	
-	#var aberrations_pictured:Array = raycast_camera(5)
-	var aberrations_pictured:Array = raycast_camera2([-17.5,17.5], [30,-30], 1.0, 5)
+	var aberrations_pictured:Array = raycast_camera(5)
+	#var aberrations_pictured:Array = raycast_camera2([-17.5,17.5], [30,-30], 1.0, 5)
 	if aberrations_pictured:
 		for abb in aberrations_pictured:
 			new_ab_img.aberrations_pictured.append(abb)
@@ -145,6 +145,9 @@ func raycast_camera(amount:int):
 			ray.force_raycast_update()
 			var collision = ray.get_collider()
 			
+			if collision == null:
+				continue
+			
 			if collision.is_in_group("Aberration"):
 				all_collisions.append(collision)
 				
@@ -156,58 +159,58 @@ func raycast_camera(amount:int):
 			return_collisions.append(col)
 	return return_collisions
 
-func raycast_camera2(ray_angle_z:Array, ray_angle_y:Array, interval:float, amount:int):
-	var all_collisions:Array
-	var unique_collisions:Array
-	var return_collisions:Array
-
-	var cur_angle_z:float = ray_angle_z[0] - interval
-	var cur_angle_y:float = ray_angle_y[0] - interval
-	var count:int = 1
-
-	raycast_main.enabled = true
-	while cur_angle_z <= ray_angle_z[1]:
-		cur_angle_z = cur_angle_z + interval
-		if cur_angle_z > ray_angle_z[1]:
-			break # if it hits here, it's at the bottom of the view
-
-		raycast_main.rotate_z(cur_angle_z)
-		while cur_angle_y <= ray_angle_y[1]:
-			cur_angle_y = cur_angle_y + interval
-			if cur_angle_y > ray_angle_y[1]:
-				continue
-
-			#same ray, just rotated
-			#??? https://www.reddit.com/r/godot/comments/6iwokq/help_can_i_rotate_a_transform_using_euler_angles/
-			raycast_main.rotate_y(cur_angle_y)
-			raycast_main.force_raycast_update()
-			var collision = raycast_main.get_collider()
-
-			if collision.is_in_group("Aberration"):
-				all_collisions.append(collision)
-
-				if collision not in unique_collisions:
-					unique_collisions.append(collision)
-	raycast_main.enabled = false
-			
-			
-	#for ray_group in all_cam_raycasts.get_children():
-	#	for ray in ray_group.get_children():
-	#		ray.enabled = true
-	#		ray.force_raycast_update()
-	#		var collision = ray.get_collider()
-	#		ray.enabled = false
-	#		
-	#		if collision.is_in_group("Aberration"):
-	#			all_collisions.append(collision)
-	#			
-	#			if collision not in unique_collisions:
-	#				unique_collisions.append(collision)
-	
-	for col in unique_collisions:
-		if all_collisions.count(col) > amount:
-			return_collisions.append(col)
-	return return_collisions
+#func raycast_camera2(ray_angle_z:Array, ray_angle_y:Array, interval:float, amount:int):
+	#var all_collisions:Array
+	#var unique_collisions:Array
+	#var return_collisions:Array
+#
+	#var cur_angle_z:float = ray_angle_z[0] - interval
+	#var cur_angle_y:float = ray_angle_y[0] - interval
+	#var count:int = 1
+#
+	#raycast_main.enabled = true
+	#while cur_angle_z <= ray_angle_z[1]:
+		#cur_angle_z = cur_angle_z + interval
+		#if cur_angle_z > ray_angle_z[1]:
+			#break # if it hits here, it's at the bottom of the view
+#
+		#raycast_main.rotate_z(cur_angle_z)
+		#while cur_angle_y <= ray_angle_y[1]:
+			#cur_angle_y = cur_angle_y + interval
+			#if cur_angle_y > ray_angle_y[1]:
+				#continue
+#
+			##same ray, just rotated
+			##??? https://www.reddit.com/r/godot/comments/6iwokq/help_can_i_rotate_a_transform_using_euler_angles/
+			#raycast_main.rotate_y(cur_angle_y)
+			#raycast_main.force_raycast_update()
+			#var collision = raycast_main.get_collider()
+#
+			#if collision.is_in_group("Aberration"):
+				#all_collisions.append(collision)
+#
+				#if collision not in unique_collisions:
+					#unique_collisions.append(collision)
+	#raycast_main.enabled = false
+			#
+			#
+	##for ray_group in all_cam_raycasts.get_children():
+	##	for ray in ray_group.get_children():
+	##		ray.enabled = true
+	##		ray.force_raycast_update()
+	##		var collision = ray.get_collider()
+	##		ray.enabled = false
+	##		
+	##		if collision.is_in_group("Aberration"):
+	##			all_collisions.append(collision)
+	##			
+	##			if collision not in unique_collisions:
+	##				unique_collisions.append(collision)
+	#
+	#for col in unique_collisions:
+		#if all_collisions.count(col) > amount:
+			#return_collisions.append(col)
+	#return return_collisions
 
 	
 func set_cam_screen_ab(cam_img:Aberration_Image):
