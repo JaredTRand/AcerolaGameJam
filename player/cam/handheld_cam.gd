@@ -159,6 +159,24 @@ func raycast_camera(amount:int):
 			return_collisions.append(col)
 	return return_collisions
 
+#func raycast_camera3():
+	#var all_aberrations = get_tree().get_nodes_in_group("Aberration")
+	#for aberration in all_aberrations:
+		#for child in aberration.get_children():
+			#if child is VisibleOnScreenNotifier3D:
+				#if child.is_on_screen():
+					#var space_state = get_world_3d().direct_space_state
+					#var mousepos = get_viewport().get_mouse_position()
+#
+					#var origin = handheld_camera.project_ray_origin(mousepos)
+					#var end = child.global_transform
+					#var query = PhysicsRayQueryParameters3D.create(origin, end)
+					#query.collide_with_areas = true
+#
+					#var result = space_state.intersect_ray(query)
+
+#if this doesnt work, could also do the "is visible on screen" deal. Then if it is, cast a ray towards the object. if it hits, that means it's on screen. If not, it's not.
+#cast a ray from player position to object position
 #func raycast_camera2(ray_angle_z:Array, ray_angle_y:Array, interval:float, amount:int):
 	#var all_collisions:Array
 	#var unique_collisions:Array

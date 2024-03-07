@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6amenil043m5"]
+[gd_scene load_steps=13 format=3 uid="uid://b6amenil043m5"]
 
 [ext_resource type="PackedScene" uid="uid://dpmurlitcdsi7" path="res://main_player.tscn" id="1_46x6s"]
 [ext_resource type="PackedScene" uid="uid://bw7w8oxmfq7w7" path="res://test_room_1/testblock.blend" id="2_fsh7b"]
+[ext_resource type="PackedScene" uid="uid://bpv76ofuj2uk0" path="res://finish_area.tscn" id="4_iw1fv"]
 [ext_resource type="PackedScene" uid="uid://4cjqosgik5we" path="res://testroom2/house.tscn" id="4_ql7tu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60b2g"]
@@ -60,7 +61,7 @@ transform = Transform3D(0.475985, -0.457335, 0.751188, -0.878885, -0.278068, 0.3
 light_color = Color(1, 1, 0.733333, 1)
 shadow_enabled = true
 
-[node name="Basic FPS Player" parent="." instance=ExtResource("1_46x6s")]
+[node name="Player" parent="." instance=ExtResource("1_46x6s")]
 transform = Transform3D(0.693678, 0, 0.720285, 0, 1, 0, -0.720285, 0, 0.693678, 19.8948, 0, -0.09832)
 floor_max_angle = 1.0472
 SPEED = 4.0
@@ -119,5 +120,8 @@ shape = SubResource("CapsuleShape3D_jkmvi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 layers = 16
 mesh = SubResource("CapsuleMesh_172wq")
+
+[node name="Area3D" parent="." instance=ExtResource("4_iw1fv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7, 0, 6.16182)
 
 [editable path="testblock3"]

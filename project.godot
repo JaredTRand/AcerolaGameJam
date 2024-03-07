@@ -17,11 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AllImages="*res://player/cam/all_image.gd"
+AllImages="*res://globals/all_image.gd"
+SceneTimer="*res://globals/scene_timer.gd"
 
 [display]
 
-window/size/mode=3
 window/use_occlusion_culling=true
 
 [editor_plugins]

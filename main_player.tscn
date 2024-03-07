@@ -10,7 +10,7 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cx1k7"]
 radius = 0.275
 
-[node name="Basic FPS Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_xe8ql")
 
 [node name="Head" parent="." instance=ExtResource("2_4hhew")]

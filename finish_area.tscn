@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpv76ofuj2uk0"]
+
+[ext_resource type="Script" path="res://finish_area.gd" id="1_xyfut"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e85kw"]
+
+[node name="Area3D" type="Area3D"]
+script = ExtResource("1_xyfut")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3.30616, 0, 0, 0, 3.30616, 0, 0, 0, 3.30616, 0, 0, 0)
+shape = SubResource("BoxShape3D_e85kw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
