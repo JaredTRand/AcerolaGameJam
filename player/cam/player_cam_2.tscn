@@ -75,668 +75,9 @@ one_shot = true
 
 [node name="raycasts" type="Node3D" parent="." index="14"]
 transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, -1.837, -0.611, -3.255)
-visible = false
 
-[node name="U1" type="Node3D" parent="raycasts" index="0"]
-transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U1" index="0"]
-transform = Transform3D(-4.84288e-08, 1, -1.42109e-14, -1, -4.84288e-08, 0, -4.44089e-16, 2.13163e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U1" index="1"]
-transform = Transform3D(-4.47035e-08, 0.996195, -0.0871557, -1, -4.47035e-08, 4.65661e-10, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U1" index="2"]
-transform = Transform3D(-4.29849e-08, 0.984808, -0.173648, -1, -4.37114e-08, -3.59304e-10, -7.94424e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U1" index="3"]
-transform = Transform3D(-4.09782e-08, 0.965926, -0.258819, -1, -5.21541e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U1" index="4"]
-transform = Transform3D(-4.09782e-08, 0.939692, -0.34202, -1, -4.47035e-08, 2.79397e-09, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U1" index="5"]
-transform = Transform3D(-4.09782e-08, 0.906308, -0.422618, -1, -5.21541e-08, 3.72529e-09, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U1" index="6"]
-transform = Transform3D(-3.72529e-08, 0.866025, -0.5, -1, -4.47035e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U1" index="7"]
-transform = Transform3D(-4.47035e-08, 0.996195, 0.0871557, -1, -4.47035e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U1" index="8"]
-transform = Transform3D(-4.09782e-08, 0.984808, 0.173648, -1, -4.84288e-08, -4.65661e-10, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U1" index="9"]
-transform = Transform3D(-4.09782e-08, 0.965926, 0.258819, -1, -5.21541e-08, -1.86265e-09, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U1" index="10"]
-transform = Transform3D(-4.09782e-08, 0.939692, 0.34202, -1, -4.47035e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U1" index="11"]
-transform = Transform3D(-4.09782e-08, 0.906307, 0.422618, -1, -4.84288e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U1" index="12"]
-transform = Transform3D(-3.72529e-08, 0.866025, 0.5, -1, -4.84288e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U2" type="Node3D" parent="raycasts" index="1"]
-transform = Transform3D(0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U2" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U2" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U2" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U2" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U2" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U2" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U2" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U2" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U2" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U2" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U2" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U2" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U2" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U3" type="Node3D" parent="raycasts" index="2"]
-transform = Transform3D(0.991445, 0.130526, 0, -0.130526, 0.991445, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U3" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U3" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U3" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U3" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U3" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U3" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U3" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U3" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U3" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U3" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U3" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U3" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U3" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U4" type="Node3D" parent="raycasts" index="3"]
-transform = Transform3D(0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U4" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U4" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U4" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U4" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U4" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U4" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U4" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U4" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U4" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U4" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U4" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U4" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U4" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U5" type="Node3D" parent="raycasts" index="4"]
-transform = Transform3D(0.976296, 0.21644, 0, -0.21644, 0.976296, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U5" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U5" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U5" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U5" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U5" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U5" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U5" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U5" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U5" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U5" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U5" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U5" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U5" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U6" type="Node3D" parent="raycasts" index="5"]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U6" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U6" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U6" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U6" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U6" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U6" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U6" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U6" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U6" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U6" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U6" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U6" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U6" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U7" type="Node3D" parent="raycasts" index="6"]
-transform = Transform3D(0.953717, 0.300706, 0, -0.300706, 0.953717, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U7" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U7" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U7" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U7" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U7" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U7" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U7" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U7" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U7" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U7" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U7" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U7" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U7" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="C1" type="Node3D" parent="raycasts" index="7"]
-transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
+[node name="C1" type="Node3D" parent="raycasts" index="0"]
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0, 0)
 
 [node name="RayCast3D_C" type="RayCast3D" parent="raycasts/C1" index="0"]
 transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
@@ -752,2152 +93,837 @@ target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/C1" index="2"]
+[node name="RayCast3D_R1_1" type="RayCast3D" parent="raycasts/C1" index="2"]
+transform = Transform3D(-4.37097e-08, 0.999962, -0.00872654, -1, -4.37114e-08, 0, -3.81449e-10, 0.00872654, 0.999962, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R1_2" type="RayCast3D" parent="raycasts/C1" index="3"]
+transform = Transform3D(-4.37047e-08, 0.999848, -0.0174524, -1, -4.37114e-08, 0, -7.62869e-10, 0.0174524, 0.999848, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R1_3" type="RayCast3D" parent="raycasts/C1" index="4"]
+transform = Transform3D(-4.36964e-08, 0.999658, -0.026177, -1, -4.37114e-08, 0, -1.14423e-09, 0.026177, 0.999658, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R1_4" type="RayCast3D" parent="raycasts/C1" index="5"]
+transform = Transform3D(-4.36848e-08, 0.999391, -0.0348995, -1, -4.37114e-08, 0, -1.52551e-09, 0.0348995, 0.999391, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R1_5" type="RayCast3D" parent="raycasts/C1" index="6"]
+transform = Transform3D(-4.36698e-08, 0.999048, -0.0436194, -1, -4.37114e-08, 0, -1.90666e-09, 0.0436194, 0.999048, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R1_6" type="RayCast3D" parent="raycasts/C1" index="7"]
+transform = Transform3D(-4.36515e-08, 0.99863, -0.052336, -1, -4.37114e-08, 0, -2.28768e-09, 0.052336, 0.99863, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R1_7" type="RayCast3D" parent="raycasts/C1" index="8"]
+transform = Transform3D(-4.36299e-08, 0.998135, -0.0610486, -1, -4.37114e-08, 0, -2.66852e-09, 0.0610486, 0.998135, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R1_8" type="RayCast3D" parent="raycasts/C1" index="9"]
+transform = Transform3D(-4.36049e-08, 0.997564, -0.0697565, -1, -4.37114e-08, 0, -3.04915e-09, 0.0697565, 0.997564, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R1_9" type="RayCast3D" parent="raycasts/C1" index="10"]
+transform = Transform3D(-4.35766e-08, 0.996918, -0.0784591, -1, -4.37114e-08, 0, -3.42956e-09, 0.0784591, 0.996918, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/C1" index="11"]
 transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/C1" index="3"]
+[node name="RayCast3D_R2_1" type="RayCast3D" parent="raycasts/C1" index="12"]
+transform = Transform3D(-4.35101e-08, 0.995396, -0.0958458, -1, -4.37114e-08, 0, -4.18955e-09, 0.0958458, 0.995396, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R2_2" type="RayCast3D" parent="raycasts/C1" index="13"]
+transform = Transform3D(-4.34719e-08, 0.994522, -0.104528, -1, -4.37114e-08, 0, -4.56908e-09, 0.104528, 0.994522, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R2_3" type="RayCast3D" parent="raycasts/C1" index="14"]
+transform = Transform3D(-4.34304e-08, 0.993572, -0.113203, -1, -4.37114e-08, 0, -4.94827e-09, 0.113203, 0.993572, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R2_4" type="RayCast3D" parent="raycasts/C1" index="15"]
+transform = Transform3D(-4.33856e-08, 0.992546, -0.121869, -1, -4.37114e-08, 0, -5.32708e-09, 0.121869, 0.992546, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R2_5" type="RayCast3D" parent="raycasts/C1" index="16"]
+transform = Transform3D(-4.33374e-08, 0.991445, -0.130526, -1, -4.37114e-08, 0, -5.70548e-09, 0.130526, 0.991445, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R2_6" type="RayCast3D" parent="raycasts/C1" index="17"]
+transform = Transform3D(-4.3286e-08, 0.990268, -0.139173, -1, -4.37114e-08, 0, -6.08345e-09, 0.139173, 0.990268, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R2_7" type="RayCast3D" parent="raycasts/C1" index="18"]
+transform = Transform3D(-4.32313e-08, 0.989016, -0.147809, -1, -4.37114e-08, 0, -6.46095e-09, 0.147809, 0.989016, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R2_8" type="RayCast3D" parent="raycasts/C1" index="19"]
+transform = Transform3D(-4.31732e-08, 0.987689, -0.156435, -1, -4.37114e-08, 0, -6.83797e-09, 0.156435, 0.987689, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R2_9" type="RayCast3D" parent="raycasts/C1" index="20"]
+transform = Transform3D(-4.31119e-08, 0.986286, -0.165048, -1, -4.37114e-08, 0, -7.21446e-09, 0.165048, 0.986286, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/C1" index="21"]
 transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/C1" index="4"]
+[node name="RayCast3D_R3_1" type="RayCast3D" parent="raycasts/C1" index="22"]
+transform = Transform3D(-4.29794e-08, 0.983255, -0.182236, -1, -4.37114e-08, 0, -7.96577e-09, 0.182236, 0.983255, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R3_2" type="RayCast3D" parent="raycasts/C1" index="23"]
+transform = Transform3D(-4.29083e-08, 0.981627, -0.190809, -1, -4.37114e-08, 0, -8.34053e-09, 0.190809, 0.981627, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R3_3" type="RayCast3D" parent="raycasts/C1" index="24"]
+transform = Transform3D(-4.28339e-08, 0.979925, -0.199368, -1, -4.37114e-08, 0, -8.71465e-09, 0.199368, 0.979925, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R3_4" type="RayCast3D" parent="raycasts/C1" index="25"]
+transform = Transform3D(-4.27562e-08, 0.978148, -0.207912, -1, -4.37114e-08, 0, -9.08811e-09, 0.207912, 0.978148, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R3_5" type="RayCast3D" parent="raycasts/C1" index="26"]
+transform = Transform3D(-4.26753e-08, 0.976296, -0.21644, -1, -4.37114e-08, 0, -9.46088e-09, 0.21644, 0.976296, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R3_6" type="RayCast3D" parent="raycasts/C1" index="27"]
+transform = Transform3D(-4.25911e-08, 0.97437, -0.224951, -1, -4.37114e-08, 0, -9.83292e-09, 0.224951, 0.97437, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R3_7" type="RayCast3D" parent="raycasts/C1" index="28"]
+transform = Transform3D(-4.25036e-08, 0.97237, -0.233445, -1, -4.37114e-08, 0, -1.02042e-08, 0.233445, 0.97237, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R3_8" type="RayCast3D" parent="raycasts/C1" index="29"]
+transform = Transform3D(-4.2413e-08, 0.970296, -0.241922, -1, -4.37114e-08, 0, -1.05747e-08, 0.241922, 0.970296, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R3_9" type="RayCast3D" parent="raycasts/C1" index="30"]
+transform = Transform3D(-4.23191e-08, 0.968148, -0.25038, -1, -4.37114e-08, 0, -1.09445e-08, 0.25038, 0.968148, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/C1" index="31"]
 transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/C1" index="5"]
+[node name="RayCast3D_R4_1" type="RayCast3D" parent="raycasts/C1" index="32"]
+transform = Transform3D(-4.21216e-08, 0.96363, -0.267238, -1, -4.37114e-08, 0, -1.16814e-08, 0.267238, 0.96363, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R4_2" type="RayCast3D" parent="raycasts/C1" index="33"]
+transform = Transform3D(-4.12042e-08, 0.942641, -0.333807, -1, -4.37114e-08, 0, -1.45912e-08, 0.333807, 0.942641, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R4_3" type="RayCast3D" parent="raycasts/C1" index="34"]
+transform = Transform3D(-4.20181e-08, 0.961261, -0.275637, -1, -4.37114e-08, 0, -1.20485e-08, 0.275637, 0.961261, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R4_4" type="RayCast3D" parent="raycasts/C1" index="35"]
+transform = Transform3D(-4.19113e-08, 0.958819, -0.284015, -1, -4.37114e-08, 0, -1.24147e-08, 0.284015, 0.958819, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R4_5" type="RayCast3D" parent="raycasts/C1" index="36"]
+transform = Transform3D(-4.18014e-08, 0.956304, -0.292372, -1, -4.37114e-08, 0, -1.278e-08, 0.292372, 0.956304, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R4_6" type="RayCast3D" parent="raycasts/C1" index="37"]
+transform = Transform3D(-4.16883e-08, 0.953716, -0.300706, -1, -4.37114e-08, 0, -1.31443e-08, 0.300706, 0.953716, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R4_7" type="RayCast3D" parent="raycasts/C1" index="38"]
+transform = Transform3D(-4.1572e-08, 0.951056, -0.309017, -1, -4.37114e-08, 0, -1.35076e-08, 0.309017, 0.951056, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R4_8" type="RayCast3D" parent="raycasts/C1" index="39"]
+transform = Transform3D(-4.14525e-08, 0.948323, -0.317304, -1, -4.37114e-08, 0, -1.38698e-08, 0.317304, 0.948323, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R4_9" type="RayCast3D" parent="raycasts/C1" index="40"]
+transform = Transform3D(-4.13299e-08, 0.945518, -0.325568, -1, -4.37114e-08, 0, -1.4231e-08, 0.325568, 0.945518, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/C1" index="41"]
 transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/C1" index="6"]
+[node name="RayCast3D_R5_1" type="RayCast3D" parent="raycasts/C1" index="42"]
+transform = Transform3D(-4.09432e-08, 0.936672, -0.350207, -1, -4.37114e-08, 0, -1.53081e-08, 0.350207, 0.936672, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R5_2" type="RayCast3D" parent="raycasts/C1" index="43"]
+transform = Transform3D(-4.08081e-08, 0.933581, -0.358368, -1, -4.37114e-08, 0, -1.56648e-08, 0.358368, 0.933581, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R5_3" type="RayCast3D" parent="raycasts/C1" index="44"]
+transform = Transform3D(-4.06698e-08, 0.930418, -0.366501, -1, -4.37114e-08, 0, -1.60203e-08, 0.366501, 0.930418, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R5_4" type="RayCast3D" parent="raycasts/C1" index="45"]
+transform = Transform3D(-4.05285e-08, 0.927184, -0.374607, -1, -4.37114e-08, 0, -1.63746e-08, 0.374607, 0.927184, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R5_5" type="RayCast3D" parent="raycasts/C1" index="46"]
+transform = Transform3D(-4.03841e-08, 0.92388, -0.382684, -1, -4.37114e-08, 0, -1.67276e-08, 0.382684, 0.92388, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R5_6" type="RayCast3D" parent="raycasts/C1" index="47"]
+transform = Transform3D(-4.02365e-08, 0.920505, -0.390731, -1, -4.37114e-08, 0, -1.70794e-08, 0.390731, 0.920505, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R5_7" type="RayCast3D" parent="raycasts/C1" index="48"]
+transform = Transform3D(-4.0086e-08, 0.91706, -0.398749, -1, -4.37114e-08, 0, -1.74299e-08, 0.398749, 0.91706, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R5_8" type="RayCast3D" parent="raycasts/C1" index="49"]
+transform = Transform3D(-3.99323e-08, 0.913546, -0.406737, -1, -4.37114e-08, 0, -1.7779e-08, 0.406737, 0.913546, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R5_9" type="RayCast3D" parent="raycasts/C1" index="50"]
+transform = Transform3D(-3.97757e-08, 0.909961, -0.414693, -1, -4.37114e-08, 0, -1.81268e-08, 0.414693, 0.909961, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/C1" index="51"]
 transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/C1" index="7"]
+[node name="RayCast3D_R6_1" type="RayCast3D" parent="raycasts/C1" index="52"]
+transform = Transform3D(-3.94533e-08, 0.902585, -0.430511, -1, -4.37114e-08, 0, -1.88182e-08, 0.430511, 0.902585, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R6_2" type="RayCast3D" parent="raycasts/C1" index="53"]
+transform = Transform3D(-3.92875e-08, 0.898794, -0.438371, -1, -4.37114e-08, 0, -1.91618e-08, 0.438371, 0.898794, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R6_3" type="RayCast3D" parent="raycasts/C1" index="54"]
+transform = Transform3D(-3.91188e-08, 0.894934, -0.446198, -1, -4.37114e-08, 0, -1.95039e-08, 0.446198, 0.894934, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R6_4" type="RayCast3D" parent="raycasts/C1" index="55"]
+transform = Transform3D(-3.89471e-08, 0.891006, -0.45399, -1, -4.37114e-08, 0, -1.98446e-08, 0.45399, 0.891006, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R6_5" type="RayCast3D" parent="raycasts/C1" index="56"]
+transform = Transform3D(-3.87725e-08, 0.88701, -0.461748, -1, -4.37114e-08, 0, -2.01837e-08, 0.461748, 0.88701, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R6_6" type="RayCast3D" parent="raycasts/C1" index="57"]
+transform = Transform3D(-3.85949e-08, 0.882947, -0.469471, -1, -4.37114e-08, 0, -2.05213e-08, 0.469471, 0.882947, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R6_7" type="RayCast3D" parent="raycasts/C1" index="58"]
+transform = Transform3D(-3.84143e-08, 0.878817, -0.477159, -1, -4.37114e-08, 0, -2.08573e-08, 0.477159, 0.878817, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R6_8" type="RayCast3D" parent="raycasts/C1" index="59"]
+transform = Transform3D(-3.82308e-08, 0.874619, -0.484809, -1, -4.37114e-08, 0, -2.11917e-08, 0.484809, 0.874619, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D_R6_9" type="RayCast3D" parent="raycasts/C1" index="60"]
+transform = Transform3D(-3.80445e-08, 0.870355, -0.492423, -1, -4.37114e-08, 0, -2.15245e-08, 0.492423, 0.870355, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/C1" index="61"]
 transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/C1" index="8"]
+[node name="RayCast3D6_L1_1" type="RayCast3D" parent="raycasts/C1" index="62"]
+transform = Transform3D(-4.37097e-08, 0.999962, 0.00872654, -1, -4.37114e-08, 0, 3.81449e-10, -0.00872654, 0.999962, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L1_2" type="RayCast3D" parent="raycasts/C1" index="63"]
+transform = Transform3D(-4.37047e-08, 0.999848, 0.0174524, -1, -4.37114e-08, 0, 7.62869e-10, -0.0174524, 0.999848, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L1_3" type="RayCast3D" parent="raycasts/C1" index="64"]
+transform = Transform3D(-4.36964e-08, 0.999658, 0.026177, -1, -4.37114e-08, 0, 1.14423e-09, -0.026177, 0.999658, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L1_4" type="RayCast3D" parent="raycasts/C1" index="65"]
+transform = Transform3D(-4.36848e-08, 0.999391, 0.0348995, -1, -4.37114e-08, 0, 1.52551e-09, -0.0348995, 0.999391, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L1_5" type="RayCast3D" parent="raycasts/C1" index="66"]
+transform = Transform3D(-4.36698e-08, 0.999048, 0.0436194, -1, -4.37114e-08, 0, 1.90666e-09, -0.0436194, 0.999048, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L1_6" type="RayCast3D" parent="raycasts/C1" index="67"]
+transform = Transform3D(-4.36515e-08, 0.99863, 0.052336, -1, -4.37114e-08, 0, 2.28768e-09, -0.052336, 0.99863, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L1_7" type="RayCast3D" parent="raycasts/C1" index="68"]
+transform = Transform3D(-4.36299e-08, 0.998135, 0.0610486, -1, -4.37114e-08, 0, 2.66852e-09, -0.0610486, 0.998135, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L1_8" type="RayCast3D" parent="raycasts/C1" index="69"]
+transform = Transform3D(-4.36049e-08, 0.997564, 0.0697565, -1, -4.37114e-08, 0, 3.04915e-09, -0.0697565, 0.997564, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L1_9" type="RayCast3D" parent="raycasts/C1" index="70"]
+transform = Transform3D(-4.35766e-08, 0.996918, 0.0784591, -1, -4.37114e-08, 0, 3.42956e-09, -0.0784591, 0.996918, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/C1" index="71"]
 transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/C1" index="9"]
+[node name="RayCast3D6_L2_1" type="RayCast3D" parent="raycasts/C1" index="72"]
+transform = Transform3D(-4.35101e-08, 0.995396, 0.0958458, -1, -4.37114e-08, 0, 4.18955e-09, -0.0958458, 0.995396, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L2_2" type="RayCast3D" parent="raycasts/C1" index="73"]
+transform = Transform3D(-4.34719e-08, 0.994522, 0.104528, -1, -4.37114e-08, 0, 4.56908e-09, -0.104528, 0.994522, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L2_3" type="RayCast3D" parent="raycasts/C1" index="74"]
+transform = Transform3D(-4.34304e-08, 0.993572, 0.113203, -1, -4.37114e-08, 0, 4.94827e-09, -0.113203, 0.993572, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L2_4" type="RayCast3D" parent="raycasts/C1" index="75"]
+transform = Transform3D(-4.33856e-08, 0.992546, 0.121869, -1, -4.37114e-08, 0, 5.32708e-09, -0.121869, 0.992546, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L2_5" type="RayCast3D" parent="raycasts/C1" index="76"]
+transform = Transform3D(-4.33374e-08, 0.991445, 0.130526, -1, -4.37114e-08, 0, 5.70548e-09, -0.130526, 0.991445, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L2_6" type="RayCast3D" parent="raycasts/C1" index="77"]
+transform = Transform3D(-4.3286e-08, 0.990268, 0.139173, -1, -4.37114e-08, 0, 6.08345e-09, -0.139173, 0.990268, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L2_7" type="RayCast3D" parent="raycasts/C1" index="78"]
+transform = Transform3D(-4.32313e-08, 0.989016, 0.147809, -1, -4.37114e-08, 0, 6.46095e-09, -0.147809, 0.989016, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L2_8" type="RayCast3D" parent="raycasts/C1" index="79"]
+transform = Transform3D(-4.31732e-08, 0.987689, 0.156435, -1, -4.37114e-08, 0, 6.83797e-09, -0.156435, 0.987689, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L2_9" type="RayCast3D" parent="raycasts/C1" index="80"]
+transform = Transform3D(-4.31119e-08, 0.986286, 0.165048, -1, -4.37114e-08, 0, 7.21446e-09, -0.165048, 0.986286, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/C1" index="81"]
 transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/C1" index="10"]
+[node name="RayCast3D6_L3_1" type="RayCast3D" parent="raycasts/C1" index="82"]
+transform = Transform3D(-4.29794e-08, 0.983255, 0.182236, -1, -4.37114e-08, 0, 7.96577e-09, -0.182236, 0.983255, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L3_2" type="RayCast3D" parent="raycasts/C1" index="83"]
+transform = Transform3D(-4.29083e-08, 0.981627, 0.190809, -1, -4.37114e-08, 0, 8.34053e-09, -0.190809, 0.981627, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L3_3" type="RayCast3D" parent="raycasts/C1" index="84"]
+transform = Transform3D(-4.28339e-08, 0.979925, 0.199368, -1, -4.37114e-08, 0, 8.71465e-09, -0.199368, 0.979925, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L3_4" type="RayCast3D" parent="raycasts/C1" index="85"]
+transform = Transform3D(-4.27562e-08, 0.978148, 0.207912, -1, -4.37114e-08, 0, 9.08811e-09, -0.207912, 0.978148, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L3_5" type="RayCast3D" parent="raycasts/C1" index="86"]
+transform = Transform3D(-4.26753e-08, 0.976296, 0.21644, -1, -4.37114e-08, 0, 9.46088e-09, -0.21644, 0.976296, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L3_6" type="RayCast3D" parent="raycasts/C1" index="87"]
+transform = Transform3D(-4.25911e-08, 0.97437, 0.224951, -1, -4.37114e-08, 0, 9.83292e-09, -0.224951, 0.97437, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L3_7" type="RayCast3D" parent="raycasts/C1" index="88"]
+transform = Transform3D(-4.25036e-08, 0.97237, 0.233445, -1, -4.37114e-08, 0, 1.02042e-08, -0.233445, 0.97237, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L3_8" type="RayCast3D" parent="raycasts/C1" index="89"]
+transform = Transform3D(-4.2413e-08, 0.970296, 0.241922, -1, -4.37114e-08, 0, 1.05747e-08, -0.241922, 0.970296, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L3_9" type="RayCast3D" parent="raycasts/C1" index="90"]
+transform = Transform3D(-4.23191e-08, 0.968148, 0.25038, -1, -4.37114e-08, 0, 1.09445e-08, -0.25038, 0.968148, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/C1" index="91"]
 transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/C1" index="11"]
+[node name="RayCast3D6_L4_1" type="RayCast3D" parent="raycasts/C1" index="92"]
+transform = Transform3D(-4.21216e-08, 0.96363, 0.267238, -1, -4.37114e-08, 0, 1.16814e-08, -0.267238, 0.96363, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L4_2" type="RayCast3D" parent="raycasts/C1" index="93"]
+transform = Transform3D(-4.20181e-08, 0.961261, 0.275637, -1, -4.37114e-08, 0, 1.20485e-08, -0.275637, 0.961261, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L4_3" type="RayCast3D" parent="raycasts/C1" index="94"]
+transform = Transform3D(-4.19113e-08, 0.958819, 0.284015, -1, -4.37114e-08, 0, 1.24147e-08, -0.284015, 0.958819, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L4_4" type="RayCast3D" parent="raycasts/C1" index="95"]
+transform = Transform3D(-4.18014e-08, 0.956304, 0.292372, -1, -4.37114e-08, 0, 1.278e-08, -0.292372, 0.956304, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L4_5" type="RayCast3D" parent="raycasts/C1" index="96"]
+transform = Transform3D(-4.16883e-08, 0.953716, 0.300706, -1, -4.37114e-08, 0, 1.31443e-08, -0.300706, 0.953716, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L4_6" type="RayCast3D" parent="raycasts/C1" index="97"]
+transform = Transform3D(-4.1572e-08, 0.951056, 0.309017, -1, -4.37114e-08, 0, 1.35076e-08, -0.309017, 0.951056, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L4_7" type="RayCast3D" parent="raycasts/C1" index="98"]
+transform = Transform3D(-4.14525e-08, 0.948323, 0.317304, -1, -4.37114e-08, 0, 1.38698e-08, -0.317304, 0.948323, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L4_8" type="RayCast3D" parent="raycasts/C1" index="99"]
+transform = Transform3D(-4.13299e-08, 0.945518, 0.325568, -1, -4.37114e-08, 0, 1.4231e-08, -0.325568, 0.945518, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L4_9" type="RayCast3D" parent="raycasts/C1" index="100"]
+transform = Transform3D(-4.12042e-08, 0.942641, 0.333807, -1, -4.37114e-08, 0, 1.45912e-08, -0.333807, 0.942641, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/C1" index="101"]
 transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/C1" index="12"]
+[node name="RayCast3D6_L5_1" type="RayCast3D" parent="raycasts/C1" index="102"]
+transform = Transform3D(-4.09432e-08, 0.936671, 0.350207, -1, -4.37114e-08, 0, 1.53081e-08, -0.350207, 0.936671, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L5_2" type="RayCast3D" parent="raycasts/C1" index="103"]
+transform = Transform3D(-4.08081e-08, 0.93358, 0.358368, -1, -4.37114e-08, 0, 1.56648e-08, -0.358368, 0.93358, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L5_3" type="RayCast3D" parent="raycasts/C1" index="104"]
+transform = Transform3D(-4.06698e-08, 0.930417, 0.366501, -1, -4.37114e-08, 0, 1.60203e-08, -0.366501, 0.930417, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L5_4" type="RayCast3D" parent="raycasts/C1" index="105"]
+transform = Transform3D(-4.05285e-08, 0.927183, 0.374606, -1, -4.37114e-08, 0, 1.63746e-08, -0.374606, 0.927183, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L5_5" type="RayCast3D" parent="raycasts/C1" index="106"]
+transform = Transform3D(-4.03841e-08, 0.923879, 0.382683, -1, -4.37114e-08, 0, 1.67276e-08, -0.382683, 0.923879, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L5_6" type="RayCast3D" parent="raycasts/C1" index="107"]
+transform = Transform3D(-4.02365e-08, 0.920504, 0.390731, -1, -4.37114e-08, 0, 1.70794e-08, -0.390731, 0.920504, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L5_7" type="RayCast3D" parent="raycasts/C1" index="108"]
+transform = Transform3D(-4.0086e-08, 0.917059, 0.398749, -1, -4.37114e-08, 0, 1.74299e-08, -0.398749, 0.917059, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L5_8" type="RayCast3D" parent="raycasts/C1" index="109"]
+transform = Transform3D(-3.99323e-08, 0.913545, 0.406736, -1, -4.37114e-08, 0, 1.7779e-08, -0.406736, 0.913545, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L5_9" type="RayCast3D" parent="raycasts/C1" index="110"]
+transform = Transform3D(-3.97757e-08, 0.909961, 0.414693, -1, -4.37114e-08, 0, 1.81268e-08, -0.414693, 0.909961, 0, 0, 0)
+enabled = false
+target_position = Vector3(0, -1000, 0)
+collision_mask = 17
+debug_shape_thickness = 4
+
+[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/C1" index="111"]
 transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="L1" type="Node3D" parent="raycasts" index="8"]
-transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L1" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L1" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L1" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L1" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L1" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L1" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L1" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L1" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L1" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L1" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L1" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L1" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L1" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L2" type="Node3D" parent="raycasts" index="9"]
-transform = Transform3D(0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L2" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L2" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L2" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L2" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L2" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L2" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L2" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L2" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L2" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L2" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L2" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L2" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L2" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L3" type="Node3D" parent="raycasts" index="10"]
-transform = Transform3D(0.991445, -0.130526, 0, 0.130526, 0.991445, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L3" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L3" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L3" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L3" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L3" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L3" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L3" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L3" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L3" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L3" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L3" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L3" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L3" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L4" type="Node3D" parent="raycasts" index="11"]
-transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L4" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L4" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L4" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L4" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L4" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L4" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L4" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L4" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L4" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L4" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L4" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L4" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L4" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L5" type="Node3D" parent="raycasts" index="12"]
-transform = Transform3D(0.976296, -0.21644, 0, 0.21644, 0.976296, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L5" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L5" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L5" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L5" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L5" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L5" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L5" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L5" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L5" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L5" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L5" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L5" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L5" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L6" type="Node3D" parent="raycasts" index="13"]
-transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L6" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L6" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L6" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L6" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L6" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L6" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L6" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L6" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L6" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L6" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L6" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L6" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L6" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L7" type="Node3D" parent="raycasts" index="14"]
-transform = Transform3D(0.953717, -0.300706, 0, 0.300706, 0.953717, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L7" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L7" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L7" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L7" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L7" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L7" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L7" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L7" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L7" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L7" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L7" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L7" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L7" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U8" type="Node3D" parent="raycasts" index="15"]
-transform = Transform3D(0.998097, 0.0435779, -0.0436194, -0.0436194, 0.999048, 0, 0.0435779, 0.00190265, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U8" index="0"]
-transform = Transform3D(-4.84288e-08, 1, -1.42109e-14, -1, -4.84288e-08, 0, -4.44089e-16, 2.13163e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U8" index="1"]
-transform = Transform3D(-4.47035e-08, 0.996195, -0.0871557, -1, -4.47035e-08, 4.65661e-10, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U8" index="2"]
-transform = Transform3D(-4.09782e-08, 0.984808, -0.173648, -1, -4.84288e-08, -9.31323e-10, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U8" index="3"]
-transform = Transform3D(-4.09782e-08, 0.965926, -0.258819, -1, -5.21541e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U8" index="4"]
-transform = Transform3D(-4.09782e-08, 0.939692, -0.34202, -1, -4.47035e-08, 2.79397e-09, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U8" index="5"]
-transform = Transform3D(-4.09782e-08, 0.906308, -0.422618, -1, -5.21541e-08, 3.72529e-09, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U8" index="6"]
-transform = Transform3D(-3.72529e-08, 0.866025, -0.5, -1, -4.47035e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U8" index="7"]
-transform = Transform3D(-4.47035e-08, 0.996195, 0.0871557, -1, -4.47035e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U8" index="8"]
-transform = Transform3D(-4.09782e-08, 0.984808, 0.173648, -1, -4.84288e-08, -4.65661e-10, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U8" index="9"]
-transform = Transform3D(-4.09782e-08, 0.965926, 0.258819, -1, -5.21541e-08, -1.86265e-09, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U8" index="10"]
-transform = Transform3D(-4.09782e-08, 0.939692, 0.34202, -1, -4.47035e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U8" index="11"]
-transform = Transform3D(-4.09782e-08, 0.906307, 0.422618, -1, -4.84288e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U8" index="12"]
-transform = Transform3D(-3.72529e-08, 0.866025, 0.5, -1, -4.84288e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U9" type="Node3D" parent="raycasts" index="16"]
-transform = Transform3D(0.995247, 0.0870728, -0.0436194, -0.0871557, 0.996195, 0, 0.0434534, 0.00380168, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U9" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U9" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U9" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U9" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U9" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U9" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U9" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U9" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U9" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U9" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U9" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U9" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U9" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U10" type="Node3D" parent="raycasts" index="17"]
-transform = Transform3D(0.990501, 0.130402, -0.0436194, -0.130526, 0.991445, 0, 0.0432462, 0.00569347, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U10" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U10" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U10" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U10" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U10" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U10" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U10" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U10" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U10" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U10" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U10" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U10" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U10" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U11" type="Node3D" parent="raycasts" index="18"]
-transform = Transform3D(0.98387, 0.173483, -0.0436194, -0.173648, 0.984808, 0, 0.0429567, 0.00757443, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U11" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U11" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U11" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U11" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U11" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U11" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U11" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U11" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U11" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U11" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U11" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U11" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U11" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U12" type="Node3D" parent="raycasts" index="19"]
-transform = Transform3D(0.975367, 0.216234, -0.0436194, -0.21644, 0.976296, 0, 0.0425854, 0.00944096, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U12" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U12" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U12" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U12" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U12" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U12" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U12" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U12" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U12" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U12" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U12" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U12" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U12" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U13" type="Node3D" parent="raycasts" index="20"]
-transform = Transform3D(0.965006, 0.258573, -0.0436194, -0.258819, 0.965926, 0, 0.0421331, 0.0112895, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U13" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U13" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U13" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U13" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U13" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U13" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U13" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U13" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U13" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U13" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U13" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U13" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U13" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="U14" type="Node3D" parent="raycasts" index="21"]
-transform = Transform3D(0.952809, 0.30042, -0.0436194, -0.300706, 0.953717, 0, 0.0416005, 0.0131166, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/U14" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/U14" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/U14" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/U14" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/U14" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/U14" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/U14" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/U14" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/U14" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/U14" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/U14" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/U14" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/U14" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="C2" type="Node3D" parent="raycasts" index="22"]
-transform = Transform3D(0.999048, 0, -0.0436194, 0, 1, 0, 0.0436194, 0, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/C2" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/C2" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/C2" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/C2" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/C2" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/C2" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/C2" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/C2" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/C2" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/C2" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/C2" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/C2" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/C2" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L8" type="Node3D" parent="raycasts" index="23"]
-transform = Transform3D(0.998097, -0.0435779, -0.0436194, 0.0436194, 0.999048, 0, 0.0435779, -0.00190265, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L8" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L8" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L8" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L8" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L8" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L8" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L8" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L8" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L8" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L8" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L8" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L8" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L8" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L9" type="Node3D" parent="raycasts" index="24"]
-transform = Transform3D(0.995247, -0.0870728, -0.0436194, 0.0871557, 0.996195, 0, 0.0434534, -0.00380168, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L9" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L9" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L9" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L9" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L9" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L9" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L9" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L9" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L9" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L9" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L9" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L9" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L9" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L10" type="Node3D" parent="raycasts" index="25"]
-transform = Transform3D(0.990501, -0.130402, -0.0436194, 0.130526, 0.991445, 0, 0.0432462, -0.00569347, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L10" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L10" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L10" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L10" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L10" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L10" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L10" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L10" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L10" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L10" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L10" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L10" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L10" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L11" type="Node3D" parent="raycasts" index="26"]
-transform = Transform3D(0.98387, -0.173483, -0.0436194, 0.173648, 0.984808, 0, 0.0429567, -0.00757443, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L11" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L11" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L11" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L11" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L11" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L11" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L11" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L11" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L11" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L11" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L11" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L11" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L11" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L12" type="Node3D" parent="raycasts" index="27"]
-transform = Transform3D(0.975367, -0.216234, -0.0436194, 0.21644, 0.976296, 0, 0.0425854, -0.00944096, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L12" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L12" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L12" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L12" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L12" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L12" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
+[node name="RayCast3D6_L6_1" type="RayCast3D" parent="raycasts/C1" index="112"]
+transform = Transform3D(-3.94533e-08, 0.902585, 0.430511, -1, -4.37114e-08, 0, 1.88182e-08, -0.430511, 0.902585, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L12" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
+[node name="RayCast3D6_L6_2" type="RayCast3D" parent="raycasts/C1" index="113"]
+transform = Transform3D(-3.92875e-08, 0.898794, 0.438371, -1, -4.37114e-08, 0, 1.91618e-08, -0.438371, 0.898794, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L12" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
+[node name="RayCast3D6_L6_3" type="RayCast3D" parent="raycasts/C1" index="114"]
+transform = Transform3D(-3.91188e-08, 0.894934, 0.446198, -1, -4.37114e-08, 0, 1.95039e-08, -0.446198, 0.894934, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L12" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
+[node name="RayCast3D6_L6_4" type="RayCast3D" parent="raycasts/C1" index="115"]
+transform = Transform3D(-3.89471e-08, 0.891006, 0.45399, -1, -4.37114e-08, 0, 1.98446e-08, -0.45399, 0.891006, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L12" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
+[node name="RayCast3D6_L6_5" type="RayCast3D" parent="raycasts/C1" index="116"]
+transform = Transform3D(-3.87725e-08, 0.88701, 0.461748, -1, -4.37114e-08, 0, 2.01837e-08, -0.461748, 0.88701, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L12" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
+[node name="RayCast3D6_L6_6" type="RayCast3D" parent="raycasts/C1" index="117"]
+transform = Transform3D(-3.85949e-08, 0.882947, 0.469471, -1, -4.37114e-08, 0, 2.05213e-08, -0.469471, 0.882947, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L12" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
+[node name="RayCast3D6_L6_7" type="RayCast3D" parent="raycasts/C1" index="118"]
+transform = Transform3D(-3.84143e-08, 0.878817, 0.477159, -1, -4.37114e-08, 0, 2.08573e-08, -0.477159, 0.878817, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L12" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
+[node name="RayCast3D6_L6_8" type="RayCast3D" parent="raycasts/C1" index="119"]
+transform = Transform3D(-3.82308e-08, 0.874619, 0.484809, -1, -4.37114e-08, 0, 2.11917e-08, -0.484809, 0.874619, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
 
-[node name="L13" type="Node3D" parent="raycasts" index="28"]
-transform = Transform3D(0.965006, -0.258573, -0.0436194, 0.258819, 0.965926, 0, 0.0421331, -0.0112895, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L13" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L13" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L13" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L13" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L13" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L13" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L13" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L13" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L13" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L13" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L13" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L13" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L13" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="L14" type="Node3D" parent="raycasts" index="29"]
-transform = Transform3D(0.952809, -0.30042, -0.0436194, 0.300706, 0.953717, 0, 0.0416005, -0.0131166, 0.999048, 0, 0, 0)
-
-[node name="RayCast3D_C" type="RayCast3D" parent="raycasts/L14" index="0"]
-transform = Transform3D(-4.37114e-08, 1, -1.77636e-14, -1, -4.37114e-08, 0, -6.35275e-22, 1.77636e-14, 1, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R1" type="RayCast3D" parent="raycasts/L14" index="1"]
-transform = Transform3D(-4.35451e-08, 0.996195, -0.0871557, -1, -4.37114e-08, 0, -3.8097e-09, 0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R2" type="RayCast3D" parent="raycasts/L14" index="2"]
-transform = Transform3D(-4.30473e-08, 0.984808, -0.173648, -1, -4.37114e-08, 0, -7.5904e-09, 0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R3" type="RayCast3D" parent="raycasts/L14" index="3"]
-transform = Transform3D(-4.2222e-08, 0.965926, -0.258819, -1, -4.37114e-08, 0, -1.13133e-08, 0.258819, 0.965926, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R4" type="RayCast3D" parent="raycasts/L14" index="4"]
-transform = Transform3D(-4.10753e-08, 0.939692, -0.34202, -1, -4.37114e-08, 0, -1.49502e-08, 0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R5" type="RayCast3D" parent="raycasts/L14" index="5"]
-transform = Transform3D(-3.9616e-08, 0.906308, -0.422618, -1, -4.37114e-08, 0, -1.84732e-08, 0.422618, 0.906308, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_R6" type="RayCast3D" parent="raycasts/L14" index="6"]
-transform = Transform3D(-3.78552e-08, 0.866025, -0.5, -1, -4.37114e-08, 0, -2.18557e-08, 0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L1" type="RayCast3D" parent="raycasts/L14" index="7"]
-transform = Transform3D(-4.35451e-08, 0.996195, 0.0871557, -1, -4.37114e-08, 0, 3.8097e-09, -0.0871557, 0.996195, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L2" type="RayCast3D" parent="raycasts/L14" index="8"]
-transform = Transform3D(-4.30473e-08, 0.984808, 0.173648, -1, -4.37114e-08, 0, 7.5904e-09, -0.173648, 0.984808, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L3" type="RayCast3D" parent="raycasts/L14" index="9"]
-transform = Transform3D(-4.2222e-08, 0.965926, 0.258819, -1, -4.37114e-08, 0, 1.13133e-08, -0.258819, 0.965926, 0, 0, 0)
+[node name="RayCast3D6_L6_9" type="RayCast3D" parent="raycasts/C1" index="120"]
+transform = Transform3D(-3.80445e-08, 0.870355, 0.492423, -1, -4.37114e-08, 0, 2.15245e-08, -0.492423, 0.870355, 0, 0, 0)
 enabled = false
 target_position = Vector3(0, -1000, 0)
 collision_mask = 17
 debug_shape_thickness = 4
-
-[node name="RayCast3D6_L4" type="RayCast3D" parent="raycasts/L14" index="10"]
-transform = Transform3D(-4.10753e-08, 0.939692, 0.34202, -1, -4.37114e-08, 0, 1.49502e-08, -0.34202, 0.939692, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L5" type="RayCast3D" parent="raycasts/L14" index="11"]
-transform = Transform3D(-3.9616e-08, 0.906307, 0.422618, -1, -4.37114e-08, 0, 1.84732e-08, -0.422618, 0.906307, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D6_L6" type="RayCast3D" parent="raycasts/L14" index="12"]
-transform = Transform3D(-3.78552e-08, 0.866025, 0.5, -1, -4.37114e-08, 0, 2.18557e-08, -0.5, 0.866025, 0, 0, 0)
-enabled = false
-target_position = Vector3(0, -1000, 0)
-collision_mask = 17
-debug_shape_thickness = 4
-
-[node name="RayCast3D_main" type="RayCast3D" parent="." index="15"]
-collision_mask = 17
 
 [connection signal="timeout" from="timers/cam_preview_image_cooldown" to="." method="_on_cam_preview_image_cooldown_timeout"]

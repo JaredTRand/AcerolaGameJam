@@ -125,8 +125,8 @@ func save_img(cam_img:Image):
 		images_array[images_array.size()-1].next_img = new_ab_img
 		new_ab_img.prev_img = images_array[images_array.size()-1]
 	
-	#var aberrations_pictured:Array = raycast_camera(5)
-	var aberrations_pictured:Array = raycast_camera2([-17.5,17.5], [30,-30], 1.0, 5)
+	var aberrations_pictured:Array = raycast_camera(3)
+	#var aberrations_pictured:Array = raycast_camera2([-17.5,17.5], [30,-30], 1.0, 5)
 	if aberrations_pictured:
 		for abb in aberrations_pictured:
 			new_ab_img.aberrations_pictured.append(abb)
@@ -172,9 +172,9 @@ func raycast_camera2(ray_angle_z:Array, ray_angle_y:Array, interval:float, amoun
 			break # if it hits here, it's at the bottom of the view
 
 		raycast_main.rotate_z(cur_angle_z)
-		while cur_angle_y <= ray_angle_y[1]:
+		while cur_angle_y >= ray_angle_y[1]:
 			cur_angle_y = cur_angle_y + interval
-			if cur_angle_y > ray_angle_y[1]:
+			if cur_angle_y - abs(ray_angle_y[1]):
 				continue
 
 			#same ray, just rotated
