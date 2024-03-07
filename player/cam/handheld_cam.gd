@@ -40,7 +40,7 @@ func _physics_process(delta):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	cam_follow_movement.global_transform = camera_loc.global_transform # make handheld_viewport_cam follow with cam mesh
+	cam_follow_movement.global_transform = global_transform # make handheld_viewport_cam follow with cam mesh
 	
 	#bring camera close
 	if Input.is_action_pressed("secondary_action"):
@@ -144,6 +144,9 @@ func raycast_camera(amount:int):
 			ray.enabled = true
 			ray.force_raycast_update()
 			var collision = ray.get_collider()
+			
+			if collision == null:
+				continue
 			
 			if collision.is_in_group("Aberration"):
 				all_collisions.append(collision)
