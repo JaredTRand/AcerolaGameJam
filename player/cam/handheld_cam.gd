@@ -51,7 +51,7 @@ func _process(delta):
 		
 		if(current_image != null):
 			set_cam_screen_ab(current_image)
-		if(AllImages.images.size() > 0):
+		if(PlayerGlobals.all_images.size() > 0):
 			if Input.is_action_just_pressed("cam_prev_image"):
 				if(current_image.prev_img != null):
 					play_sound(load("res://player/cam/sounds/camera_next_image.wav"), [-10, -7], [1,1], true)
@@ -113,9 +113,9 @@ func save_img(cam_img:Image):
 	new_ab_img.ab_image = cam_img
 	
 	# Set next image var for previous image, and prev image var for new img
-	if(AllImages.images.size() > 0):
-		AllImages.images[AllImages.images.size()-1].next_img = new_ab_img
-		new_ab_img.prev_img = AllImages.images[AllImages.images.size()-1]
+	if(PlayerGlobals.all_images.size() > 0):
+		PlayerGlobals.all_images[PlayerGlobals.all_images.size()-1].next_img = new_ab_img
+		new_ab_img.prev_img = PlayerGlobals.all_images[PlayerGlobals.all_images.size()-1]
 	
 	var aberrations_pictured:Array = raycast_camera(5)
 	#var aberrations_pictured:Array = raycast_camera2([-17.5,17.5], [30,-30], 1.0, 5)
@@ -124,7 +124,7 @@ func save_img(cam_img:Image):
 			new_ab_img.aberrations_pictured.append(abb)
 	
 	current_image = new_ab_img
-	AllImages.images.push_back(new_ab_img)
+	PlayerGlobals.all_images.push_back(new_ab_img)
 	set_cam_screen_ab(new_ab_img)
 	
 func raycast_camera(amount:int):
@@ -152,6 +152,7 @@ func raycast_camera(amount:int):
 			return_collisions.append(col)
 	return return_collisions
 
+#region Stuff for later
 #func raycast_camera3():
 	#var all_aberrations = get_tree().get_nodes_in_group("Aberration")
 	#for aberration in all_aberrations:
@@ -222,6 +223,7 @@ func raycast_camera(amount:int):
 		#if all_collisions.count(col) > amount:
 			#return_collisions.append(col)
 	#return return_collisions
+#endregion
 
 	
 func set_cam_screen_ab(cam_img:Aberration_Image):
@@ -240,8 +242,8 @@ func set_cam_screen(cam_img:Image):
 	cam_preview_image_cooldown.start()
 
 func _on_cam_preview_image_cooldown_timeout():
-	if(AllImages.images.size() > 0):
-		current_image = AllImages.images[AllImages.images.size()-1]
+	if(PlayerGlobals.all_images.size() > 0):
+		current_image = PlayerGlobals.all_images[PlayerGlobals.all_images.size()-1]
 	set_cam_screen(black_screen)
 	starred.visible = false
 
@@ -254,7 +256,8 @@ func play_sound(sound, max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:boo
 		cam_sound_player.play()
 		
 func delete_image(image_to_del:Aberration_Image):
-		if image_to_del == null: return
+		if image_to_del == null or image_to_del.starred: return
+		play_sound(load("res://player/cam/sounds/img_delete.wav"), [-15.0, -13.5], [-5, -6], true)
 		
 		var temp_img:Aberration_Image
 		var prev_img:Aberration_Image = image_to_del.prev_img
@@ -271,7 +274,7 @@ func delete_image(image_to_del:Aberration_Image):
 			prev_img.next_img = null
 			temp_img = prev_img
 			
-		AllImages.images.remove_at(AllImages.images.find(image_to_del))
+		PlayerGlobals.all_images.remove_at(PlayerGlobals.all_images.find(image_to_del))
 			
 		if(temp_img != null):
 			current_image = temp_img

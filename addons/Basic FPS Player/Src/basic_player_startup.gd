@@ -4,6 +4,8 @@ extends CharacterBody3D
 var BasicFPSPlayerScene : PackedScene = preload("basic_player_head.tscn")
 var addedHead = false
 
+var useCast:RayCast3D = $Head/useCast
+
 func _enter_tree():
 	
 	if find_child("Head"):
@@ -104,6 +106,10 @@ func _process(delta):
 	if !UPDATE_PLAYER_ON_PHYS_STEP:
 		move_player(delta)
 		rotate_player(delta)
+		
+	if Input.is_action_just_pressed("cam_next_image"):
+		print_debug("hi")
+	
 
 func _input(event):
 	if Engine.is_editor_hint():
@@ -112,6 +118,7 @@ func _input(event):
 	# Listen for mouse movement and check if mouse is captured
 	if event is InputEventMouseMotion && Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		set_rotation_target(event.relative)
+		
 
 func set_rotation_target(mouse_motion : Vector2):
 	# Add player target to the mouse -x input

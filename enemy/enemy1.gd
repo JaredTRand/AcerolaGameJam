@@ -13,3 +13,8 @@ func _physics_process(delta):
 	
 func update_target_loc(target_loc):
 	nav_agent.target_position = target_loc
+
+
+func _on_enemy_hurt_area_body_entered(body):
+	if body.is_in_group("Player"):
+		PlayerGlobals.player_death_timer.start()

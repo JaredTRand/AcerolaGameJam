@@ -15,7 +15,7 @@ func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		print_debug("entered")
 		
-		var start_time = Time.get_unix_time_from_datetime_dict(SceneTimer.start_time)
+		var start_time = Time.get_unix_time_from_datetime_dict(PlayerGlobals.start_time)
 		var end_time   = Time.get_unix_time_from_datetime_dict(Time.get_datetime_dict_from_system())
 		var total_time = Time.get_datetime_dict_from_unix_time (end_time - start_time)
 		
@@ -25,7 +25,7 @@ func _on_body_entered(body):
 		
 		var all_aberrations = get_tree().get_nodes_in_group("Aberration")
 		
-		for image:Aberration_Image in AllImages.images:
+		for image:Aberration_Image in PlayerGlobals.all_images:
 			# only submit starred pics
 			if not image.starred: continue
 			

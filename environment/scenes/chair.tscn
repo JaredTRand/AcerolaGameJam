@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdywny5d7pidv"]
+
+[ext_resource type="PackedScene" uid="uid://dqvc7l58tc62n" path="res://environment/models/chair_diining_wood.glb" id="1_y5g4o"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="chair_diining_wood" parent="." instance=ExtResource("1_y5g4o")]

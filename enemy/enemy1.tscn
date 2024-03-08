@@ -17,7 +17,7 @@ material = ExtResource("2_evxyf")
 radius = 1.65267
 
 [node name="Enemy" type="CharacterBody3D" groups=["Aberration", "enemies"]]
-collision_layer = 0
+collision_layer = 16
 script = ExtResource("1_exy1n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -71,3 +71,5 @@ transform = Transform3D(8.30709, 0, 0, 0, 8.30709, 0, 0, 0, 8.30709, 0, -1, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="areas/enemy_danger_near"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("SphereShape3D_jvxf6")
+
+[connection signal="body_entered" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_entered"]

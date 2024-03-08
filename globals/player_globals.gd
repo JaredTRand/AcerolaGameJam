@@ -1,5 +1,11 @@
 extends Node
+
+var all_images:Array
+
 var start_time
+
+# dictates how long a player must 
+var player_death_timer = Timer.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
