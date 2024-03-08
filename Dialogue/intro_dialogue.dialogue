@@ -1,13 +1,48 @@
-~ this_is_a_node_title
 [speed=0.1]
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
+~ this_is_a_node_title
+
+Boss: Hello.
+Boss: So, you’re my new contract worker? 
+Boss: Alright.
+Boss: Do you know what this job is about?
+- No
+#	You: No, I don't. 
+- Yes
+	You: [[I know the deal.|I know what to do.|So where am I going?]]
+	=> skip
+	
+Boss: I’m not a man who likes to waste time, so I’ll get right down to it.
+Boss: For that last three years, certain unknown entities have been appearing in various locations around the world. 
+Boss: We call them Aberrations.
+Boss: Our company is in the business of tracking and documenting these entities. 
+Boss: They are unpredictable and they are fickle. 
+Boss: At a moment's notice, they can appear anywhere in the world, and then vanish completely a half hour later.
+Boss: When we detect them, we need to act fast.
+Boss: Are you following so far?
+- No
+	Boss: You'll pick it up.
+- Yes
+- I
+	You: [[I know the deal.|I know what to do.|So where am I going?]]
+	=> skip
+
+Boss: These things tend to appear in groups, typically contained within a building or some other structure. 
+Boss: We have the capability to locate groupings of these entities the moment they appear. 
+Boss: We know how many are present in a location, but not what they appear as. 
+Boss: This is where you come in.
+
+
+Boss: Here are some choices.
 - First one
-	Nathan: You picked the first one.
+	Boss: You picked the first one.
 - Second one
-	Nathan: You picked the second one.
+	Boss: You picked the second one.
 - Start again => this_is_a_node_title
 - End the conversation => END
-Nathan: For more information see the online documentation.
+Boss: For more information see the online documentation.
 
+=> END
+
+~ skip
+Boss: Let's get to it then.
 => END

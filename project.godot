@@ -22,6 +22,10 @@ SceneTimer="res://globals/scene_timer.gd"
 PlayerGlobals="*res://globals/player_globals.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
+[dialogue_manager]
+
+general/balloon_path="res://addons/dialogue_manager/test_balloon/example_balloon.tscn"
+
 [display]
 
 window/use_occlusion_culling=true

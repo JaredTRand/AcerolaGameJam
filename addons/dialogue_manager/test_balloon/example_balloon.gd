@@ -11,7 +11,6 @@ const SKIP_ACTION = &"ui_cancel"
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
-@onready var talk_sound: AudioStreamPlayer = $TalkSound
 
 ## The dialogue resource
 var resource: DialogueResource
@@ -137,16 +136,3 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
-
-
-func _on_dialogue_label_spoke(letter, letter_index, speed):
-	#talk_sound.play()
-	if dialogue_line.character != "You":
-		play_sound([1, 2], [1.5, 2])
-		
-func play_sound(max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:bool = false):
-	if skip_wait_for_done or !talk_sound.is_playing(): 
-		 #just to give the sound a litte variety
-		talk_sound.volume_db = RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1])
-		talk_sound.pitch_scale = RandomNumberGenerator.new().randf_range(pitch_rng[0], pitch_rng[1])
-		talk_sound.play()
