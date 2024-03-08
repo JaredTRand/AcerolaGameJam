@@ -104,7 +104,7 @@ func take_pic():
 	
 	play_sound(load("res://player/cam/sounds/camera-shutter.wav"), [-3.0, -1.5], [.90, 1.1])
 	
-	await get_tree().create_timer(.05).timeout
+	#await get_tree().create_timer(.05).timeout
 	
 
 	

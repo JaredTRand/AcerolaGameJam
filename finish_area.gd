@@ -51,8 +51,11 @@ func _on_body_entered(body):
 		var time_bonus = 1000 - ( (total_time.get("minute") * 60) + total_time.get("second") )
 		
 		var total_score = abs_img_score - miss_abs_penalty - blank_img_penalty
-		var total_score_w_bonus = total_score + time_bonus
+		
 		
 		print_debug("you got $" + str(total_score))
-		print_debug("bonus of $" + str(time_bonus))
+		
+		if miss_abs_penalty == 0:
+			var total_score_w_bonus = total_score + time_bonus
+			print_debug("bonus of $" + str(time_bonus))
 		

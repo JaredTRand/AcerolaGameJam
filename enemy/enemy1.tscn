@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1sl0igxx8mlt"]
+
+[ext_resource type="Script" path="res://enemy/enemy1.gd" id="1_exy1n"]
+[ext_resource type="Material" uid="uid://bu8q3kga2i7pk" path="res://enemy/new_standard_material_3d.tres" id="2_evxyf"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6bfec"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0bceb"]
+material = ExtResource("2_evxyf")
+
+[sub_resource type="SphereMesh" id="SphereMesh_v6jje"]
+material = ExtResource("2_evxyf")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_oskns"]
+
+[node name="Enemy" type="CharacterBody3D" groups=["Aberration", "enemies"]]
+collision_layer = 0
+script = ExtResource("1_exy1n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.853578, 0, 0, 0, 0.853578, 0, 0, 0, 0.853578, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_6bfec")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.853567, 0, 0, 0, 0.853567, 0, 0, 0, 0.853567, 0, 1, 0)
+layers = 16
+mesh = SubResource("CapsuleMesh_0bceb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62171, 0)
+layers = 16
+mesh = SubResource("SphereMesh_v6jje")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-9.83506e-09, 0.438178, -0.0291387, -0.225, -1.91534e-08, 1.27369e-09, 0, 0.0572283, 0.223105, 0.288, 1, 0.403)
+layers = 16
+material_override = ExtResource("2_evxyf")
+mesh = SubResource("CapsuleMesh_oskns")
+skeleton = NodePath("../MeshInstance3D2")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-9.91979e-09, 0.438059, 0.0295981, -0.225, -1.9316e-08, -1.29377e-09, 1.12429e-11, -0.0581306, 0.223045, 0.288, 1, -0.403)
+layers = 16
+material_override = ExtResource("2_evxyf")
+mesh = SubResource("CapsuleMesh_oskns")
+skeleton = NodePath("../MeshInstance3D2")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
