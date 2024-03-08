@@ -23,72 +23,72 @@ Things I know I need:
  <li> 
   A viewport camera on the camera 
    <ol>
-    <li>This will take a snapshot and display it on the camera’s screen </li>
+	<li>This will take a snapshot and display it on the camera’s screen </li>
    </ol>
  </li>
  <li>
   A resource for each photo taken. 
   <ol>
-    <li>
-       Will have variables like 
-       <ol>
-         <li>
-            The image itself 
-         </li>
-        <li>
-          # of aberrations in photo 
-           <ol>
-            <li>
-               Going to do it this way, because I bet there is a way to tell if an object is in frame of a camera or not. (need to make sure that it doesn’t register as being in frame if it’s behind an object. Otherwise you could take a pic of the entire location and get every aberration LOL) 
-            </li>
-          </ol>
-        </li>
-        <li>
-             Starred boolean 
-           <ol>
-            <li>
-    I wanna make it so you can star photos at any time, so you can star any that you think have an aberration or whatever 
-            </li>
-            <li>
-    Or maybe you have to star the photos you wanna submit 
-            </li>
-          </ol>
-        </li>
-       </ol>
-    </li>
+	<li>
+	   Will have variables like 
+	   <ol>
+		 <li>
+			The image itself 
+		 </li>
+		<li>
+		  # of aberrations in photo 
+		   <ol>
+			<li>
+			   Going to do it this way, because I bet there is a way to tell if an object is in frame of a camera or not. (need to make sure that it doesn’t register as being in frame if it’s behind an object. Otherwise you could take a pic of the entire location and get every aberration LOL) 
+			</li>
+		  </ol>
+		</li>
+		<li>
+			 Starred boolean 
+		   <ol>
+			<li>
+	I wanna make it so you can star photos at any time, so you can star any that you think have an aberration or whatever 
+			</li>
+			<li>
+	Or maybe you have to star the photos you wanna submit 
+			</li>
+		  </ol>
+		</li>
+	   </ol>
+	</li>
   </ol>
  </li>
  <li>
-      An aberration layer. 
-    <ol>
-    <li>
-    I read that there is a way to make objects appear in one viewport camera, but not another. I’ll just have to put the aberrations on a layer that only the “camera” camera can see, but not the fps camera. Sounds pretty simple, fingers crossed🤞 that it stays that way! 
-    </li>
+	  An aberration layer. 
+	<ol>
+	<li>
+	I read that there is a way to make objects appear in one viewport camera, but not another. I’ll just have to put the aberrations on a layer that only the “camera” camera can see, but not the fps camera. Sounds pretty simple, fingers crossed🤞 that it stays that way! 
+	</li>
   </ol>
  </li>
  <li>    Entities 
    <ol>
-    <li>
-    Thinking of a couple different kinds 
-       <ol>
-        <li>
-    One that is slow to come towards you, but is always coming.  
-        </li>
-        <li> One that you can only see in the camera flash as a shadow </li>
-        <li> One that moves towards you but only when you take a picture. </li>
-      </ol>
-    </li>
+	<li>
+	Thinking of a couple different kinds 
+	   <ol>
+		<li>
+	One that is slow to come towards you, but is always coming.  
+		</li>
+		<li> One that you can only see in the camera flash as a shadow </li>
+		<li> One that moves towards you but only when you take a picture. </li>
+	  </ol>
+	</li>
   </ol>
  </li>
  <li>
-    Location 
-    <ol>
-    <li>
-       Probably just a house, or a factory or something, idk yet. 
-    </li>
-    <li>
-           This one will come later. The gameplay is more important first. 
-    </li>
+	Location 
+	<ol>
+	<li>
+	   Probably just a house, or a factory or something, idk yet. 
+	</li>
+	<li>
+		   This one will come later. The gameplay is more important first. 
+	</li>
   </ol>
  </li>
 </ol>
@@ -172,3 +172,7 @@ I'll get this one working, then will move on to other aspects of the game until 
 
 OH! One thing I do need to work on is some freakin UI. Other UI elements can come around later, but the important one is UI that list out the buttons you can press. So if you have the cam up to your face, you know how to navigate through. 
 
+## Day 9 3/8
+Did get some decent work done yesterday! Fixed the delete option, so you can actually delete images you dont want now (excluding any starred pics). I got some basic Enemy AI working! At the very least, it moves towards you! I'm gonna work on getting noises/attacks working tomorrow. 
+I tried my hand at whipping up some models for levels, but I'm thinking I might go with some free asset packs, since making models takes up a lot of time that I could use for level/game design. At the very least, ill try to design the aberrations.
+My goal for today is to work on enemy attacks, and what happens when you die. I'm thinking you have 3 lives before you actually die. something like that! 
