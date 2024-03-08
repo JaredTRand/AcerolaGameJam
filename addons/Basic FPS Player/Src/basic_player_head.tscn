@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://kmyakts4l64t"]
+[gd_scene load_steps=3 format=3 uid="uid://kmyakts4l64t"]
 
 [ext_resource type="PackedScene" uid="uid://cbghrmmreds0r" path="res://player/cam/player_cam_2.tscn" id="1_exhrd"]
+[ext_resource type="PackedScene" uid="uid://ccuppll4lc07u" path="res://player/flashlight/flashlight.tscn" id="2_tl0t2"]
 
 [node name="Head" type="Node3D"]
 
@@ -10,3 +11,6 @@ cull_mask = 1048559
 
 [node name="player_cam" parent="." instance=ExtResource("1_exhrd")]
 ads_pos = Vector3(-0.17, 0.032, -0.12)
+
+[node name="Node3D" parent="." instance=ExtResource("2_tl0t2")]
+transform = Transform3D(-0.122198, -0.00015587, 0.00116695, 0, 0.121128, 0.0161792, -0.00117731, 0.0161784, -0.121122, -0.508602, -0.362113, -0.283081)

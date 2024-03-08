@@ -15,6 +15,11 @@ run/main_scene="res://test_room_1/testroom_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AllImages="*res://globals/all_image.gd"
+SceneTimer="*res://globals/scene_timer.gd"
+
 [display]
 
 window/size/mode=3
@@ -90,6 +95,7 @@ cam_favorite_img={
 [layer_names]
 
 3d_render/layer_5="Abberations"
+3d_physics/layer_5="Aberrations"
 
 [rendering]
 

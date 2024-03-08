@@ -1,17 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6amenil043m5"]
+[gd_scene load_steps=13 format=3 uid="uid://b6amenil043m5"]
 
 [ext_resource type="PackedScene" uid="uid://dpmurlitcdsi7" path="res://main_player.tscn" id="1_46x6s"]
 [ext_resource type="PackedScene" uid="uid://bw7w8oxmfq7w7" path="res://test_room_1/testblock.blend" id="2_fsh7b"]
+[ext_resource type="PackedScene" uid="uid://bpv76ofuj2uk0" path="res://finish_area.tscn" id="4_iw1fv"]
 [ext_resource type="PackedScene" uid="uid://4cjqosgik5we" path="res://testroom2/house.tscn" id="4_ql7tu"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frm4m"]
-transparency = 1
-emission_enabled = true
-emission = Color(0.27451, 0.486275, 0.988235, 1)
-emission_energy_multiplier = 64.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_xq7w5"]
-material = SubResource("StandardMaterial3D_frm4m")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60b2g"]
 resource_name = "Material"
@@ -58,6 +50,10 @@ data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nocfv"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jkmvi"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_172wq"]
+
 [node name="Node3D" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -65,7 +61,7 @@ transform = Transform3D(0.475985, -0.457335, 0.751188, -0.878885, -0.278068, 0.3
 light_color = Color(1, 1, 0.733333, 1)
 shadow_enabled = true
 
-[node name="Basic FPS Player" parent="." instance=ExtResource("1_46x6s")]
+[node name="Player" parent="." instance=ExtResource("1_46x6s")]
 transform = Transform3D(0.693678, 0, 0.720285, 0, 1, 0, -0.720285, 0, 0.693678, 19.8948, 0, -0.09832)
 floor_max_angle = 1.0472
 SPEED = 4.0
@@ -77,16 +73,7 @@ transform = Transform3D(0.812371, 0, 0, 0, 3.08012, 0, 0, 0, 0.656237, 4.14216, 
 [node name="testblock5" parent="." instance=ExtResource("2_fsh7b")]
 transform = Transform3D(0.740246, 0, 0.270322, 0, 3.08012, 0, -0.334639, 0, 0.597974, 3.46912, -2.86681, -0.549743)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["Aberration"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.83491, 1.14018, -5.15792)
-layers = 16
-mesh = SubResource("SphereMesh_xq7w5")
-
-[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="MeshInstance3D"]
-transform = Transform3D(0.470608, 0, 0, 0, 0.470608, 0, 0, 0, 0.470608, 0, 0, 0)
-layers = 16
-
-[node name="testblock4" type="Node3D" parent="." groups=["Aberration"]]
+[node name="testblock4" type="Node3D" parent="."]
 transform = Transform3D(0.812371, 0, 0, 0, 2.50398, 0.38215, 0, -1.79366, 0.533487, -4.99405, 0.166329, 1.64576)
 
 [node name="Cube" type="MeshInstance3D" parent="testblock4"]
@@ -111,17 +98,30 @@ transform = Transform3D(0.812371, 0, 0, 0, 3.08012, 0, 0, 0, 0.656237, -0.678181
 [node name="testroom1" parent="." instance=ExtResource("4_ql7tu")]
 transform = Transform3D(0.360842, 0, 0, 0, 0.360842, 0, 0, 0, 0.360842, 1.05123, -1.08547, 0.57597)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.15738, 0, 0, 0, 2.15738, 0, 0, 0, 2.15738, 14.52, 0, -5.15558)
+[node name="StaticBody3D2" type="StaticBody3D" parent="." groups=["Aberration"]]
+transform = Transform3D(2.15738, 0, 0, 0, 2.15738, 0, 0, 0, 2.15738, -16.8052, 0, 5.96697)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.52, 0, -5.15558)
 layers = 16
 mesh = SubResource("CapsuleMesh_gmlm4")
-skeleton = NodePath("StaticBody3D")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.52, 0, 5.15558)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5219, -2.21026e-07, -5.1396)
 shape = SubResource("CapsuleShape3D_nocfv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["Aberration"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2666, 0, 4.88873)
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CapsuleShape3D_jkmvi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+layers = 16
+mesh = SubResource("CapsuleMesh_172wq")
+
+[node name="Area3D" parent="." instance=ExtResource("4_iw1fv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7, 0, 6.16182)
 
 [editable path="testblock3"]
