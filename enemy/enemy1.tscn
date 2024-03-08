@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1sl0igxx8mlt"]
+[gd_scene load_steps=8 format=3 uid="uid://b1sl0igxx8mlt"]
 
 [ext_resource type="Script" path="res://enemy/enemy1.gd" id="1_exy1n"]
 [ext_resource type="Material" uid="uid://bu8q3kga2i7pk" path="res://enemy/new_standard_material_3d.tres" id="2_evxyf"]
@@ -12,6 +12,9 @@ material = ExtResource("2_evxyf")
 material = ExtResource("2_evxyf")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oskns"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jvxf6"]
+radius = 1.65267
 
 [node name="Enemy" type="CharacterBody3D" groups=["Aberration", "enemies"]]
 collision_layer = 0
@@ -46,3 +49,25 @@ mesh = SubResource("CapsuleMesh_oskns")
 skeleton = NodePath("../MeshInstance3D2")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="areas" type="Node3D" parent="."]
+
+[node name="enemy_hurt_area" type="Area3D" parent="areas"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="areas/enemy_hurt_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_jvxf6")
+
+[node name="enemy_danger_close" type="Area3D" parent="areas"]
+transform = Transform3D(2.87139, 0, 0, 0, 2.87139, 0, 0, 0, 2.87139, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="areas/enemy_danger_close"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_jvxf6")
+
+[node name="enemy_danger_near" type="Area3D" parent="areas"]
+transform = Transform3D(8.30709, 0, 0, 0, 8.30709, 0, 0, 0, 8.30709, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="areas/enemy_danger_near"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("SphereShape3D_jvxf6")
