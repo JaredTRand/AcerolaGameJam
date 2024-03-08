@@ -71,6 +71,7 @@ func _process(delta):
 		transform.origin = transform.origin.lerp(default_pos, ADS_LERP*delta)
 		
 	if Input.is_action_just_pressed("cam_favorite_img"):
+		if current_image == null or cam_preview_image_cooldown.is_stopped(): return
 		if(current_image.starred):
 			play_sound(load("res://player/cam/sounds/star_image_remove.wav"), [-9.0, -7.5], [.90, 1.1])
 			current_image.starred = false
@@ -80,19 +81,8 @@ func _process(delta):
 			current_image.starred = true
 			starred.visible = true
 	elif Input.is_action_just_pressed("cam_delete_image"):
-		var temp_img:Aberration_Image
-		
-		if(current_image.next_img != null):
-			temp_img = current_image.next_img
-		elif(current_image.prev_img != null):
-			temp_img = current_image.next_img
+		delete_image(current_image)
 			
-		if(temp_img != null):
-			set_cam_screen_ab(temp_img)
-		else:
-			set_cam_screen(black_screen)
-			
-		AllImages.images.remove_at(AllImages.images.find(current_image))
 
 func take_pic():
 	cam_cooldown_timer.start()
@@ -262,3 +252,30 @@ func play_sound(sound, max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:boo
 		cam_sound_player.set_max_db(RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1]))
 		cam_sound_player.set_pitch_scale(RandomNumberGenerator.new().randf_range(pitch_rng[0], pitch_rng[1]))
 		cam_sound_player.play()
+		
+func delete_image(image_to_del:Aberration_Image):
+		if image_to_del == null: return
+		
+		var temp_img:Aberration_Image
+		var prev_img:Aberration_Image = image_to_del.prev_img
+		var next_img:Aberration_Image = image_to_del.next_img
+		
+		if next_img != null and prev_img != null: 
+			next_img.prev_img = prev_img
+			prev_img.next_img = next_img
+			temp_img = next_img
+		elif next_img != null and prev_img == null:
+			next_img.prev_img = null
+			temp_img = next_img
+		if prev_img != null and next_img == null:
+			prev_img.next_img = null
+			temp_img = prev_img
+			
+		AllImages.images.remove_at(AllImages.images.find(image_to_del))
+			
+		if(temp_img != null):
+			current_image = temp_img
+			set_cam_screen_ab(temp_img)
+		else:
+			current_image = null
+			set_cam_screen(black_screen)
