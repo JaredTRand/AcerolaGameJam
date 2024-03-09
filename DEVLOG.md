@@ -176,3 +176,6 @@ OH! One thing I do need to work on is some freakin UI. Other UI elements can com
 Did get some decent work done yesterday! Fixed the delete option, so you can actually delete images you dont want now (excluding any starred pics). I got some basic Enemy AI working! At the very least, it moves towards you! I'm gonna work on getting noises/attacks working tomorrow. 
 I tried my hand at whipping up some models for levels, but I'm thinking I might go with some free asset packs, since making models takes up a lot of time that I could use for level/game design. At the very least, ill try to design the aberrations.
 My goal for today is to work on enemy attacks, and what happens when you die. I'm thinking you have 3 lives before you actually die. something like that! 
+
+## Day 10 3/9
+Coming up towards the end of the jam so this weekend will be a bit of crunch time for me. I'm also kinda sick so it's not a good combo. Since I'm sick i dont really remember what I finished last night. I know I put in some footsteps and started making the final environment for the level. And right now I'm working on making interactable objects, so you can open doors, and interact with the car when you want to leave. At the end I want to come up with a kind of leaderboard for the amount of cash you're able to rake in. but that might have to come later.

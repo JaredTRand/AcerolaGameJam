@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://player/cam/handheld_cam.gd" id="2_fwxil"]
 [ext_resource type="AudioStream" uid="uid://b80uhcgplgc38" path="res://player/cam/sounds/camera-shutter.wav" id="2_niyvt"]
 [ext_resource type="Texture2D" uid="uid://4cp4keildw7t" path="res://player/cam/black2.png" id="4_27h8v"]
-[ext_resource type="Texture2D" uid="uid://cr084m836tl3m" path="res://player/starred.png" id="5_280qy"]
+[ext_resource type="Texture2D" uid="uid://bqfjs6pi7cbti" path="res://player/star.png" id="5_v3x8d"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_iibmc"]
 viewport_path = NodePath("SubViewport")
@@ -69,11 +69,11 @@ double_sided = false
 texture = ExtResource("4_27h8v")
 
 [node name="starred" type="Sprite3D" parent="sprites" index="2"]
-transform = Transform3D(-1.29674e-13, -2.58298e-08, 0.908761, 2.66165e-08, 0.590917, 3.97235e-08, -0.608914, 2.58298e-08, -2.98428e-13, 0.528, 0.218899, -4.32615)
+transform = Transform3D(-5.44009e-15, -1.27037e-09, 0.0446948, 1.30906e-09, 0.0290626, 1.95369e-09, -0.0299477, 1.27037e-09, -1.39888e-14, 0.528003, 0.283524, -4.38995)
 visible = false
 double_sided = false
 render_priority = 1
-texture = ExtResource("5_280qy")
+texture = ExtResource("5_v3x8d")
 
 [node name="SubViewport" type="SubViewport" parent="." index="11"]
 size = Vector2i(1775, 1175)

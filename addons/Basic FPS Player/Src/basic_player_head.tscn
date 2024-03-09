@@ -11,7 +11,8 @@ cull_mask = 1048559
 
 [node name="useCast" type="RayCast3D" parent="."]
 transform = Transform3D(-0.122198, -0.00015587, 0.00116695, -0.00116754, 0.000474899, -0.122197, 0.000151326, -0.122203, -0.000476464, -0.00146131, -0.00171801, -0.525723)
-target_position = Vector3(0, 10, 0)
+target_position = Vector3(0, 5, 0)
+collide_with_areas = true
 debug_shape_custom_color = Color(0.647059, 0.819608, 0.921569, 1)
 
 [node name="player_cam" parent="." instance=ExtResource("1_exhrd")]

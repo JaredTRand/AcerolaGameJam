@@ -25,7 +25,7 @@ reflected_light_source = 2
 environment = SubResource("Environment_qvd7h")
 
 [node name="Player" parent="." instance=ExtResource("1_ysa23")]
-transform = Transform3D(0.999823, 0, 0.018814, 0, 1, 0, -0.018814, 0, 0.999823, 0.333667, 1.06322, 0.229359)
+transform = Transform3D(-0.316991, 0, 0.948429, 0, 1, 0, -0.948429, 0, -0.316991, 0.161455, 1.06322, 1.85311)
 floor_max_angle = 1.0472
 SPEED = 4.0
 KEY_BIND_MOUSE_SENS = 0.002

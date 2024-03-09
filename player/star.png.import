@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr084m836tl3m"
-path.s3tc="res://.godot/imported/starred.png-4057fe231ed6ee67ed3502d8ac552dc5.s3tc.ctex"
+uid="uid://bqfjs6pi7cbti"
+path.s3tc="res://.godot/imported/star.png-3c250b4fbf343da7b61a4f409accdd55.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://player/starred.png"
-dest_files=["res://.godot/imported/starred.png-4057fe231ed6ee67ed3502d8ac552dc5.s3tc.ctex"]
+source_file="res://player/star.png"
+dest_files=["res://.godot/imported/star.png-3c250b4fbf343da7b61a4f409accdd55.s3tc.ctex"]
 
 [params]
 

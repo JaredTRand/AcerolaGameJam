@@ -110,7 +110,10 @@ func _process(delta):
 		rotate_player(delta)
 		
 	if Input.is_action_just_pressed("cam_next_image"):
-		print_debug("hi")
+		if useCast.is_colliding():
+			var collider = useCast.get_collider()
+			if collider.is_in_group("interactable"):
+				collider.use()
 	
 
 func _input(event):
