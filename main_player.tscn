@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpmurlitcdsi7"]
+[gd_scene load_steps=7 format=3 uid="uid://dpmurlitcdsi7"]
 
 [ext_resource type="Script" path="res://addons/Basic FPS Player/Src/basic_player_startup.gd" id="1_xe8ql"]
 [ext_resource type="PackedScene" uid="uid://kmyakts4l64t" path="res://addons/Basic FPS Player/Src/basic_player_head.tscn" id="2_4hhew"]
+[ext_resource type="AudioStream" uid="uid://bdx3d0dnkdhhn" path="res://player/sounds/627913__mikefozzy98__01-footstep.wav" id="3_88ie3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d35w2"]
 
@@ -12,14 +13,23 @@ radius = 0.275
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_xe8ql")
+HEAD_BOB_FREQUENCY = 0.2
 
 [node name="Head" parent="." instance=ExtResource("2_4hhew")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.566418, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Head"]
-light_energy = 0.25
-omni_range = 15.0
-omni_attenuation = 2.14355
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.725626, 0)
+light_energy = 2.0
+light_cull_mask = 4294967293
+omni_range = 30.0
+omni_attenuation = 1.03527
+
+[node name="light for tools" type="OmniLight3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.110223, 0.157963)
+light_energy = 0.1
+light_cull_mask = 4293918722
+omni_range = 0.995
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.794628, 0, 0, 0, 0.794628, 0, 0, 0, 0.794628, 0, -0.21083, 0)
@@ -36,3 +46,11 @@ transform = Transform3D(1.25845, 0, 0, 0, 1.25845, 0, 0, 0, 1.25845, 0, 0.260245
 layers = 2
 ignore_occlusion_culling = true
 mesh = SubResource("CapsuleMesh_cx1k7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_88ie3")
+
+[node name="footsteptimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="footsteptimer" to="." method="_on_footsteptimer_timeout"]

@@ -14,7 +14,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("flashlight"):
-		if transform.origin == default_pos:
-			transform.origin = transform.origin.lerp(ads_pos, ADS_LERP*delta)
-		elif transform.origin == ads_pos:
-			transform.origin = transform.origin.lerp(default_pos, ADS_LERP*delta)
+		print_debug("falshlight")
+		#if transform.origin == default_pos:
+		transform.origin = transform.origin.lerp(ads_pos, ADS_LERP*delta)
+		
+		#elif transform.origin == ads_pos:
+			#transform.origin = transform.origin.lerp(default_pos, ADS_LERP*delta)

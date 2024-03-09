@@ -22,26 +22,46 @@ Boss: Are you following so far?
 - No
 	Boss: You'll pick it up.
 - Yes
-- I
-	You: [[I know the deal.|I know what to do.|So where am I going?]]
+- (Skip)
+	You: Ok. I'm ready to get started.
 	=> skip
 
 Boss: These things tend to appear in groups, typically contained within a building or some other structure. 
 Boss: We have the capability to locate groupings of these entities the moment they appear. 
-Boss: We know how many are present in a location, but not what they appear as. 
+Boss: We know how many are present in a location, but not what they physically appear as. 
 Boss: This is where you come in.
+~ question_loop
+Boss: Any Questions?
+- What do I have to do?
+	Boss: When a grouping of entities is detected nearby, you must get to the location ASAP.
+	Boss: The Aberrations are not visible to the human eye.
+	Boss: But they do appear in digital photographs.
+	Boss: You will need to locate them using the camera we’ve provided you, photograph as many as you can find, then submit those photos to me.
+	=> question_loop
+- I am getting paid for this... Right?
+	Boss: You will be paid handsomly for each unique picture of an entity.
+	Boss: Meaning if you send me 20 photos of the same entity, I will only pay you once. 
+	Boss: Do not send me photos that do not have entities in them.
+	Boss: I am not a patient man. I will subtract each one from your pay.
+	=> question_loop
+- How quickly do I need to finish?
+	Boss: You'll find that speed will benefit you in this job.
+	Boss: If you finish your job before a certain time, I'll pay you a bonus.
+	Boss: How much? Well, that depends on how quick you finish.
+	=> question_loop
+- No questions.
 
+Boss: Okay then. Good.
+Boss: We'll send you your first job shortly. 
+Boss: Oh. One final thing to note.
+Boss: The entities do not always appreciate us encroaching on their locale.
+Boss: Some of them are known to get aggressive with intruders. 
+Boss: Stay alert and you’ll be fine.
 
-Boss: Here are some choices.
-- First one
-	Boss: You picked the first one.
-- Second one
-	Boss: You picked the second one.
-- Start again => this_is_a_node_title
-- End the conversation => END
-Boss: For more information see the online documentation.
+Boss: Follow these rules, and you will have a long and successful career with us. 
+Boss: Blank Corp thanks you for your service to our company.
 
-=> END
+#=> END
 
 ~ skip
 Boss: Let's get to it then.

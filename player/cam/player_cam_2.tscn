@@ -15,6 +15,31 @@ script = ExtResource("2_fwxil")
 flash_brightness = 4.0
 default_pos = Vector3(-0.195, -0.17, -0.394)
 
+[node name="body" parent="." index="0"]
+layers = 2
+
+[node name="buttonbody" parent="." index="1"]
+layers = 2
+
+[node name="button" parent="." index="2"]
+layers = 2
+
+[node name="view" parent="." index="3"]
+layers = 2
+
+[node name="lensglass" parent="." index="4"]
+layers = 2
+
+[node name="lens" parent="." index="5"]
+layers = 2
+
+[node name="screen" parent="." index="6"]
+transform = Transform3D(0, -1.05084, 0, 1.05084, 0, 0, 0, 0, 1.61607, 0.527077, -0.600487, -2.97363)
+layers = 2
+
+[node name="view_001" parent="." index="7"]
+layers = 2
+
 [node name="CameraFLash" type="SpotLight3D" parent="." index="8"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.576685, 0.993742, -3.29924)
 light_energy = 0.0
@@ -33,11 +58,13 @@ transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="sprites" index="0"]
 transform = Transform3D(-6.61685e-09, -3.30844e-09, -0.1164, -3.30844e-09, 0.0756882, -5.08795e-09, 0.0756882, 3.30844e-09, -1.01759e-08, 0.166846, -0.600487, -2.97363)
+layers = 2
 double_sided = false
 texture = SubResource("ViewportTexture_iibmc")
 
 [node name="spriteScreen" type="Sprite3D" parent="sprites" index="1"]
-transform = Transform3D(-2.93099e-14, -7.495e-09, 0.263694, 7.72326e-09, 0.171466, 1.15265e-08, -0.176688, 7.495e-09, -6.92779e-14, 0.529003, -0.6, -2.974)
+transform = Transform3D(-2.75335e-14, -7.495e-09, 0.263694, 7.72326e-09, 0.171466, 1.15265e-08, -0.176688, 7.495e-09, -6.92779e-14, 0.529003, -0.6, -2.974)
+layers = 2
 double_sided = false
 texture = ExtResource("4_27h8v")
 
@@ -75,6 +102,7 @@ one_shot = true
 
 [node name="raycasts" type="Node3D" parent="." index="14"]
 transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, -1.837, -0.611, -3.255)
+visible = false
 
 [node name="U8" type="Node3D" parent="raycasts" index="0"]
 transform = Transform3D(0.976296, 0.21644, 0, -0.21644, 0.976296, 0, 0, 0, 1, 0, 0, 0)

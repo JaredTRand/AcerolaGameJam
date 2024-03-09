@@ -4,7 +4,9 @@ extends CharacterBody3D
 var BasicFPSPlayerScene : PackedScene = preload("basic_player_head.tscn")
 var addedHead = false
 
-var useCast:RayCast3D = $Head/useCast
+@onready var useCast:RayCast3D = $Head/useCast
+@onready var playerSounds:AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var footstepTimer:Timer = $footsteptimer
 
 func _enter_tree():
 	
@@ -141,6 +143,11 @@ func rotate_player(delta):
 		$Head.quaternion = Quaternion(Vector3.RIGHT, rotation_target_head)
 	
 func move_player(delta):
+	# Get the input direction and handle the movement/deceleration.
+	var input_dir = Input.get_vector(KEY_BIND_LEFT, KEY_BIND_RIGHT, KEY_BIND_UP, KEY_BIND_DOWN)
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	var currently_moving:bool = input_dir != Vector2(0,0)
 	# Check if not on floor
 	if not is_on_floor():
 		# Reduce speed and accel
@@ -152,6 +159,13 @@ func move_player(delta):
 		# Set speed and accel to defualt
 		speed = SPEED
 		accel = ACCEL
+		
+		if footstepTimer.is_stopped() and currently_moving:
+			play_sound(load("res://player/sounds/627913__mikefozzy98__01-footstep.wav"), [-8.5, -11], [1, 2])
+			if Input.is_action_pressed("sprint"):
+				footstepTimer.start(.25)
+			else:
+				footstepTimer.start(.5)
 
 	if Input.is_action_pressed("sprint"):
 		speed = SPEED * 2
@@ -160,9 +174,7 @@ func move_player(delta):
 	if Input.is_action_just_pressed(KEY_BIND_JUMP) and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	var input_dir = Input.get_vector(KEY_BIND_LEFT, KEY_BIND_RIGHT, KEY_BIND_UP, KEY_BIND_DOWN)
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
 	
 	velocity.x = move_toward(velocity.x, direction.x * speed, accel * delta)
 	velocity.z = move_toward(velocity.z, direction.z * speed, accel * delta)
@@ -180,3 +192,13 @@ func reset_head_bob(delta):
 	if $Head.position == head_start_pos:
 		pass
 	$Head.position = lerp($Head.position, head_start_pos, 2 * (1/HEAD_BOB_FREQUENCY) * delta)
+
+
+
+func play_sound(sound, max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:bool = false):
+	if skip_wait_for_done or !playerSounds.is_playing(): 
+		 #just to give the sound a litte variety
+		playerSounds.stream = sound
+		playerSounds.set_max_db(RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1]))
+		playerSounds.set_pitch_scale(RandomNumberGenerator.new().randf_range(pitch_rng[0], pitch_rng[1]))
+		playerSounds.play()
