@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ck8lrk42y7kui" path="res://flashlight.glb" id="1_ar1du"]
 [ext_resource type="Script" path="res://player/flashlight/flashlight.gd" id="1_ngdor"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Flashlight" type="Node3D"]
 script = ExtResource("1_ngdor")
 
 [node name="turn_on_flash" type="Timer" parent="."]

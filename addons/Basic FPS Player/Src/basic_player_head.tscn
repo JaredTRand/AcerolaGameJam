@@ -18,6 +18,9 @@ debug_shape_custom_color = Color(0.647059, 0.819608, 0.921569, 1)
 ads_pos = Vector3(-0.17, 0.032, -0.12)
 
 [node name="Node3D" parent="." instance=ExtResource("2_tl0t2")]
-transform = Transform3D(-0.122198, -0.00015587, 0.00116695, -0.00116754, 0.000474899, -0.122197, 0.000151326, -0.122203, -0.000476464, -0.013126, -0.272699, 0.143871)
+transform = Transform3D(-0.164967, -0.00742313, 0.00679094, -0.00742311, 0.014505, -0.164468, 0.00679095, -0.164469, -0.0148115, -0.165447, -0.391445, 0.177719)
+rotation_edit_mode = 1
 default_pos = Vector3(-0.013, -0.273, 0.144)
+default_rot = Quaternion(0.032, -0.709, 0.709, 0)
 ads_pos = Vector3(-0.509, -0.362, -0.283)
+ads_rot = Quaternion(0, 0.996, -0.013, 0)

@@ -12,7 +12,7 @@ Boss: Do you know what this job is about?
 	=> skip
 	
 Boss: I’m not a man who likes to waste time, so I’ll get right down to it.
-Boss: For that last three years, certain unknown entities have been appearing in various locations around the world. 
+Boss: For the last three years, certain unknown entities have been appearing in various locations around the world. 
 Boss: We call them Aberrations.
 Boss: Our company is in the business of tracking and documenting these entities. 
 Boss: They are unpredictable and they are fickle. 
@@ -38,16 +38,23 @@ Boss: Any Questions?
 	Boss: But they do appear in digital photographs.
 	Boss: You will need to locate them using the camera we’ve provided you, photograph as many as you can find, then submit those photos to me.
 	=> question_loop
+- How do I know if what I'm looking at is an Aberration?
+	Boss: It's quite simple, really.
+	Boss: When you arrive at your location, take a picture. 
+	Boss: If you see something in the image that you do not see with your eyes, that is an Aberration.
+	Boss: They will be odd. Unusual. Something not of this world.
+	Boss: You'll know one when you see it.
+	=> question_loop
 - I am getting paid for this... Right?
 	Boss: You will be paid handsomly for each unique picture of an entity.
 	Boss: Meaning if you send me 20 photos of the same entity, I will only pay you once. 
 	Boss: Do not send me photos that do not have entities in them.
 	Boss: I am not a patient man. I will subtract each one from your pay.
 	=> question_loop
-- How quickly do I need to finish?
+- How quick do I need to finish?
 	Boss: You'll find that speed will benefit you in this job.
 	Boss: If you finish your job before a certain time, I'll pay you a bonus.
-	Boss: How much? Well, that depends on how quick you finish.
+	Boss: How much? Well, that depends on how quickly you finish.
 	=> question_loop
 - No questions.
 
