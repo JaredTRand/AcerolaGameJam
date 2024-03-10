@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwk30fymt1apo"
-path.s3tc="res://.godot/imported/Wood 9 - 128x128.png-394a2aff0c7cd2ec39717fd27c64b5bf.s3tc.ctex"
+uid="uid://3uu7vjgdgobr"
+path.s3tc="res://.godot/imported/pepicons-pencil--leave.png-a8dfc745d67683ffc05e3cc5548ae652.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/128x128/Wood/Wood 9 - 128x128.png"
-dest_files=["res://.godot/imported/Wood 9 - 128x128.png-394a2aff0c7cd2ec39717fd27c64b5bf.s3tc.ctex"]
+source_file="res://player/interactUI/pepicons-pencil--leave.png"
+dest_files=["res://.godot/imported/pepicons-pencil--leave.png-a8dfc745d67683ffc05e3cc5548ae652.s3tc.ctex"]
 
 [params]
 

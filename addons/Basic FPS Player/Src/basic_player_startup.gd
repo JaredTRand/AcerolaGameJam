@@ -7,9 +7,10 @@ var addedHead = false
 @onready var useCast:RayCast3D = $Head/useCast
 @onready var playerSounds:AudioStreamPlayer3D = $AudioStreamPlayer3D
 @onready var footstepTimer:Timer = $footsteptimer
+@onready var hand_ui:Sprite3D = $Head/interact_UI2/hand
+@onready var leave_ui:Sprite3D = $Head/interact_UI2/leave
 
 func _enter_tree():
-	
 	if find_child("Head"):
 		addedHead = true
 	
@@ -109,11 +110,19 @@ func _process(delta):
 		move_player(delta)
 		rotate_player(delta)
 		
-	if Input.is_action_just_pressed("cam_next_image"):
-		if useCast.is_colliding():
-			var collider = useCast.get_collider()
-			if collider.is_in_group("interactable"):
-				collider.use()
+	if useCast.is_colliding():
+		var collider = useCast.get_collider()
+		if collider.is_in_group("interactable"):
+			if collider.is_in_group("car"):
+				leave_ui.visible = true
+			else:
+				hand_ui.visible = true
+			if Input.is_action_just_pressed("interact"):
+				if collider.is_in_group("interactable") and collider.has_method("use"):
+					collider.use()
+	elif not useCast.is_colliding() or not useCast.get_collider().is_in_group("interactable"):
+		hand_ui.visible = false
+		leave_ui.visible = false
 	
 
 func _input(event):

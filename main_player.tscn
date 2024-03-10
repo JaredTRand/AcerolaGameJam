@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpmurlitcdsi7"]
+[gd_scene load_steps=9 format=3 uid="uid://dpmurlitcdsi7"]
 
 [ext_resource type="Script" path="res://addons/Basic FPS Player/Src/basic_player_startup.gd" id="1_xe8ql"]
 [ext_resource type="PackedScene" uid="uid://kmyakts4l64t" path="res://addons/Basic FPS Player/Src/basic_player_head.tscn" id="2_4hhew"]
 [ext_resource type="AudioStream" uid="uid://bdx3d0dnkdhhn" path="res://player/sounds/627913__mikefozzy98__01-footstep.wav" id="3_88ie3"]
+[ext_resource type="Texture2D" uid="uid://ck6t7unbk5arg" path="res://player/interactUI/ion--hand-right-outline.png" id="4_0ru3o"]
+[ext_resource type="Texture2D" uid="uid://3uu7vjgdgobr" path="res://player/interactUI/pepicons-pencil--leave.png" id="4_3ggon"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d35w2"]
 
@@ -30,6 +32,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.110223, 0.157963)
 light_energy = 0.1
 light_cull_mask = 4293918722
 omni_range = 0.995
+
+[node name="interact_UI2" type="Node3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00087142, -0.438219)
+
+[node name="hand" type="Sprite3D" parent="Head/interact_UI2"]
+transform = Transform3D(0.000942161, 0, 0, 0, 0.000942161, 0, 0, 0, 0.000942161, 0, 0, -2.93255e-05)
+visible = false
+double_sided = false
+no_depth_test = true
+texture = ExtResource("4_0ru3o")
+
+[node name="leave" type="Sprite3D" parent="Head/interact_UI2"]
+transform = Transform3D(0.000942161, 0, 0, 0, 0.000942161, 0, 0, 0, 0.000942161, 0, 0, -2.93255e-05)
+visible = false
+double_sided = false
+no_depth_test = true
+texture = ExtResource("4_3ggon")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.794628, 0, 0, 0, 0.794628, 0, 0, 0, 0.794628, 0, -0.21083, 0)

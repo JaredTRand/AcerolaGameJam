@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0idk68jntyet"]
+
+[ext_resource type="Shader" path="res://Level_One/Level_One_skyshader.gdshader" id="1_8oev6"]
+[ext_resource type="PackedScene" uid="uid://dpmurlitcdsi7" path="res://main_player.tscn" id="1_ysa23"]
+[ext_resource type="PackedScene" uid="uid://cjp8s2f6l0516" path="res://environment/models/road.blend" id="2_8u1l8"]
+[ext_resource type="PackedScene" uid="uid://ktno3vba53qw" path="res://environment/scenes/car.tscn" id="4_gvxon"]
+[ext_resource type="PackedScene" uid="uid://8lyavsum8cc2" path="res://environment/scenes/door.tscn" id="5_4ha2f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s8hx1"]
+shader = ExtResource("1_8oev6")
+shader_parameter/skyColor = Color(0.0431373, 0.0431373, 0.0431373, 1)
+shader_parameter/horizonColor = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_mnpm1"]
+sky_material = SubResource("ShaderMaterial_s8hx1")
+
+[sub_resource type="Environment" id="Environment_qvd7h"]
+background_mode = 2
+sky = SubResource("Sky_mnpm1")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qvd7h")
+
+[node name="Player" parent="." instance=ExtResource("1_ysa23")]
+transform = Transform3D(-0.316991, 0, 0.948429, 0, 1, 0, -0.948429, 0, -0.316991, 0.161455, 1.06322, 1.85311)
+floor_max_angle = 1.0472
+SPEED = 4.0
+KEY_BIND_MOUSE_SENS = 0.002
+
+[node name="Level" type="Node3D" parent="."]
+
+[node name="road" parent="Level" instance=ExtResource("2_8u1l8")]
+
+[node name="Car2" parent="Level" instance=ExtResource("4_gvxon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Door" parent="." instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.692121, 1.0574, 5.6183)

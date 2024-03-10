@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://ktno3vba53qw"]
+[gd_scene load_steps=8 format=3 uid="uid://ktno3vba53qw"]
 
+[ext_resource type="Script" path="res://environment/scenes/car/car.gd" id="1_5c4uj"]
 [ext_resource type="Texture2D" uid="uid://c1lrkos1do58c" path="res://assets/PSX_Style_Cars_by_GGBot_(August2023)/Car 01/car.png" id="1_37hge"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i5vqp"]
@@ -49,7 +50,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rxjgy")
 
-[node name="Car2" type="StaticBody3D"]
+[node name="Car2" type="StaticBody3D" groups=["car", "interactable"]]
+script = ExtResource("1_5c4uj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -3.57628e-07, -1, 0, 1, -3.57628e-07, 0.00902557, 0.596031, 1.71054)
