@@ -257,7 +257,7 @@ func play_sound(sound, max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:boo
 		
 func delete_image(image_to_del:Aberration_Image):
 		if image_to_del == null or image_to_del.starred: return
-		play_sound(load("res://player/cam/sounds/img_delete.wav"), [-15.0, -13.5], [-5, -6], true)
+		play_sound(load("res://player/cam/sounds/img_delete.wav"), [-15.0, -13.5], [-6, -5], true)
 		
 		var temp_img:Aberration_Image
 		var prev_img:Aberration_Image = image_to_del.prev_img

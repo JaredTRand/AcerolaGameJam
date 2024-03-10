@@ -26,6 +26,7 @@ general/balloon_path="res://addons/dialogue_manager/test_balloon/example_balloon
 
 [display]
 
+window/size/mode=3
 window/use_occlusion_culling=true
 
 [editor_plugins]

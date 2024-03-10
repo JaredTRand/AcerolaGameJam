@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0idk68jntyet"]
+[gd_scene load_steps=12 format=3 uid="uid://b0idk68jntyet"]
 
+[ext_resource type="Script" path="res://testroom2/world.gd" id="1_7m7av"]
 [ext_resource type="Shader" path="res://Level_One/Level_One_skyshader.gdshader" id="1_8oev6"]
 [ext_resource type="PackedScene" uid="uid://dpmurlitcdsi7" path="res://main_player.tscn" id="1_ysa23"]
 [ext_resource type="PackedScene" uid="uid://cjp8s2f6l0516" path="res://environment/models/road.blend" id="2_8u1l8"]
@@ -26,6 +27,7 @@ vertices = PackedVector3Array(-4.76379, 0.564239, -393.248, 4.23621, 0.564239, -
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 9), PackedInt32Array(7, 9, 8), PackedInt32Array(14, 13, 10), PackedInt32Array(10, 13, 11), PackedInt32Array(11, 13, 12), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 19), PackedInt32Array(17, 19, 18), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(27, 24, 28), PackedInt32Array(31, 30, 29), PackedInt32Array(35, 34, 32), PackedInt32Array(32, 34, 33), PackedInt32Array(39, 38, 36), PackedInt32Array(36, 38, 37), PackedInt32Array(41, 40, 42), PackedInt32Array(42, 40, 43), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 47), PackedInt32Array(47, 44, 48), PackedInt32Array(50, 49, 51), PackedInt32Array(51, 49, 52), PackedInt32Array(54, 53, 55), PackedInt32Array(55, 53, 56), PackedInt32Array(56, 53, 58), PackedInt32Array(56, 58, 57), PackedInt32Array(60, 59, 61), PackedInt32Array(61, 59, 63), PackedInt32Array(61, 63, 62), PackedInt32Array(67, 66, 64), PackedInt32Array(64, 66, 65), PackedInt32Array(71, 70, 68), PackedInt32Array(68, 70, 69)]
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_7m7av")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qvd7h")
@@ -37,7 +39,7 @@ SPEED = 4.0
 KEY_BIND_MOUSE_SENS = 0.002
 
 [node name="Enemy" parent="." instance=ExtResource("6_hdi60")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7165, 9.53674e-07, 20.1375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.8893, 0.368864, -11.5749)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_doqi1")
@@ -49,5 +51,5 @@ navigation_mesh = SubResource("NavigationMesh_doqi1")
 [node name="Car2" parent="NavigationRegion3D/Level" instance=ExtResource("4_gvxon")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="Door" parent="NavigationRegion3D" instance=ExtResource("5_4ha2f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.692121, 1.0574, 5.6183)
+[node name="Door" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 0, 0, 1.09033, 0, 0, 0, 1.09033, -36.8103, 1.10016, 5.37368)

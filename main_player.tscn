@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://kmyakts4l64t" path="res://addons/Basic FPS Player/Src/basic_player_head.tscn" id="2_4hhew"]
 [ext_resource type="AudioStream" uid="uid://bdx3d0dnkdhhn" path="res://player/sounds/627913__mikefozzy98__01-footstep.wav" id="3_88ie3"]
 [ext_resource type="Texture2D" uid="uid://ck6t7unbk5arg" path="res://player/interactUI/ion--hand-right-outline.png" id="4_0ru3o"]
-[ext_resource type="Texture2D" uid="uid://3uu7vjgdgobr" path="res://player/interactUI/pepicons-pencil--leave.png" id="4_3ggon"]
+[ext_resource type="Texture2D" uid="uid://p8g3hv1oax0l" path="res://player/interactUI/pepicons-pop--leave-circle-filled.png" id="4_py5yl"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d35w2"]
 
@@ -21,10 +21,9 @@ HEAD_BOB_FREQUENCY = 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.566418, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.725626, 0)
-light_energy = 2.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639594, 0)
 light_cull_mask = 4294967293
-omni_range = 30.0
+omni_range = 15.0
 omni_attenuation = 1.03527
 
 [node name="light for tools" type="OmniLight3D" parent="Head"]
@@ -48,7 +47,7 @@ transform = Transform3D(0.000942161, 0, 0, 0, 0.000942161, 0, 0, 0, 0.000942161,
 visible = false
 double_sided = false
 no_depth_test = true
-texture = ExtResource("4_3ggon")
+texture = ExtResource("4_py5yl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.794628, 0, 0, 0, 0.794628, 0, 0, 0, 0.794628, 0, -0.21083, 0)

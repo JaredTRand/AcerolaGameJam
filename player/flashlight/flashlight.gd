@@ -7,11 +7,13 @@ extends Node3D
 
 const ADS_LERP:int = 10
 
-@onready var current_rot = Quaternion(transform.basis).normalized()
-@onready var smoothrot = current_rot
+#@onready var current_rot = Quaternion(transform.basis).normalized()
+@onready var smoothrot = default_rot
 
 @onready var turn_flash_timer:Timer = $turn_on_flash
 var flashlight_active:bool = false
+
+@onready var bulb:SpotLight3D = $flashlight/SpotLight3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,13 +25,19 @@ func _process(delta):
 	if Input.is_action_just_pressed("flashlight"):
 		if flashlight_active:
 			flashlight_active = false
-			smoothrot = current_rot.slerp(ads_rot, ADS_LERP).normalized()
+			smoothrot = smoothrot.slerp(ads_rot, ADS_LERP).normalized()
 		else:
 			flashlight_active = true
-			smoothrot = current_rot.slerp(default_rot, ADS_LERP).normalized()
+			smoothrot = smoothrot.slerp(default_rot, ADS_LERP).normalized()
 			
-	if flashlight_active:
-		quaternion = quaternion.slerp(Quaternion(Vector3.UP, smoothrot), ADS_LERP * delta)
+	if flashlight_active && self.quaternion != ads_rot:
+		self.quaternion = self.quaternion.slerp(ads_rot, ADS_LERP * delta)
+		bulb.light_energy = 2
+	elif not flashlight_active and self.quaternion!= default_rot:
+		self.quaternion = self.quaternion.slerp(default_rot, ADS_LERP * delta)
+		bulb.light_energy = 0
+		
+		
 	if flashlight_active and transform.origin != ads_pos:
 		transform.origin = transform.origin.lerp(ads_pos, ADS_LERP*delta)
 	elif not flashlight_active and transform.origin != default_pos:

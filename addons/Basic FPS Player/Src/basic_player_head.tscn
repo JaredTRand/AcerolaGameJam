@@ -18,10 +18,10 @@ debug_shape_custom_color = Color(0.647059, 0.819608, 0.921569, 1)
 [node name="player_cam" parent="." instance=ExtResource("1_exhrd")]
 ads_pos = Vector3(-0.17, 0.032, -0.12)
 
-[node name="Node3D" parent="." instance=ExtResource("2_tl0t2")]
-transform = Transform3D(-0.164967, -0.00742313, 0.00679094, -0.00742311, 0.014505, -0.164468, 0.00679095, -0.164469, -0.0148115, -0.165447, -0.391445, 0.177719)
+[node name="Flashlight" parent="." instance=ExtResource("2_tl0t2")]
+transform = Transform3D(-0.164288, 0.00167775, 0.00650701, -0.006555, -0.00496443, -0.16422, -0.00147918, -0.164342, 0.00502717, 0.0242571, -0.489008, 0.127288)
 rotation_edit_mode = 1
-default_pos = Vector3(-0.013, -0.273, 0.144)
-default_rot = Quaternion(0.032, -0.709, 0.709, 0)
-ads_pos = Vector3(-0.509, -0.362, -0.283)
-ads_rot = Quaternion(0, 0.996, -0.013, 0)
+default_pos = Vector3(-0.215, -0.489, 0.089)
+default_rot = Quaternion(0.011, -0.696, 0.718, -0.017)
+ads_pos = Vector3(-0.33, -0.489, -0.094)
+ads_rot = Quaternion(0.002, 0.998, 0.04, 0.049)

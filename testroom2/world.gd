@@ -9,4 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	await get_tree().process_frame
+	await get_tree().process_frame
+	await get_tree().process_frame
 	get_tree().call_group("enemies", "update_target_loc", player.global_transform.origin)
