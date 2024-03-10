@@ -10,6 +10,8 @@ var addedHead = false
 @onready var hand_ui:Sprite3D = $Head/interact_UI2/hand
 @onready var leave_ui:Sprite3D = $Head/interact_UI2/leave
 
+@onready var animation_plr:AnimationPlayer = $Head/fadeToBlack/AnimationPlayer
+@onready var fade_in_timer:Timer = $fade_in_timer
 func _enter_tree():
 	if find_child("Head"):
 		addedHead = true
@@ -84,6 +86,8 @@ func _ready():
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 	head_start_pos = $Head.position
+	
+	fade_in_timer.start()
 
 func _physics_process(delta):
 	if Engine.is_editor_hint():
@@ -214,3 +218,12 @@ func play_sound(sound, max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:boo
 		playerSounds.set_max_db(RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1]))
 		playerSounds.set_pitch_scale(RandomNumberGenerator.new().randf_range(pitch_rng[0], pitch_rng[1]))
 		playerSounds.play()
+
+
+func pass_out():
+	animation_plr.play("fade_to_black")
+
+
+func _on_fade_in_timer_timeout():
+	animation_plr.play("fade_in")
+	PlayerGlobals.start_time = Time.get_datetime_dict_from_system()

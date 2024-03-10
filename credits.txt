@@ -3,3 +3,4 @@ Nathan Hoad -- Dialogue Manager
 Sammburr -- FPS controller
 Lukky
 Screaming Brain Studios 
+JakLocke -- https://freesound.org/people/JakLocke/

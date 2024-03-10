@@ -71,4 +71,9 @@ stream = ExtResource("3_88ie3")
 [node name="footsteptimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="fade_in_timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="timeout" from="footsteptimer" to="." method="_on_footsteptimer_timeout"]
+[connection signal="timeout" from="fade_in_timer" to="." method="_on_fade_in_timer_timeout"]

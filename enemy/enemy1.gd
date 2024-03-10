@@ -20,3 +20,5 @@ func update_target_loc(target_loc):
 func _on_enemy_hurt_area_body_entered(body):
 	if body.is_in_group("Player"):
 		PlayerGlobals.player_death_timer.start()
+		body.pass_out()
+		print_debug("dying")

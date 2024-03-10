@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://8lyavsum8cc2"]
 
-[ext_resource type="Script" path="res://environment/scenes/door.gd" id="1_xvx12"]
+[ext_resource type="Script" path="res://environment/scenes/door/door.gd" id="1_xvx12"]
 [ext_resource type="Texture2D" uid="uid://dwk30fymt1apo" path="res://assets/128x128/Wood/Wood 9 - 128x128.png" id="2_xii34"]
 [ext_resource type="Texture2D" uid="uid://bjc1bak43tce" path="res://assets/Models pack psx/Texture/Metal_11.jpg" id="3_njau0"]
 
@@ -92,6 +92,9 @@ transform = Transform3D(0.0620026, 0, 4.65661e-11, 0, 0.0544461, 0, 3.91155e-08,
 material_override = SubResource("StandardMaterial3D_t0twf")
 mesh = SubResource("BoxMesh_je1dy")
 skeleton = NodePath("../MeshInstance3D")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="hinge/StaticBody3D"]
+transform = Transform3D(1, 0, 1.19209e-07, 0, 1, 0, 0, 0, 1, -0.372269, 0, -4.4378e-08)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
