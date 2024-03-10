@@ -39,7 +39,7 @@ SPEED = 4.0
 KEY_BIND_MOUSE_SENS = 0.002
 
 [node name="Enemy" parent="." instance=ExtResource("6_hdi60")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.8893, 0.368864, -11.5749)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.6479, 0.368864, -11.1262)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_doqi1")
@@ -52,7 +52,7 @@ navigation_mesh = SubResource("NavigationMesh_doqi1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
 [node name="Door" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
-transform = Transform3D(-1.18962, 0, -9.53197e-08, 0, 1.09033, 0, 1.04e-07, 0, -1.09033, -36.8092, 1.10016, 5.37368)
+transform = Transform3D(-1.1988, 0, -9.53197e-08, 0, 1.09033, 0, 1.04802e-07, 0, -1.09033, -36.7918, 1.10016, 5.37368)
 
 [node name="Door6" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
 transform = Transform3D(-5.19999e-08, 0, 1.09033, 0, 1.09033, 0, -1.18962, 0, -4.76598e-08, -35.8092, 1.10016, 4.6443)
@@ -71,3 +71,21 @@ transform = Transform3D(-5.19999e-08, 0, -1.09033, 0, 1.09033, 0, 1.18962, 0, -4
 
 [node name="Door2" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
 transform = Transform3D(1.18962, 0, 0, 0, 1.09033, 0, 0, 0, 1.09033, -30.8103, 1.10016, -12.6263)
+
+[node name="Door8" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 0, 0, 1.09033, 0, 0, 0, 1.09033, -42.8103, 4.10016, -2.48993)
+
+[node name="Door9" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 0, 0, 1.09033, 0, 0, 0, 1.09033, -40.8587, 4.10016, -5.30901)
+
+[node name="Door10" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 0, 0, 1.09033, 0, 0, 0, 1.09033, -36.8587, 4.10016, -5.30901)
+
+[node name="Door11" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(-5.19999e-08, 0, -1.09033, 0, 1.09033, 0, 1.18962, 0, -4.76598e-08, -33.7767, 4.10016, -4.30901)
+
+[node name="Door13" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(-5.19999e-08, 0, -1.09033, 0, 1.09033, 0, 1.18962, 0, -4.76598e-08, -34.2256, 4.10016, 2.58671)
+
+[node name="Door12" parent="NavigationRegion3D/Level" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 3.55271e-15, 0, 1.09033, 0, 1.06581e-14, 0, 1.09033, -28.8623, 4.10016, -5.30901)

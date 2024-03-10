@@ -11,6 +11,7 @@ var addedHead = false
 @onready var leave_ui:Sprite3D = $Head/interact_UI2/leave
 
 @onready var animation_plr:AnimationPlayer = $Head/fadeToBlack/AnimationPlayer
+@onready var ambience_plr:AudioStreamPlayer3D = $ambience_player
 @onready var fade_in_timer:Timer = $fade_in_timer
 func _enter_tree():
 	if find_child("Head"):

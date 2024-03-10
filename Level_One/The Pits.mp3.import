@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ky23ptdw2g3v"
+path="res://.godot/imported/The Pits.mp3-c750243fe4b6b65290a95ff63378fb70.mp3str"
+
+[deps]
+
+source_file="res://Level_One/The Pits.mp3"
+dest_files=["res://.godot/imported/The Pits.mp3-c750243fe4b6b65290a95ff63378fb70.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
