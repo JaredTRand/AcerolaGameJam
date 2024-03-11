@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://y4do2ahub8ut"]
+
+[ext_resource type="PackedScene" uid="uid://ce3t721yg8cga" path="res://environment/models/secondFllor.glb" id="1_vwld7"]
+
+[node name="secondFloor" type="Node3D"]
+
+[node name="secondFllor" parent="." instance=ExtResource("1_vwld7")]
