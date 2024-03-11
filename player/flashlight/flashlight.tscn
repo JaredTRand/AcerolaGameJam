@@ -15,8 +15,8 @@ wait_time = 1.5
 [node name="SpotLight3D" type="SpotLight3D" parent="flashlight"]
 transform = Transform3D(-0.99923, 0, -0.039225, 0, 1, 0, 0.039225, 0, -0.99923, 0.0168394, 1.42297, 2.64401)
 light_energy = 20.0
-spot_range = 120.0
-spot_attenuation = 0.35
+spot_range = 20.0
+spot_attenuation = 0.956228
 spot_angle = 44.1887
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="flashlight"]
