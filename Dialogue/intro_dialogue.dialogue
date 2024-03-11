@@ -54,6 +54,7 @@ Boss: Any Questions?
 - How quick do I need to finish?
 	Boss: You'll find that speed will benefit you in this job.
 	Boss: If you finish your job before a certain time, I'll pay you a bonus.
+	Boss: Granted, I'll only pay the bonus if you bring me a picture of every Aberration in that location.
 	Boss: How much? Well, that depends on how quickly you finish.
 	=> question_loop
 - No questions.
