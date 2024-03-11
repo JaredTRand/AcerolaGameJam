@@ -37,6 +37,7 @@ enabled=PackedStringArray("res://addons/Basic FPS Player/plugin.cfg", "res://add
 [file_customization]
 
 folder_colors={
+"res://Aberritions/": "pink",
 "res://Level_One/": "purple",
 "res://enemy/": "red",
 "res://player/": "green"

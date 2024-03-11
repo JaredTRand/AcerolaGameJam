@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="AberritionList" load_steps=2 format=3 uid="uid://jnpn6ano7lvd"]
+
+[ext_resource type="Script" path="res://Aberritions/Aberrition_List.gd" id="1_deg8j"]
+
+[resource]
+script = ExtResource("1_deg8j")
