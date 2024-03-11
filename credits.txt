@@ -4,3 +4,5 @@ Sammburr -- FPS controller
 Lukky
 Screaming Brain Studios 
 JakLocke -- https://freesound.org/people/JakLocke/
+GGBotNet -- https://ggbot.itch.io/
+elbolilloduro -- https://elbolilloduro.itch.io/

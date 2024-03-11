@@ -64,10 +64,10 @@ transform = Transform3D(-5.19999e-08, 0, 1.09033, 0, 1.09033, 0, -1.18962, 0, -4
 transform = Transform3D(1.56e-07, 0, -1.09033, 0, 1.09033, 0, 1.18962, 0, 1.4298e-07, -39.973, 1.10016, 4.65767)
 
 [node name="Door3" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
-transform = Transform3D(-5.19999e-08, 0, 1.09033, 0, 1.09033, 0, -1.18962, 0, -4.76598e-08, -35.8103, 1.10016, 0.37368)
+transform = Transform3D(-5.19999e-08, 0, 1.09033, 0, 1.09033, 0, -1.18962, 0, -4.76598e-08, -35.8259, 1.10016, 0.376788)
 
 [node name="Door4" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
-transform = Transform3D(1.18962, 0, 1.77636e-14, 0, 1.09033, 0, 1.42109e-14, 0, 1.09033, -44.8532, 1.10016, -4.35145)
+transform = Transform3D(-1.18962, 0, 9.53197e-08, 0, 1.09033, 0, -1.04e-07, 0, -1.09033, -44.7773, 1.10016, -4.35145)
 
 [node name="Door5" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
 transform = Transform3D(-5.19999e-08, 0, -1.09033, 0, 1.09033, 0, 1.18962, 0, -4.76598e-08, -26.7968, 1.10016, -7.62029)
