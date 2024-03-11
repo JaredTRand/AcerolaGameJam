@@ -42,7 +42,9 @@ Boss: Any Questions?
 	Boss: It's quite simple, really.
 	Boss: When you arrive at your location, take a picture. 
 	Boss: If you see something in the image that you do not see with your eyes, that is an Aberration.
-	Boss: They will be odd. Unusual. Oftentimes, something not of this world.
+	Boss: They will be odd. Unusual. 
+	Boss: Sometimes, a little harder to tell apart from other objects in an image.
+	Boss: Oftentimes, though, they're something not of this world.
 	Boss: You'll know one when you see it.
 	=> question_loop
 - I am getting paid for this... Right?
