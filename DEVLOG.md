@@ -179,3 +179,8 @@ My goal for today is to work on enemy attacks, and what happens when you die. I'
 
 ## Day 10 3/9
 Coming up towards the end of the jam so this weekend will be a bit of crunch time for me. I'm also kinda sick so it's not a good combo. Since I'm sick i dont really remember what I finished last night. I know I put in some footsteps and started making the final environment for the level. And right now I'm working on making interactable objects, so you can open doors, and interact with the car when you want to leave. At the end I want to come up with a kind of leaderboard for the amount of cash you're able to rake in. but that might have to come later.
+
+## Day 12 3/11
+I spent most of yesterday finishing up the environment. Only one level, but thats okay to start! I think if I had more time, I would've played around with textures a little more, found something that I really liked, but what I have set up is okay! 
+Now I'm working on getting aberrations set up, and getting them to spawn in a random number in the house. then once that's good, I'll also need to finish up the enemy aberration and make sure he works correctly in the level. I think he'll be able to get upstairs and everything, so that's cool. Once he sarts working, just gotta add a death/passout mechanic. I have a fadetoblack animation already, probably wouldn't be hugely difficult to make a pass out animation! just float the character up a little in the air with some choking noises and then fade to black, then put outside after deleting a random num of images.
+
