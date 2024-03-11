@@ -4,6 +4,9 @@ var all_images:Array
 var start_time
 var cash:int
 
+var aberritions_in_scene:int
+
+
 # dictates how long a player must 
 @onready var player_death_timer = Timer.new()
 

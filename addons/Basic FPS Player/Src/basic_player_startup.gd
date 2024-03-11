@@ -13,6 +13,8 @@ var addedHead = false
 @onready var animation_plr:AnimationPlayer = $Head/fadeToBlack/AnimationPlayer
 @onready var ambience_plr:AudioStreamPlayer3D = $ambience_player
 @onready var fade_in_timer:Timer = $fade_in_timer
+
+@onready var resource = load("res://Dialogue/level_one.dialogue")
 func _enter_tree():
 	if find_child("Head"):
 		addedHead = true
@@ -88,7 +90,12 @@ func _ready():
 
 	head_start_pos = $Head.position
 	
-	fade_in_timer.start()
+	#animation_plr.connect("animation_finished", self, "fade_in_from_black_complete")
+	animation_plr.animation_finished.connect(_on_animation_player_animation_finished)
+	DialogueManager.dialogue_ended.connect(_on_dialogue_manager_dialogue_ended)
+	#PlayerGlobals.dialogue_done.connect(_on_dialogue_manager_dialogue_ended)
+	#DialogueManager.
+	start_level()
 
 func _physics_process(delta):
 	if Engine.is_editor_hint():
@@ -224,7 +231,16 @@ func play_sound(sound, max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:boo
 func pass_out():
 	animation_plr.play("fade_to_black")
 
+#Show dialogue. when done, start fade in timer. when done, start fading in. when done, start the level timer 
+func start_level():
+	await get_tree().process_frame
+	DialogueManager.show_dialogue_balloon(resource, "start")
 
+func _on_dialogue_manager_dialogue_ended(resource: DialogueResource):
+	fade_in_timer.start()
+	
 func _on_fade_in_timer_timeout():
 	animation_plr.play("fade_in")
+	
+func _on_animation_player_animation_finished(anim_name: String):
 	PlayerGlobals.start_time = Time.get_datetime_dict_from_system()

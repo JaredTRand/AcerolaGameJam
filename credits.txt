@@ -1,5 +1,5 @@
 Craigsnedeker -- https://craigsnedeker.itch.io/classic64-asset-library
-Nathan Hoad -- Dialogue Manager
+Dialogue System by Nathan Hoad
 Sammburr -- FPS controller
 Lukky
 Screaming Brain Studios 

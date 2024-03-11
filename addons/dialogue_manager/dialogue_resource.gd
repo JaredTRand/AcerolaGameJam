@@ -30,7 +30,10 @@ const _DialogueManager = preload("./dialogue_manager.gd")
 ## be a title string or a stringified line number). Runs any mutations along the way and then returns
 ## the first dialogue line encountered.
 func get_next_dialogue_line(title: String, extra_game_states: Array = [], mutation_behaviour: _DialogueManager.MutationBehaviour = _DialogueManager.MutationBehaviour.Wait) -> DialogueLine:
-	return await Engine.get_singleton("DialogueManager").get_next_dialogue_line(self, title, extra_game_states, mutation_behaviour)
+	var nextline:DialogueLine = await Engine.get_singleton("DialogueManager").get_next_dialogue_line(self, title, extra_game_states, mutation_behaviour)
+	if nextline != null:
+		nextline.text = nextline.text.replace("{Aberrations}", str(PlayerGlobals.aberritions_in_scene))
+	return nextline
 
 
 ## Get the list of any titles found in the file.
