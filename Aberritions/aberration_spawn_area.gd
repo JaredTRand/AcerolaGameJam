@@ -15,6 +15,7 @@ func _ready():
 		ab_to_spawn = aberration_list.pick_random()
 		ab_noise = ab_to_spawn.get_noise()
 		spawn_point.add_child(ab_to_spawn.instance())
+		ab_to_spawn.transform.origin = spawn_point.transform.origin #make sure spawned ab is right on the spawn point
 	else:
 		self.queue_free() #remove from scene if not being used
 
