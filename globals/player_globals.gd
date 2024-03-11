@@ -82,7 +82,7 @@ func calculate_score():
 	## set all text to display ##
 	text_to_display["Aberrations_imaged"] = {"title":"Aberrations Pictured", "amount":aberrations_pictured.size(), "total_abs":all_aberrations.size(), "points":abs_img_score}
 	text_to_display["Aberrations_missed"] = {"title":"Aberrations Missed", "amount":missed_abs, "penalty":miss_abs_penalty}
-	text_to_display["Blank_images"]	      = {"title":"Images Submitted Without Aberrition" "amount":images_wo_ab.size(), "penalty":blank_img_penalty }
+	text_to_display["Blank_images"]	      = {"title":"Images Submitted Without Aberration" "amount":images_wo_ab.size(), "penalty":blank_img_penalty }
 	text_to_display["Time_elapsed"]	      = {"title":"Time Elapsed", "minutes":total_time.get("minute"), "seconds":total_time.get("second"), "bonus_gotten":time_bonus > 0, "bonus_amount":time_bonus}
 	#############################
 
