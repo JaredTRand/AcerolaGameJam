@@ -7,7 +7,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjfl1"]
 resource_name = "Humanoid_NotOverlapping"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_hyggk")
 metallic = 0.4
 
