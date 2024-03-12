@@ -17,9 +17,8 @@ var addedHead = false
 
 @onready var enemy = $"../Enemy"
 
-var can_move := true
 
-@onready var resource = load("res://Dialogue/level_one.dialogue")
+var can_move := true
 
 signal player_left_location
 func _enter_tree():
@@ -250,7 +249,7 @@ func pass_out():
 #Show dialogue. when done, start fade in timer. when done, start fading in. when done, start the level timer 
 func start_level():
 	await get_tree().process_frame
-	DialogueManager.show_dialogue_balloon(resource, "start")
+	#DialogueManager.show_dialogue_balloon(resource, "start")
 
 func _on_dialogue_manager_dialogue_ended(resource: DialogueResource):
 	fade_in_timer.start()

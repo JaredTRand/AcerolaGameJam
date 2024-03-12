@@ -1,6 +1,7 @@
 extends Node3D
 
 var will_spawn:bool = false
+var spawned:bool = false
 var ab_to_spawn
 @onready var spawn_point:Node3D = $Area3D/SpawnPoint
 
@@ -10,9 +11,7 @@ var ab_to_spawn
 # Will run the chances of this area spawning an aberrition or not. Defaults to 33% chance
 # if it will spawn, it picks a random ab from the list.
 func _ready():
-	will_spawn = get_chance(chance, 1)
-	if will_spawn:
-		spawn_ab()
+	try_to_spawn()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -35,3 +34,9 @@ func _on_body_exited(body):
 func spawn_ab():
 	ab_to_spawn = aberration_list.pick_random()
 	spawn_point.add_child(ab_to_spawn.instantiate())
+	
+func try_to_spawn():
+	will_spawn = get_chance(chance, 1)
+	if will_spawn:
+		spawned = true
+		spawn_ab()

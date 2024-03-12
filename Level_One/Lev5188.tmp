@@ -37,7 +37,6 @@ agent_max_slope = 55.05
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_7m7av")
-low_limit_abs = 3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qvd7h")
