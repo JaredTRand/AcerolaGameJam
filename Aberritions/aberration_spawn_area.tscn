@@ -4,7 +4,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p5o7u"]
 
-[node name="AberrationSpawnArea" type="Node3D"]
+[node name="AberrationSpawnArea" type="Node3D" groups=["spawner"]]
 script = ExtResource("1_cwhe4")
 
 [node name="Area3D" type="Area3D" parent="."]

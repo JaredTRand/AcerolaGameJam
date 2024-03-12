@@ -1,0 +1,171 @@
+[gd_scene load_steps=18 format=3 uid="uid://b0idk68jntyet"]
+
+[ext_resource type="Script" path="res://testroom2/world.gd" id="1_7m7av"]
+[ext_resource type="Shader" path="res://Level_One/Level_One_skyshader.gdshader" id="1_8oev6"]
+[ext_resource type="PackedScene" uid="uid://dpmurlitcdsi7" path="res://main_player.tscn" id="1_ysa23"]
+[ext_resource type="PackedScene" uid="uid://cjp8s2f6l0516" path="res://environment/models/road.blend" id="2_8u1l8"]
+[ext_resource type="PackedScene" uid="uid://ktno3vba53qw" path="res://environment/scenes/car/car.tscn" id="4_gvxon"]
+[ext_resource type="PackedScene" uid="uid://8lyavsum8cc2" path="res://environment/scenes/door/door.tscn" id="5_4ha2f"]
+[ext_resource type="PackedScene" uid="uid://bwcb5f1lbybal" path="res://Aberritions/aberration_spawn_area.tscn" id="5_j7o1l"]
+[ext_resource type="PackedScene" uid="uid://bk5dne0vlak1r" path="res://Aberritions/scary_man_1/scary_man_1.tscn" id="6_g3eko"]
+[ext_resource type="PackedScene" uid="uid://b1sl0igxx8mlt" path="res://enemy/enemy1.tscn" id="6_hdi60"]
+[ext_resource type="PackedScene" uid="uid://31lrd7cjuf6x" path="res://environment/scenes/telepole.tscn" id="8_3kidu"]
+[ext_resource type="PackedScene" uid="uid://1n1ek1bowmxy" path="res://environment/scenes/hosuelevels/first_floor.tscn" id="9_5368n"]
+[ext_resource type="PackedScene" uid="uid://ce3t721yg8cga" path="res://environment/models/secondFllor.glb" id="10_lqq54"]
+[ext_resource type="PackedScene" uid="uid://dphm0m4l6b07f" path="res://environment/models/roof.glb" id="11_8n3i1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s8hx1"]
+shader = ExtResource("1_8oev6")
+shader_parameter/skyColor = Color(0.0431373, 0.0431373, 0.0431373, 1)
+shader_parameter/horizonColor = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_mnpm1"]
+sky_material = SubResource("ShaderMaterial_s8hx1")
+
+[sub_resource type="Environment" id="Environment_qvd7h"]
+background_mode = 2
+sky = SubResource("Sky_mnpm1")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_doqi1"]
+agent_radius = 0.25
+agent_max_climb = 0.5
+agent_max_slope = 55.05
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_7m7av")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qvd7h")
+
+[node name="Player" parent="." instance=ExtResource("1_ysa23")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2683, 1, 9.61749)
+
+[node name="Enemy" parent="." instance=ExtResource("6_hdi60")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.6479, 0.368864, -11.1262)
+SPEED = 1.0
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_doqi1")
+use_edge_connections = false
+
+[node name="Level" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="road" parent="NavigationRegion3D/Level" instance=ExtResource("2_8u1l8")]
+
+[node name="Car2" parent="NavigationRegion3D/Level" instance=ExtResource("4_gvxon")]
+transform = Transform3D(-0.79853, 0, 0.601954, 0, 1, 0, -0.601954, 0, -0.79853, -6.49087, 0, 10.6794)
+
+[node name="doors" type="Node3D" parent="NavigationRegion3D/Level"]
+
+[node name="Door" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(-1.1988, 0, -9.53197e-08, 0, 1.09033, 0, 1.04802e-07, 0, -1.09033, -36.7918, 1.10016, 5.37368)
+
+[node name="Door6" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(-5.19999e-08, 0, 1.09033, 0, 1.09033, 0, -1.18962, 0, -4.76598e-08, -35.8092, 1.10016, 4.6443)
+
+[node name="Door7" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.56e-07, 0, -1.09033, 0, 1.09033, 0, 1.18962, 0, 1.4298e-07, -39.973, 1.10016, 4.65767)
+
+[node name="Door3" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(-5.19999e-08, 0, 1.09033, 0, 1.09033, 0, -1.18962, 0, -4.76598e-08, -35.8259, 1.10016, 0.376788)
+
+[node name="Door4" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(-1.18962, 0, 9.53197e-08, 0, 1.09033, 0, -1.04e-07, 0, -1.09033, -44.7773, 1.10016, -4.35145)
+
+[node name="Door5" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(-5.19999e-08, 0, -1.09033, 0, 1.09033, 0, 1.18962, 0, -4.76598e-08, -26.7968, 1.10016, -7.62029)
+
+[node name="Door2" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 0, 0, 1.09033, 0, 0, 0, 1.09033, -30.8103, 1.10016, -12.6263)
+
+[node name="Door8" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 0, 0, 1.09033, 0, 0, 0, 1.09033, -42.8103, 4.10016, -2.48993)
+
+[node name="Door9" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 0, 0, 1.09033, 0, 0, 0, 1.09033, -40.8587, 4.10016, -5.30901)
+
+[node name="Door10" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 0, 0, 1.09033, 0, 0, 0, 1.09033, -36.8587, 4.10016, -5.30901)
+
+[node name="Door11" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(-5.19999e-08, 0, -1.09033, 0, 1.09033, 0, 1.18962, 0, -4.76598e-08, -33.7767, 4.10016, -4.30901)
+
+[node name="Door13" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(-5.19999e-08, 0, -1.09033, 0, 1.09033, 0, 1.18962, 0, -4.76598e-08, -34.2256, 4.10016, 2.58671)
+
+[node name="Door12" parent="NavigationRegion3D/Level/doors" instance=ExtResource("5_4ha2f")]
+transform = Transform3D(1.18962, 0, 3.55271e-15, 0, 1.09033, 0, 1.06581e-14, 0, 1.09033, -28.8623, 4.10016, -5.30901)
+
+[node name="streelights" type="Node3D" parent="NavigationRegion3D/Level"]
+
+[node name="Node3D" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Node3D7" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -25)
+
+[node name="Node3D8" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -50)
+
+[node name="Node3D9" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -75)
+
+[node name="Node3D10" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -100)
+
+[node name="Node3D11" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -125)
+
+[node name="Node3D2" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 25)
+
+[node name="Node3D3" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 50)
+
+[node name="Node3D4" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 75)
+
+[node name="Node3D5" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 100)
+
+[node name="Node3D6" parent="NavigationRegion3D/Level/streelights" instance=ExtResource("8_3kidu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 125)
+
+[node name="house" type="Node3D" parent="NavigationRegion3D/Level"]
+
+[node name="firstFloor" parent="NavigationRegion3D/Level/house" instance=ExtResource("9_5368n")]
+
+[node name="secondFllor" parent="NavigationRegion3D/Level/house" instance=ExtResource("10_lqq54")]
+
+[node name="roof" parent="NavigationRegion3D/Level/house" instance=ExtResource("11_8n3i1")]
+visible = false
+
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="AberrationSpawnArea" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0203, 0.594246, 11.1179)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[node name="AberrationSpawnArea2" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7683, 0.594246, 11.1179)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[node name="AberrationSpawnArea3" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4357, 0.594246, 11.1179)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[node name="AberrationSpawnArea4" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1332, 0.594246, 11.1179)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[node name="AberrationSpawnArea5" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.2556, 0.594246, 11.1179)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[node name="AberrationSpawnArea6" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0738, 0.594246, 11.1179)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[connection signal="player_leave_location" from="NavigationRegion3D/Level/Car2" to="." method="_on_car_2_player_leave_location"]

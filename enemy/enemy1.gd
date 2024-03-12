@@ -32,10 +32,6 @@ func _on_enemy_hurt_area_body_exited(body):
 		player_left_hurt_zone.emit()
 		fade_out_noise()
 
-func _on_player_death_timer_timeout():
-	body_entered.pass_out()
-	print_debug("dying")
-
 func fade_up_noise():
 	noise_fading_in = true
 

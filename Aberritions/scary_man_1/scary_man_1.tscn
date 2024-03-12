@@ -399,6 +399,8 @@ script = ExtResource("1_ana54")
 [node name="RootNode" type="Node3D" parent="Root Scene"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Root Scene/RootNode" groups=["Aberration"]]
+collision_layer = 16
+collision_mask = 16
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/RootNode/StaticBody3D"]
 transform = Transform3D(1.39775, 0, 0, 0, 0.573931, 0, 0, 0, 1.39775, 0, 0.259612, 0)

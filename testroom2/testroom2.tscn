@@ -75,6 +75,7 @@ shadow_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_46x6s")]
 transform = Transform3D(0.693678, 0, 0.720285, 0, 1, 0, -0.720285, 0, 0.693678, 19.8948, 0, -0.09832)
 floor_max_angle = 1.0472
+percent_of_imgs_to_lose = null
 SPEED = 4.0
 KEY_BIND_MOUSE_SENS = 0.002
 

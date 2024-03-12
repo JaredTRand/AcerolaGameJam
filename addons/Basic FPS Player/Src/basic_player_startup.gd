@@ -15,6 +15,10 @@ var addedHead = false
 @onready var fade_in_timer:Timer = $fade_in_timer
 @onready var player_death_timer:Timer = $player_death_timer
 
+@onready var enemy = $"../Enemy"
+
+var can_move := true
+
 @onready var resource = load("res://Dialogue/level_one.dialogue")
 
 signal player_left_location
@@ -30,6 +34,7 @@ func _enter_tree():
 
 ## PLAYER MOVMENT SCRIPT ##
 ###########################
+@export var percent_of_imgs_to_lose := .3
 
 @export_category("Mouse Capture")
 @export var CAPTURE_ON_START := true
@@ -67,6 +72,7 @@ func _enter_tree():
 												# Otherwise player is updated in _process (uncapped)
 												
 
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 # To keep track of current speed and acceleration
@@ -96,7 +102,8 @@ func _ready():
 	#animation_plr.connect("animation_finished", self, "fade_in_from_black_complete")
 	#animation_plr.animation_finished.connect(_on_animation_player_animation_finished)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_manager_dialogue_ended)
-	
+	enemy.player_in_hurt_zone.connect(_on_enemy_player_in_hurt_zone)
+	enemy.player_left_hurt_zone.connect(_on_enemy_player_left_hurt_zone)
 	
 	start_level()
 
@@ -170,6 +177,7 @@ func rotate_player(delta):
 		$Head.quaternion = Quaternion(Vector3.RIGHT, rotation_target_head)
 	
 func move_player(delta):
+	if not can_move: return
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector(KEY_BIND_LEFT, KEY_BIND_RIGHT, KEY_BIND_UP, KEY_BIND_DOWN)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -253,12 +261,17 @@ func _on_fade_in_timer_timeout():
 func _on_animation_player_animation_finished(anim_name: String):
 	if anim_name == "fade_in":
 		PlayerGlobals.start_time = Time.get_datetime_dict_from_system()
+		PlayerGlobals.initial_player_pos = self.transform.origin
 	elif anim_name == "leave_location":
 		#ambience_plr.stop()
-		play_sound(load("res://player/sounds/player_leaving.ogg"))
+		play_sound(load("res://player/sounds/player_leaving.ogg"), [1,1], [0,0])
 		player_left_location.emit()
 	elif anim_name == "pass_out":
 		print_debug("passed out")
+		self.transform.origin = PlayerGlobals.initial_player_pos
+		animation_plr.play("wake_up")
+	elif anim_name == "wake_up":
+		can_move = true
 	
 	
 func leaving_location():
@@ -268,9 +281,17 @@ func leaving_location():
 func _on_player_death_timer_timeout():
 	print_debug("passing out!!")
 	animation_plr.play("pass_out")
-
+	delete_pics()
 
 func _on_enemy_player_in_hurt_zone():
+	print_debug("in hurt zone")
 	player_death_timer.start()
 func _on_enemy_player_left_hurt_zone():
 	player_death_timer.stop()
+
+func delete_pics():
+	var pic_count := PlayerGlobals.all_images.size()
+	var num_to_lose := int(pic_count * percent_of_imgs_to_lose)
+	
+	for n in num_to_lose:
+		PlayerGlobals.delete_image(PlayerGlobals.all_images.pick_random())
