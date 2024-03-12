@@ -46,7 +46,9 @@ func _process(delta):
 		transform.origin = transform.origin.lerp(ads_pos, ADS_LERP*delta)
 	elif not flashlight_active and transform.origin != default_pos:
 		transform.origin = transform.origin.lerp(default_pos, ADS_LERP*delta)
-		
+
+	#if not flashlight_active and relight up timer.is_running():
+		#show [F] Flashlight
 		
 func play_sound(max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:bool = false):
 	if skip_wait_for_done or !audio_player.is_playing(): 
