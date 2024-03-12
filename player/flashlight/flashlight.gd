@@ -28,10 +28,10 @@ func _process(delta):
 		play_sound([3, 4], [1, 2])
 		if flashlight_active:
 			flashlight_active = false
-			smoothrot = smoothrot.slerp(ads_rot, ADS_LERP).normalized()
+			smoothrot = smoothrot.slerp(default_rot, ADS_LERP).normalized()
 		else:
 			flashlight_active = true
-			smoothrot = smoothrot.slerp(default_rot, ADS_LERP).normalized()
+			smoothrot = smoothrot.slerp(ads_rot, ADS_LERP).normalized()
 	
 	#CHANGE ROTATION
 	if flashlight_active and self.quaternion != ads_rot:
@@ -54,4 +54,13 @@ func play_sound(max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:bool = fal
 		audio_player.set_max_db(RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1]))
 		audio_player.set_pitch_scale(RandomNumberGenerator.new().randf_range(pitch_rng[0], pitch_rng[1]))
 		audio_player.play()
-		
+
+
+func break_light():
+	bulb.light_energy = 0
+	# play sparky 
+	#play noise
+	#start relight up timer
+
+func _on_relight_timer_timeout():
+	bulb.light_energy = 2
