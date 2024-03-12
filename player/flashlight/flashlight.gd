@@ -10,7 +10,7 @@ const ADS_LERP:int = 10
 @onready var audio_player:AudioStreamPlayer3D = $flashlight/AudioStreamPlayer3D
 
 #@onready var current_rot = Quaternion(transform.basis).normalized()
-@onready var smoothrot = default_rot
+#@onready var smoothrot = default_rot
 
 @onready var turn_flash_timer:Timer = $turn_on_flash
 var flashlight_active:bool = false
@@ -28,10 +28,10 @@ func _process(delta):
 		play_sound([3, 4], [1, 2])
 		if flashlight_active:
 			flashlight_active = false
-			smoothrot = smoothrot.slerp(default_rot, ADS_LERP).normalized()
+			#smoothrot = smoothrot.slerp(default_rot, ADS_LERP).normalized()
 		else:
 			flashlight_active = true
-			smoothrot = smoothrot.slerp(ads_rot, ADS_LERP).normalized()
+			#smoothrot = smoothrot.slerp(ads_rot, ADS_LERP).normalized()
 	
 	#CHANGE ROTATION
 	if flashlight_active and self.quaternion != ads_rot:
