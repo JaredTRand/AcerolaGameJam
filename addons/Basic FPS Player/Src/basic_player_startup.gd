@@ -13,8 +13,11 @@ var addedHead = false
 @onready var animation_plr:AnimationPlayer = $Head/fadeToBlack/AnimationPlayer
 @onready var ambience_plr:AudioStreamPlayer3D = $ambience_player
 @onready var fade_in_timer:Timer = $fade_in_timer
+@onready var player_death_timer:Timer = $player_death_timer
 
 @onready var resource = load("res://Dialogue/level_one.dialogue")
+
+signal player_left_location
 func _enter_tree():
 	if find_child("Head"):
 		addedHead = true
@@ -91,10 +94,10 @@ func _ready():
 	head_start_pos = $Head.position
 	
 	#animation_plr.connect("animation_finished", self, "fade_in_from_black_complete")
-	animation_plr.animation_finished.connect(_on_animation_player_animation_finished)
+	#animation_plr.animation_finished.connect(_on_animation_player_animation_finished)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_manager_dialogue_ended)
-	#PlayerGlobals.dialogue_done.connect(_on_dialogue_manager_dialogue_ended)
-	#DialogueManager.
+	
+	
 	start_level()
 
 func _physics_process(delta):
@@ -219,12 +222,17 @@ func reset_head_bob(delta):
 
 
 
-func play_sound(sound, max_db_rng:Array, pitch_rng:Array, skip_wait_for_done:bool = false):
+func play_sound(sound, max_db_rng:Array = [0,0], pitch_rng:Array = [0,0], skip_wait_for_done:bool = false):
 	if skip_wait_for_done or !playerSounds.is_playing(): 
 		 #just to give the sound a litte variety
 		playerSounds.stream = sound
 		playerSounds.set_max_db(RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1]))
 		playerSounds.set_pitch_scale(RandomNumberGenerator.new().randf_range(pitch_rng[0], pitch_rng[1]))
+		
+		if pitch_rng[0] == pitch_rng[1]:
+			playerSounds.set_pitch_scale(pitch_rng[0])
+		if max_db_rng[0] == max_db_rng[1]:
+			playerSounds.set_max_db(max_db_rng[0])
 		playerSounds.play()
 
 
@@ -243,4 +251,26 @@ func _on_fade_in_timer_timeout():
 	animation_plr.play("fade_in")
 	
 func _on_animation_player_animation_finished(anim_name: String):
-	PlayerGlobals.start_time = Time.get_datetime_dict_from_system()
+	if anim_name == "fade_in":
+		PlayerGlobals.start_time = Time.get_datetime_dict_from_system()
+	elif anim_name == "leave_location":
+		#ambience_plr.stop()
+		play_sound(load("res://player/sounds/player_leaving.ogg"))
+		player_left_location.emit()
+	elif anim_name == "pass_out":
+		print_debug("passed out")
+	
+	
+func leaving_location():
+	animation_plr.play("leave_location")
+
+
+func _on_player_death_timer_timeout():
+	print_debug("passing out!!")
+	animation_plr.play("pass_out")
+
+
+func _on_enemy_player_in_hurt_zone():
+	player_death_timer.start()
+func _on_enemy_player_left_hurt_zone():
+	player_death_timer.stop()

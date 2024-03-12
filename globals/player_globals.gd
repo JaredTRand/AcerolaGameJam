@@ -26,14 +26,16 @@ func _process(delta):
 func set_death_timer():
 	player_death_timer.wait_time = 1.0
 	player_death_timer.one_shot = true
-	player_death_timer.connect("timeout", self, "_on_player_death_timer_timeout")
+	#player_death_timer.connect("timeout", self, "_on_player_death_timer_timeout")
 
 func _on_player_death_timer_timeout():
+	pass
 	# emit_signal death signal to player
 	#maybe instead of the listener here, can connect on the player?
 
 func calculate_score():
 	var final_score
+	var starting_time = Time.get_unix_time_from_datetime_dict(start_time)
 	var end_time   = Time.get_unix_time_from_datetime_dict(Time.get_datetime_dict_from_system())
 	var total_time = Time.get_datetime_dict_from_unix_time (end_time - start_time)
 	
@@ -69,11 +71,8 @@ func calculate_score():
 	var blank_img_penalty = 10 * images_wo_ab.size()
 	var time_bonus = 1000 - ( (total_time.get("minute") * 60) + total_time.get("second") )
 	
-	var final_score = abs_img_score - miss_abs_penalty - blank_img_penalty
+	final_score = abs_img_score - miss_abs_penalty - blank_img_penalty
 	
-	
-	
-
 	if miss_abs_penalty > 0:
 		time_bonus = 0
 	cash += final_score

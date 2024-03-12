@@ -1,62 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://kmyakts4l64t"]
+[gd_scene load_steps=3 format=3 uid="uid://kmyakts4l64t"]
 
 [ext_resource type="PackedScene" uid="uid://cbghrmmreds0r" path="res://player/cam/player_cam_2.tscn" id="1_exhrd"]
 [ext_resource type="PackedScene" uid="uid://ccuppll4lc07u" path="res://player/flashlight/flashlight.tscn" id="2_tl0t2"]
-[ext_resource type="Texture2D" uid="uid://4cp4keildw7t" path="res://player/cam/black2.png" id="3_d2vv2"]
-
-[sub_resource type="Animation" id="Animation_je56h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:transparency")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_24era"]
-resource_name = "fade_in"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:transparency")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.13, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_o8uoo"]
-resource_name = "fade_to_black"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:transparency")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0, 0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_f88nj"]
-_data = {
-"RESET": SubResource("Animation_je56h"),
-"fade_in": SubResource("Animation_24era"),
-"fade_to_black": SubResource("Animation_o8uoo")
-}
 
 [node name="Head" type="Node3D"]
 
@@ -80,17 +25,3 @@ default_pos = Vector3(-0.215, -0.489, 0.089)
 default_rot = Quaternion(0.011, -0.696, 0.718, -0.017)
 ads_pos = Vector3(-0.33, -0.489, -0.094)
 ads_rot = Quaternion(0.002, 0.998, 0.04, 0.049)
-
-[node name="fadeToBlack" type="Sprite3D" parent="."]
-transform = Transform3D(0.0951371, 0, 0, 0, 0.0951371, 0, 0, 0, 0.0951371, 0, 0, -0.0815553)
-transparent = false
-double_sided = false
-no_depth_test = true
-texture = ExtResource("3_d2vv2")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="fadeToBlack"]
-libraries = {
-"": SubResource("AnimationLibrary_f88nj")
-}
-
-[connection signal="animation_finished" from="fadeToBlack/AnimationPlayer" to="Flashlight" method="_on_animation_player_animation_finished"]

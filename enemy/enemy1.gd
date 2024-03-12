@@ -4,7 +4,9 @@ extends CharacterBody3D
 @export var SPEED:float
 
 var body_entered
-
+var noise_fading_in
+signal player_in_hurt_zone
+signal player_left_hurt_zone
 func _physics_process(delta):
 	var current_loc = global_transform.origin
 	var next_loc = nav_agent.get_next_path_position()
@@ -22,12 +24,12 @@ func update_target_loc(target_loc):
 func _on_enemy_hurt_area_body_entered(body):
 	if body.is_in_group("Player"):
 		body_entered = body
-		PlayerGlobals.player_death_timer.start()
+		player_in_hurt_zone.emit()
 		fade_up_noise() # fade scary noise in quickly, same amount of time as death timer (can you get that value from a timer? if so, set the tween time to that)
 
 func _on_enemy_hurt_area_body_exited(body):
 	if body.is_in_group("Player"):
-		PlayerGlobals.player_death_timer.stop()
+		player_left_hurt_zone.emit()
 		fade_out_noise()
 
 func _on_player_death_timer_timeout():

@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://8lyavsum8cc2"]
+[gd_scene load_steps=11 format=3 uid="uid://8lyavsum8cc2"]
 
 [ext_resource type="Script" path="res://environment/scenes/door/door.gd" id="1_xvx12"]
 [ext_resource type="Texture2D" uid="uid://dwk30fymt1apo" path="res://assets/128x128/Wood/Wood 9 - 128x128.png" id="2_xii34"]
-[ext_resource type="Texture2D" path="res://assets/Models pack psx/Texture/Metal_11.jpg" id="3_njau0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0umga"]
 
@@ -10,9 +9,6 @@
 albedo_texture = ExtResource("2_xii34")
 
 [sub_resource type="BoxMesh" id="BoxMesh_0l6kn"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0twf"]
-albedo_texture = ExtResource("3_njau0")
 
 [sub_resource type="BoxMesh" id="BoxMesh_je1dy"]
 
@@ -93,7 +89,6 @@ skeleton = NodePath("../../../..")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="hinge/StaticBody3D"]
 transform = Transform3D(0.0620026, 0, 4.65661e-11, 0, 0.0544461, 0, 3.91155e-08, 0, 0.209706, -0.396212, 0, -0.00345578)
 layers = 2
-material_override = SubResource("StandardMaterial3D_t0twf")
 mesh = SubResource("BoxMesh_je1dy")
 skeleton = NodePath("../MeshInstance3D")
 

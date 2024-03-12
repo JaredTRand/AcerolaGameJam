@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bk5dne0vlak1r"]
+[gd_scene load_steps=9 format=3 uid="uid://bk5dne0vlak1r"]
 
 [ext_resource type="Script" path="res://Aberritions/scary_man_1/aberrition.gd" id="1_ana54"]
 [ext_resource type="Texture2D" uid="uid://c4xc648xl1lbc" path="res://Aberritions/scary_man_1/scary_man_1-2a0a60b3a0eec6fbb2881f2db849cb28_Roof 1 - 128x128.png" id="1_hyggk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mr5a3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjfl1"]
 resource_name = "Humanoid_NotOverlapping"
@@ -390,12 +392,18 @@ _data = {
 "mixamo_com": SubResource("Animation_mbg20")
 }
 
-[node name="Node3D" type="Node3D" groups=["aberrations"]]
+[node name="Node3D" type="Node3D"]
 script = ExtResource("1_ana54")
 
 [node name="Root Scene" type="Node3D" parent="."]
 
 [node name="RootNode" type="Node3D" parent="Root Scene"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Root Scene/RootNode" groups=["Aberration"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root Scene/RootNode/StaticBody3D"]
+transform = Transform3D(1.39775, 0, 0, 0, 0.573931, 0, 0, 0, 1.39775, 0, 0.259612, 0)
+shape = SubResource("SphereShape3D_mr5a3")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="Root Scene/RootNode"]
 bones/0/name = "mixamorig_Hips"

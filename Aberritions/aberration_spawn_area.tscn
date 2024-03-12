@@ -11,3 +11,5 @@ script = ExtResource("1_cwhe4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_p5o7u")
+
+[node name="SpawnPoint" type="Node3D" parent="Area3D"]

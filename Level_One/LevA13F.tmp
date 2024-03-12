@@ -40,11 +40,35 @@ script = ExtResource("1_7m7av")
 environment = SubResource("Environment_qvd7h")
 
 [node name="Player" parent="." instance=ExtResource("1_ysa23")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2683, 1, 9.61749)
-KEY_BIND_MOUSE_SENS = 0.001
+transform = Transform3D(-0.316991, 0, 0.948429, 0, 1, 0, -0.948429, 0, -0.316991, -9.14246, 1.06322, 9.22539)
+floor_max_angle = 1.0472
+SPEED = 4.0
+KEY_BIND_MOUSE_SENS = 0.002
 
 [node name="Enemy" parent="." instance=ExtResource("6_hdi60")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.6479, 0.368864, -11.1262)
+
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="AberrationSpawnArea" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0549, 0.640885, 11.7521)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[node name="AberrationSpawnArea2" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9518, 0.640885, 11.7521)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[node name="AberrationSpawnArea3" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.0566, 0.640885, 11.7521)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[node name="AberrationSpawnArea4" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.089, 0.640885, 11.7521)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
+
+[node name="AberrationSpawnArea5" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8944, 0.640885, 11.7521)
+aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_doqi1")
@@ -141,31 +165,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 125)
 
 [node name="roof" parent="NavigationRegion3D/Level/house" instance=ExtResource("11_8n3i1")]
 visible = false
-
-[node name="SpawnPoints" type="Node3D" parent="."]
-
-[node name="AberrationSpawnArea" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0203, 0.594246, 11.1179)
-aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
-
-[node name="AberrationSpawnArea2" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7683, 0.594246, 11.1179)
-aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
-
-[node name="AberrationSpawnArea3" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4357, 0.594246, 11.1179)
-aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
-
-[node name="AberrationSpawnArea4" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1332, 0.594246, 11.1179)
-aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
-
-[node name="AberrationSpawnArea5" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.2556, 0.594246, 11.1179)
-aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
-
-[node name="AberrationSpawnArea6" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0738, 0.594246, 11.1179)
-aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
-
-[connection signal="player_leave_location" from="NavigationRegion3D/Level/Car2" to="." method="_on_car_2_player_leave_location"]

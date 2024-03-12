@@ -73,3 +73,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("SphereShape3D_jvxf6")
 
 [connection signal="body_entered" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_entered"]
+[connection signal="body_exited" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_exited"]

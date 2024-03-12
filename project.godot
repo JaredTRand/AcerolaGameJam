@@ -27,7 +27,6 @@ general/states=["PlayerGlobals"]
 
 [display]
 
-window/size/mode=3
 window/use_occlusion_culling=true
 
 [editor_plugins]
