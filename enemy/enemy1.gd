@@ -32,6 +32,10 @@ func _on_enemy_hurt_area_body_exited(body):
 		player_left_hurt_zone.emit()
 		fade_out_noise()
 
+func _on_enemy_danger_close_area_body_entered(body):
+	if body.is_in_group("Flashlight"):
+		body.break_light()
+
 func fade_up_noise():
 	noise_fading_in = true
 
