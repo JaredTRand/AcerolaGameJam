@@ -4,6 +4,7 @@ extends CharacterBody3D
 @export var SPEED:float
 var is_activated:bool = false
 @onready var audio_plr := $AudioStreamPlayer3D
+@onready var whispers := $areas/enemy_danger_close/Whispers
 
 var body_entered
 var noise_fading_in
@@ -53,5 +54,14 @@ func fade_out_noise():
 func _on_enemy_activated_timeout():
 	is_activated = true
 	audio_plr.stream = load("res://enemy/sounds/enemy_activated.ogg")
-	audio_plr.volume_db = 2
+	audio_plr.volume_db = 6
+	audio_plr.max_db = 8
+	audio_plr.play()
+	whispers.play()
+
+
+func _on_player_passing_out():
+	audio_plr.stream = load("res://enemy/sounds/572618__blandy8521__ghost-scream-ver-3.wav")
+	audio_plr.volume_db = 1
+	audio_plr.max_db = 2
 	audio_plr.play()

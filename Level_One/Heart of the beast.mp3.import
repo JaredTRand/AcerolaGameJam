@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://beuwoy4ha2xqx"
+path="res://.godot/imported/Heart of the beast.mp3-c519f580fbc55a991fcff0ad0b5eb7a1.mp3str"
+
+[deps]
+
+source_file="res://Level_One/Heart of the beast.mp3"
+dest_files=["res://.godot/imported/Heart of the beast.mp3-c519f580fbc55a991fcff0ad0b5eb7a1.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

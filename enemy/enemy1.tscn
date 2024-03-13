@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1sl0igxx8mlt"]
+[gd_scene load_steps=10 format=3 uid="uid://b1sl0igxx8mlt"]
 
 [ext_resource type="Script" path="res://enemy/enemy1.gd" id="1_exy1n"]
 [ext_resource type="Material" uid="uid://bu8q3kga2i7pk" path="res://enemy/new_standard_material_3d.tres" id="2_evxyf"]
 [ext_resource type="AudioStream" uid="uid://bgiqha3jhcfcq" path="res://enemy/sounds/enemy_activated.ogg" id="3_wwaq7"]
+[ext_resource type="AudioStream" uid="uid://cysu0rvuwudfw" path="res://enemy/sounds/creepywhispers.ogg" id="4_psnp2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6bfec"]
 
@@ -66,6 +67,13 @@ transform = Transform3D(2.87139, 0, 0, 0, 2.87139, 0, 0, 0, 2.87139, 0, -1.86307
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("SphereShape3D_jvxf6")
 
+[node name="Whispers" type="AudioStreamPlayer3D" parent="areas/enemy_danger_close"]
+transform = Transform3D(0.348263, 0, 0, 0, 0.348263, 0, 0, 0, 0.348263, 0, 0.997102, 0)
+stream = ExtResource("4_psnp2")
+volume_db = 1.0
+max_db = 4.0
+max_distance = 5.0
+
 [node name="enemy_danger_near" type="Area3D" parent="areas"]
 transform = Transform3D(8.30709, 0, 0, 0, 8.30709, 0, 0, 0, 8.30709, 0, -7.27299, 0)
 visible = false
@@ -80,7 +88,9 @@ one_shot = true
 autostart = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.994896, 0)
 stream = ExtResource("3_wwaq7")
+max_db = 6.0
 
 [connection signal="body_entered" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_entered"]
 [connection signal="body_exited" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_exited"]

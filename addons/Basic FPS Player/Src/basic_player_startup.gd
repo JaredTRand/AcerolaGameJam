@@ -17,10 +17,8 @@ var addedHead = false
 
 @onready var enemy = $"../Enemy"
 
-
-var can_move := true
-
 signal player_left_location
+signal passing_out
 func _enter_tree():
 	if find_child("Head"):
 		addedHead = true
@@ -176,7 +174,7 @@ func rotate_player(delta):
 		$Head.quaternion = Quaternion(Vector3.RIGHT, rotation_target_head)
 	
 func move_player(delta):
-	if not can_move: return
+	if not PlayerGlobals.player_can_move: return
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector(KEY_BIND_LEFT, KEY_BIND_RIGHT, KEY_BIND_UP, KEY_BIND_DOWN)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -259,6 +257,7 @@ func _on_fade_in_timer_timeout():
 	
 func _on_animation_player_animation_finished(anim_name: String):
 	if anim_name == "fade_in":
+		PlayerGlobals.player_can_move = true
 		PlayerGlobals.start_time = Time.get_datetime_dict_from_system()
 		PlayerGlobals.initial_player_pos = self.transform.origin
 	elif anim_name == "leave_location":
@@ -267,10 +266,11 @@ func _on_animation_player_animation_finished(anim_name: String):
 		player_left_location.emit()
 	elif anim_name == "pass_out":
 		print_debug("passed out")
+		PlayerGlobals.player_passout_count += 1
 		self.transform.origin = PlayerGlobals.initial_player_pos
 		animation_plr.play("wake_up")
 	elif anim_name == "wake_up":
-		can_move = true
+		PlayerGlobals.player_can_move = true
 	
 	
 func leaving_location():
@@ -279,6 +279,8 @@ func leaving_location():
 
 func _on_player_death_timer_timeout():
 	print_debug("passing out!!")
+	passing_out.emit()
+	PlayerGlobals.player_can_move = false
 	animation_plr.play("pass_out")
 	delete_pics()
 

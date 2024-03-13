@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b0idk68jntyet"]
+[gd_scene load_steps=19 format=3 uid="uid://b0idk68jntyet"]
 
 [ext_resource type="Script" path="res://testroom2/world.gd" id="1_7m7av"]
 [ext_resource type="Shader" path="res://Level_One/Level_One_skyshader.gdshader" id="1_8oev6"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://1n1ek1bowmxy" path="res://environment/scenes/hosuelevels/first_floor.tscn" id="9_5368n"]
 [ext_resource type="PackedScene" uid="uid://ce3t721yg8cga" path="res://environment/models/secondFllor.glb" id="10_lqq54"]
 [ext_resource type="PackedScene" uid="uid://dphm0m4l6b07f" path="res://environment/models/roof.glb" id="11_8n3i1"]
+[ext_resource type="Script" path="res://player/sounds/basicUI.gd" id="14_yuf3c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s8hx1"]
 shader = ExtResource("1_8oev6")
@@ -143,7 +144,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 125)
 [node name="firstFloor" parent="NavigationRegion3D/Level/house" instance=ExtResource("9_5368n")]
 
 [node name="secondFllor" parent="NavigationRegion3D/Level/house" instance=ExtResource("10_lqq54")]
-visible = false
 
 [node name="roof" parent="NavigationRegion3D/Level/house" instance=ExtResource("11_8n3i1")]
 visible = false
@@ -174,4 +174,28 @@ aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.0738, 0.594246, 11.1179)
 aberration_list = Array[PackedScene]([ExtResource("6_g3eko")])
 
+[node name="Node2D" type="Node2D" parent="."]
+top_level = true
+z_index = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
+visible = false
+offset_right = 529.0
+offset_bottom = 367.0
+text = "WASD To Move
+Space to Jump
+
+(LMB) Take Picture
+(RMB) Zoom Camera
+(F) Flashlight
+
+Camera Controls:
+	(Q) Previous Image
+	(E) Next Image
+	(1) Delete Image
+	(2) Favorite Image (Prevents Deletion)
+"
+script = ExtResource("14_yuf3c")
+
+[connection signal="passing_out" from="Player" to="Enemy" method="_on_player_passing_out"]
 [connection signal="player_leave_location" from="NavigationRegion3D/Level/Car2" to="." method="_on_car_2_player_leave_location"]

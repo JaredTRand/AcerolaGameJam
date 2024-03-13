@@ -75,16 +75,14 @@ shadow_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_46x6s")]
 transform = Transform3D(0.693678, 0, 0.720285, 0, 1, 0, -0.720285, 0, 0.693678, 19.8948, 0, -0.09832)
 floor_max_angle = 1.0472
-percent_of_imgs_to_lose = null
 SPEED = 4.0
 KEY_BIND_MOUSE_SENS = 0.002
 
 [node name="Area3D" parent="." instance=ExtResource("4_iw1fv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7, 0, 6.16182)
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("4_glf3f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.40799, 0, -9.20583)
-SPEED = 0.25
+[node name="Enemy" parent="." instance=ExtResource("4_glf3f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.951203, -0.948076, -0.0555315)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_rj78o")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bk5dne0vlak1r"]
+[gd_scene load_steps=10 format=3 uid="uid://bk5dne0vlak1r"]
 
 [ext_resource type="Script" path="res://Aberritions/scary_man_1/aberrition.gd" id="1_ana54"]
 [ext_resource type="Texture2D" uid="uid://c4xc648xl1lbc" path="res://Aberritions/scary_man_1/scary_man_1-2a0a60b3a0eec6fbb2881f2db849cb28_Roof 1 - 128x128.png" id="1_hyggk"]
+[ext_resource type="AudioStream" uid="uid://c3cu2b5lj1iec" path="res://Aberritions/scary_man_1/379500__juliusmabe__soft-growling-creature-laugh.ogg" id="3_i32jj"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mr5a3"]
 
@@ -468,7 +469,7 @@ bones/8/parent = 7
 bones/8/rest = Transform3D(0.999995, -0.00311053, 0.00080007, 0.00321178, 0.968471, -0.249104, -1.16415e-10, 0.249105, 0.968476, 1.11635e-11, 0.128006, 1.51982e-10)
 bones/8/enabled = true
 bones/8/position = Vector3(1.11635e-11, 0.128006, 1.51982e-10)
-bones/8/rotation = Quaternion(0.00652907, -0.288886, 0.469407, 0.834362)
+bones/8/rotation = Quaternion(0.00652906, -0.288886, 0.469407, 0.834361)
 bones/8/scale = Vector3(1, 1, 1)
 bones/9/name = "mixamorig_LeftForeArm"
 bones/9/parent = 8
@@ -531,7 +532,7 @@ bones/17/parent = 16
 bones/17/rest = Transform3D(1, 1.19378e-16, 3.67281e-17, -1.249e-16, 0.955787, 0.29406, 1.65436e-24, -0.29406, 0.955787, -0.00406366, 0.0428867, -1.4366e-09)
 bones/17/enabled = true
 bones/17/position = Vector3(-0.00406366, 0.0428867, -1.4366e-09)
-bones/17/rotation = Quaternion(0.383969, 0.00932553, 0.176522, 0.906268)
+bones/17/rotation = Quaternion(0.383969, 0.00932551, 0.176522, 0.906268)
 bones/17/scale = Vector3(1, 1, 1)
 bones/18/name = "mixamorig_LeftHandIndex4"
 bones/18/parent = 17
@@ -545,7 +546,7 @@ bones/19/parent = 3
 bones/19/rest = Transform3D(0.00108373, -0.950141, 0.311819, 1.90735e-06, -0.311819, -0.950142, 0.999999, 0.0010303, -0.00033617, -0.0610257, 0.11498, 6.59101e-05)
 bones/19/enabled = true
 bones/19/position = Vector3(-0.0610257, 0.11498, 6.59101e-05)
-bones/19/rotation = Quaternion(0.618428, -0.414618, 0.566341, 0.353409)
+bones/19/rotation = Quaternion(0.618428, -0.414618, 0.56634, 0.353409)
 bones/19/scale = Vector3(1, 1, 1)
 bones/20/name = "mixamorig_RightArm"
 bones/20/parent = 19
@@ -573,7 +574,7 @@ bones/23/parent = 22
 bones/23/rest = Transform3D(0.851907, 0.523693, 5.91383e-07, -0.523693, 0.851907, 9.35071e-07, -1.41129e-08, -1.1063e-06, 1, 0.0226526, 0.0343827, 1.82652e-08)
 bones/23/enabled = true
 bones/23/position = Vector3(0.0226526, 0.0343827, 1.82652e-08)
-bones/23/rotation = Quaternion(0.271831, -0.0333634, -0.453141, 0.848326)
+bones/23/rotation = Quaternion(0.271831, -0.0333634, -0.453142, 0.848326)
 bones/23/scale = Vector3(1, 1, 1)
 bones/24/name = "mixamorig_RightHandThumb2"
 bones/24/parent = 23
@@ -587,7 +588,7 @@ bones/25/parent = 24
 bones/25/rest = Transform3D(1, -4.72538e-17, 1.1478e-16, 5.55112e-17, 0.997329, -0.0730401, -1.11022e-16, 0.0730401, 0.997329, 0.00137067, 0.0339337, -3.53603e-09)
 bones/25/enabled = true
 bones/25/position = Vector3(0.00137067, 0.0339337, -3.53603e-09)
-bones/25/rotation = Quaternion(-0.00198529, -0.479801, 0.412607, 0.774302)
+bones/25/rotation = Quaternion(-0.00198528, -0.479801, 0.412607, 0.774301)
 bones/25/scale = Vector3(1, 1, 1)
 bones/26/name = "mixamorig_RightHandThumb4"
 bones/26/parent = 25
@@ -706,3 +707,11 @@ libraries = {
 }
 autoplay = "mixamo_com"
 speed_scale = 1.615
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Root Scene"]
+stream = ExtResource("3_i32jj")
+volume_db = 1.5
+max_db = 2.0
+autoplay = true
+stream_paused = true
+max_distance = 3.0

@@ -9,6 +9,8 @@ var aberritions_in_scene:int
 var text_to_display
 #####################
 var initial_player_pos
+var player_can_move := false
+var player_passout_count:int
 
 
 # Called when the node enters the scene tree for the first time.
@@ -31,9 +33,10 @@ func calculate_score():
 	
 	var all_aberrations = get_tree().get_nodes_in_group("Aberration")
 	
-	for image:Aberration_Image in all_images:
+	for image:Aberration_Image in self.all_images:
 		# only submit starred pics
-		if not image.to_submit: continue
+		#if not image.to_submit: continue
+		if not image.starred: continue
 		
 		count_images += 1
 		

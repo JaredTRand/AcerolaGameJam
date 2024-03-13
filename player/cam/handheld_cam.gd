@@ -40,7 +40,7 @@ func _physics_process(delta):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	cam_follow_movement.global_transform = camera_loc.global_transform # make handheld_viewport_cam follow with cam mesh
+	cam_follow_movement.global_transform = camera_loc.global_transform # make handheld_viewport_cam follow with cam mesh	
 	
 	#bring camera close
 	if Input.is_action_pressed("secondary_action"):
@@ -51,17 +51,6 @@ func _process(delta):
 		
 		if(current_image != null):
 			set_cam_screen_ab(current_image)
-		if(PlayerGlobals.all_images.size() > 0):
-			if Input.is_action_just_pressed("cam_prev_image"):
-				if(current_image.prev_img != null):
-					play_sound(load("res://player/cam/sounds/camera_next_image.wav"), [-10, -7], [1,1], true)
-					current_image = current_image.prev_img
-					set_cam_screen_ab(current_image)
-			elif Input.is_action_just_pressed("cam_next_image"):
-				if(current_image.next_img != null):
-					play_sound(load("res://player/cam/sounds/camera_next_image.wav"), [-10, -7], [-1,-1], true)
-					current_image = current_image.next_img
-					set_cam_screen_ab(current_image)
 				
 		cam_preview_image_cooldown.start()
 	else:
@@ -70,6 +59,18 @@ func _process(delta):
 			
 		transform.origin = transform.origin.lerp(default_pos, ADS_LERP*delta)
 		
+	if(PlayerGlobals.all_images.size() > 0):
+		if Input.is_action_just_pressed("cam_prev_image"):
+			if(current_image.prev_img != null):
+				play_sound(load("res://player/cam/sounds/camera_next_image.wav"), [-10, -7], [1,1], true)
+				current_image = current_image.prev_img
+				set_cam_screen_ab(current_image)
+		elif Input.is_action_just_pressed("cam_next_image"):
+			if(current_image.next_img != null):
+				play_sound(load("res://player/cam/sounds/camera_next_image.wav"), [-10, -7], [-1,-1], true)
+				current_image = current_image.next_img
+				set_cam_screen_ab(current_image)
+	
 	if Input.is_action_just_pressed("cam_favorite_img"):
 		if current_image == null or cam_preview_image_cooldown.is_stopped(): return
 		if(current_image.starred):
@@ -85,6 +86,7 @@ func _process(delta):
 			
 
 func take_pic():
+	if not PlayerGlobals.player_can_move: return
 	cam_cooldown_timer.start()
 	cam_flash.light_energy = flash_brightness
 	await get_tree().create_timer(.3).timeout
