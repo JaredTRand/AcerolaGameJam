@@ -2,16 +2,22 @@ extends CharacterBody3D
 
 @onready var nav_agent:NavigationAgent3D = $NavigationAgent3D
 @export var SPEED:float
+@export var TURN_SPEED:float
+@export var activation_timer_time:int = 120
+@onready var activation_timer:Timer = $enemy_activated
 var is_activated:bool = false
 @onready var audio_plr := $AudioStreamPlayer3D
 @onready var whispers := $areas/enemy_danger_close/Whispers
-
+@onready var animation_plr := $"Root Scene/AnimationPlayer"
+@onready var face_dir:Node3D = $face_dir
 var body_entered
 var noise_fading_in
 signal player_in_hurt_zone
 signal player_left_hurt_zone
 func _physics_process(delta):
 	if is_activated:
+		face_dir.look_at(nav_agent.target_position, Vector3.UP)
+		rotate_y(deg_to_rad(face_dir.rotation.y * TURN_SPEED))
 		var current_loc = global_transform.origin
 		var next_loc = nav_agent.get_next_path_position()
 		var new_velocity = (next_loc - current_loc).normalized() * SPEED
@@ -57,6 +63,9 @@ func _on_enemy_activated_timeout():
 	audio_plr.volume_db = 6
 	audio_plr.max_db = 8
 	audio_plr.play()
+	
+	animation_plr.play("mixamo_com")
+	
 	whispers.play()
 
 
@@ -65,3 +74,8 @@ func _on_player_passing_out():
 	audio_plr.volume_db = 1
 	audio_plr.max_db = 2
 	audio_plr.play()
+
+
+func _on_player_player_started_level():
+	activation_timer.wait_time = activation_timer_time
+	activation_timer.start()

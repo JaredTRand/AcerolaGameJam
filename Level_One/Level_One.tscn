@@ -47,10 +47,11 @@ environment = SubResource("Environment_qvd7h")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2683, 1, 9.61749)
 
 [node name="Enemy" parent="." instance=ExtResource("6_hdi60")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.1237, 0, -10.2904)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.9151, 0.0335929, -11.7879)
 collision_layer = 0
 collision_mask = 0
-SPEED = 0.5
+TURN_SPEED = 0.6
+activation_timer_time = 15
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_doqi1")
@@ -180,8 +181,8 @@ z_index = 5
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
 visible = false
-offset_right = 529.0
-offset_bottom = 367.0
+offset_right = 328.0
+offset_bottom = 467.0
 text = "WASD To Move
 Space to Jump
 
@@ -194,8 +195,11 @@ Camera Controls:
 	(E) Next Image
 	(1) Delete Image
 	(2) Favorite Image (Prevents Deletion)
+
+Make sure to Star the pictures you want to submit before getting in the car.
 "
 script = ExtResource("14_yuf3c")
 
 [connection signal="passing_out" from="Player" to="Enemy" method="_on_player_passing_out"]
+[connection signal="player_started_level" from="Player" to="Enemy" method="_on_player_player_started_level"]
 [connection signal="player_leave_location" from="NavigationRegion3D/Level/Car2" to="." method="_on_car_2_player_leave_location"]

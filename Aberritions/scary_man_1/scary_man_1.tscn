@@ -713,5 +713,4 @@ stream = ExtResource("3_i32jj")
 volume_db = 1.5
 max_db = 2.0
 autoplay = true
-stream_paused = true
 max_distance = 3.0

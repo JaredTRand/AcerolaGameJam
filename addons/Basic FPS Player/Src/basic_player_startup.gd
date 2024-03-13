@@ -20,6 +20,7 @@ var addedHead = false
 
 signal player_left_location
 signal passing_out
+signal player_started_level
 func _enter_tree():
 	if find_child("Head"):
 		addedHead = true
@@ -264,9 +265,11 @@ func _on_animation_player_animation_finished(anim_name: String):
 		PlayerGlobals.player_can_move = true
 		PlayerGlobals.start_time = Time.get_datetime_dict_from_system()
 		PlayerGlobals.initial_player_pos = self.transform.origin
+		player_started_level.emit()
 	elif anim_name == "leave_location":
 		#ambience_plr.stop()
 		#play_sound(load("res://player/sounds/player_leaving.ogg"), [1,1], [0,0])
+		PlayerGlobals.player_can_move = false
 		carGetAway.play()
 	elif anim_name == "pass_out":
 		print_debug("passed out")

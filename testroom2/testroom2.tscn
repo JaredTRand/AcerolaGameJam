@@ -82,7 +82,8 @@ KEY_BIND_MOUSE_SENS = 0.002
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7, 0, 6.16182)
 
 [node name="Enemy" parent="." instance=ExtResource("4_glf3f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.951203, -0.948076, -0.0555315)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87892, -0.0698671, -0.055531)
+SPEED = 0.5
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_rj78o")

@@ -11,7 +11,7 @@ var text_to_display
 var initial_player_pos
 var player_can_move := false
 var player_passout_count:int
-
+var save_path = "user://score.save"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -56,16 +56,11 @@ func calculate_score():
 
 	var abs_img_score = 500 * aberrations_pictured.size()
 	var missed_abs = (all_aberrations.size() - aberrations_pictured.size())
-	var miss_abs_penalty = 20 * missed_abs
-	var blank_img_penalty = 10 * images_wo_ab.size()
-	var time_bonus = 1000 - ( (total_time.get("minute") * 60) + total_time.get("second") )
+	var miss_abs_penalty = 200 * missed_abs
+	var blank_img_penalty = 100 * images_wo_ab.size()
+	var time_bonus = 500 - ( (total_time.get("minute") * 60) + total_time.get("second") )
 	var all_abs_picd_bonus = abs_img_score/2
-	
-	final_score = abs_img_score - miss_abs_penalty - blank_img_penalty
-	
-	#if miss_abs_penalty > 0:
-		#time_bonus = 0
-	cash += final_score
+
 
 	print_debug("bonus of $" + str(time_bonus))
 	print_debug("you got $" + str(final_score))
@@ -89,6 +84,14 @@ func calculate_score():
 		perc_range = "BT75and100"
 	elif perc_of_abs == 1:
 		perc_range = "EQ100"
+		
+	if time_bonus < 0 or perc_of_abs < 1:
+		time_bonus = 0
+		
+	final_score = abs_img_score - (miss_abs_penalty - blank_img_penalty) + (time_bonus + all_abs_picd_bonus)
+	save_to_bank(final_score) #save cash
+	var cash_in_bank = get_from_bank()
+	
 	## set all text to display #################################################################################################################################################
 	text_to_display = {
 	"Aberrations_imaged":{"title":"Aberrations Pictured", "amount":aberrations_pictured.size(), "total_abs":all_aberrations.size(), "points":abs_img_score
@@ -99,19 +102,15 @@ func calculate_score():
 	},
 	"Percentages":{"perc_of_abs_picd":perc_of_abs, "perc_range":perc_range
 	},
-	"Score":{"final_total":final_score, "time_bonus":time_bonus, "all_abs_picd_bonus":all_abs_picd_bonus, "time_elapsed_min":total_time.get("minute"), "time_elapsed:sec":total_time.get("second")
+	"Score":{"cash_in_bank":cash_in_bank, "final_total":final_score, "time_bonus":time_bonus, "all_abs_picd_bonus":all_abs_picd_bonus, "time_elapsed_min":total_time.get("minute"), "time_elapsed:sec":total_time.get("second")
 	},
 	"Blank_images":{"title":"Images Submitted Without Aberration", "amount":images_wo_ab.size(), "penalty":blank_img_penalty
 	},
 	"Time_elapsed":{"title":"Time Elapsed", "minutes":total_time.get("minute"), "seconds":total_time.get("second"), "bonus_gotten":time_bonus > 0, "bonus_amount":time_bonus
 	}
 	}
-	#text_to_display["Aberrations_imaged"] = {"title":"Aberrations Pictured", "amount":aberrations_pictured.size(), "total_abs":all_aberrations.size(), "points":abs_img_score}
-	#text_to_display["Aberrations_missed"] = {"title":"Aberrations Missed", "amount":missed_abs, "penalty":miss_abs_penalty}
-	#text_to_display["Blank_images"]	      = {"title":"Images Submitted Without Aberration", "amount":images_wo_ab.size(), "penalty":blank_img_penalty }
-	#text_to_display["Time_elapsed"]	      = {"title":"Time Elapsed", "minutes":total_time.get("minute"), "seconds":total_time.get("second"), "bonus_gotten":time_bonus > 0, "bonus_amount":time_bonus}
 	############################################################################################################################################################################
-	print_debug(text_to_display["Aberrations_imaged"].get("amount"))
+
 	return final_score
 	
 func delete_image(image_to_del:Aberration_Image):
@@ -133,3 +132,18 @@ func delete_image(image_to_del:Aberration_Image):
 			temp_img = prev_img
 			
 		self.all_images.remove_at(self.all_images.find(image_to_del))
+
+func save_to_bank(amount:int):
+	var current_cash = get_from_bank()
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	current_cash += + amount
+	file.store_var(current_cash)
+	
+func get_from_bank():
+	if FileAccess.file_exists(save_path):
+		print("file found")
+		var file = FileAccess.open(save_path, FileAccess.READ)
+		return file.get_var()
+	else:
+		print("file not found")
+		return 0
