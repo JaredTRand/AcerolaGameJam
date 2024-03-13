@@ -30,7 +30,7 @@ func _on_car_2_player_leave_location():
 	player.leaving_location()
 
 func next_scene():
-	pass
+	get_tree().change_scene_to_file("res://End_Level/end_level_driving.tscn")
 	
 func make_spawned_abs_over_limit():
 	var unspawned = get_unspawned_spawners()

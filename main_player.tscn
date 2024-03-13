@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dpmurlitcdsi7"]
+[gd_scene load_steps=19 format=3 uid="uid://dpmurlitcdsi7"]
 
 [ext_resource type="Script" path="res://addons/Basic FPS Player/Src/basic_player_startup.gd" id="1_xe8ql"]
 [ext_resource type="PackedScene" uid="uid://kmyakts4l64t" path="res://addons/Basic FPS Player/Src/basic_player_head.tscn" id="2_4hhew"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ck6t7unbk5arg" path="res://player/interactUI/ion--hand-right-outline.png" id="4_0ru3o"]
 [ext_resource type="Texture2D" uid="uid://p8g3hv1oax0l" path="res://player/interactUI/pepicons-pop--leave-circle-filled.png" id="4_py5yl"]
 [ext_resource type="Texture2D" uid="uid://4cp4keildw7t" path="res://player/cam/black2.png" id="5_v8tc7"]
+[ext_resource type="AudioStream" uid="uid://c3mnk307r5jim" path="res://player/sounds/player_leaving.ogg" id="6_i6f2j"]
 [ext_resource type="AudioStream" uid="uid://beuwoy4ha2xqx" path="res://Level_One/Heart of the beast.mp3" id="7_44jjg"]
 
 [sub_resource type="Animation" id="Animation_je56h"]
@@ -235,6 +236,10 @@ layers = 2
 ignore_occlusion_culling = true
 mesh = SubResource("CapsuleMesh_cx1k7")
 
+[node name="cargetaway" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_i6f2j")
+volume_db = 1.0
+
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_88ie3")
 
@@ -255,6 +260,7 @@ wait_time = 1.5
 one_shot = true
 
 [connection signal="animation_finished" from="Head/fadeToBlack/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="finished" from="cargetaway" to="." method="_on_cargetaway_finished"]
 [connection signal="finished" from="ambience_player" to="." method="_on_ambience_player_finished"]
 [connection signal="timeout" from="footsteptimer" to="." method="_on_footsteptimer_timeout"]
 [connection signal="timeout" from="fade_in_timer" to="." method="_on_fade_in_timer_timeout"]

@@ -4,7 +4,7 @@ uniform vec3 skyColor : source_color;
 uniform vec3 horizonColor : source_color;
 
 void sky() {
-	float col = clamp(EYEDIR.y / .15, 0.0, 1.0);
+	float col = clamp(EYEDIR.y / .05, -.1, .75);
 	vec3 finalColor = mix(horizonColor, skyColor, col);
 	COLOR = finalColor;
 }

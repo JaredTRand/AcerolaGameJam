@@ -1,10 +1,9 @@
-[gd_scene load_steps=39 format=3 uid="uid://ktno3vba53qw"]
+[gd_scene load_steps=38 format=3 uid="uid://ktno3vba53qw"]
 
 [ext_resource type="Script" path="res://environment/scenes/car/car.gd" id="1_5c4uj"]
 [ext_resource type="Texture2D" uid="uid://dthesc4yqmxjv" path="res://environment/models/car_Leather.jpg" id="2_qfxlb"]
 [ext_resource type="Texture2D" uid="uid://c28b0ng7064qm" path="res://environment/models/car_Auto.jpg" id="3_65g1g"]
 [ext_resource type="Texture2D" uid="uid://dameh3g2x763" path="res://environment/models/car_Plastic_02.jpg" id="4_svw6q"]
-[ext_resource type="AudioStream" uid="uid://dojjwbeln3wve" path="res://assets/PSX_Style_Cars_by_GGBot_(August2023)/Sound effects/Car2_Engine_Loop.ogg" id="5_lkq87"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i5vqp"]
 size = Vector3(2.29243, 2.44626, 1.09058)
@@ -775,11 +774,3 @@ spot_attenuation = 1.1487
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88193, 0.92713, 2.79544)
 light_energy = 0.205
 omni_range = 1.345
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="car/SpotLight3D2/OmniLight3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.626432, -1.81179)
-stream = ExtResource("5_lkq87")
-unit_size = 3.0
-max_db = 1.0
-autoplay = true
-max_distance = 5.0

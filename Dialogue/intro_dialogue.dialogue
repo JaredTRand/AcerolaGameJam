@@ -7,8 +7,8 @@ Boss: Alright.
 Boss: Do you know what this job is about?
 - No
 #	You: No, I don't. 
-- Yes
-	You: [[I know the deal.|I know what to do.|So where am I going?]]
+- Yes (Skip)
+	You: [[I know the deal.|I know what to do.]]
 	=> skip
 	
 Boss: I’m not a man who likes to waste time, so I’ll get right down to it.

@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://jkckg3s6k1py"]
+
+[ext_resource type="Script" path="res://End_Level/End_level_totals_UI.gd" id="1_sfohg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sfohg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 651.0
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/GridContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="aberritions_imaged" type="RichTextLabel" parent="HBoxContainer/GridContainer/GridContainer"]
+layout_mode = 2
+text = "text	"
+fit_content = true
+autowrap_mode = 0
+
+[node name="amt_and_total" type="RichTextLabel" parent="HBoxContainer/GridContainer/GridContainer"]
+layout_mode = 2
+text = "text	"
+fit_content = true
+autowrap_mode = 0
+
+[node name="points" type="RichTextLabel" parent="HBoxContainer/GridContainer/GridContainer"]
+layout_mode = 2
+text = "text	"
+fit_content = true
+autowrap_mode = 0

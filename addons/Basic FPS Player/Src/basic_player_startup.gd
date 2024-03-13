@@ -6,6 +6,7 @@ var addedHead = false
 
 @onready var useCast:RayCast3D = $Head/useCast
 @onready var playerSounds:AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var carGetAway:AudioStreamPlayer3D = $cargetaway
 @onready var footstepTimer:Timer = $footsteptimer
 @onready var hand_ui:Sprite3D = $Head/interact_UI2/hand
 @onready var leave_ui:Sprite3D = $Head/interact_UI2/leave
@@ -231,13 +232,16 @@ func play_sound(sound, max_db_rng:Array = [0,0], pitch_rng:Array = [0,0], skip_w
 	if skip_wait_for_done or !playerSounds.is_playing(): 
 		 #just to give the sound a litte variety
 		playerSounds.stream = sound
-		playerSounds.set_max_db(RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1]))
-		playerSounds.set_pitch_scale(RandomNumberGenerator.new().randf_range(pitch_rng[0], pitch_rng[1]))
 		
 		if pitch_rng[0] == pitch_rng[1]:
 			playerSounds.set_pitch_scale(pitch_rng[0])
+		else:
+			playerSounds.set_pitch_scale(RandomNumberGenerator.new().randf_range(pitch_rng[0], pitch_rng[1]))
+			
 		if max_db_rng[0] == max_db_rng[1]:
 			playerSounds.set_max_db(max_db_rng[0])
+		else:
+			playerSounds.set_max_db(RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1]))
 		playerSounds.play()
 
 
@@ -262,8 +266,8 @@ func _on_animation_player_animation_finished(anim_name: String):
 		PlayerGlobals.initial_player_pos = self.transform.origin
 	elif anim_name == "leave_location":
 		#ambience_plr.stop()
-		play_sound(load("res://player/sounds/player_leaving.ogg"), [1,1], [0,0])
-		player_left_location.emit()
+		#play_sound(load("res://player/sounds/player_leaving.ogg"), [1,1], [0,0])
+		carGetAway.play()
 	elif anim_name == "pass_out":
 		print_debug("passed out")
 		PlayerGlobals.player_passout_count += 1
@@ -296,3 +300,7 @@ func delete_pics():
 	
 	for n in num_to_lose:
 		PlayerGlobals.delete_image(PlayerGlobals.all_images.pick_random())
+
+
+func _on_cargetaway_finished():
+	player_left_location.emit()
