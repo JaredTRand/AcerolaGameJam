@@ -1,12 +1,95 @@
 ~ start
 
-Nathan: [[Hi|Hello|Howdy]], this is some {{str(PlayerGlobals["Aberrations_imaged"]["amount"])}}.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Boss: Hello. It's me.
+Boss: I just received your images. {{text_to_display["Images_submitted"].get("amount")}} of them? Let me look them over.
+Boss: You say you were inside for {{text_to_display["Time_elapsed"].get("minutes")}} minutes and {{text_to_display["Time_elapsed"].get("seconds")}} seconds?
+Boss: Alright.
+
+
+# 0 images
+if text_to_display["Images_submitted"].get("amount") == 0:
+	Boss: [wave amp=25 freq=5]Really?[/wave]
+	Boss: You didn't submit a [wave amp=25 freq=5]SINGLE[/wave] picture?
+	Boss: I thought we'd been over this. I am not a patient man.
+	Boss: I'm docking your pay.
+	Boss: Perform better next time or I'll dock your pay again.
+	=> total
+
+# less than 25% pic'd
+if text_to_display["Percentages"].get("perc_range") == "LT25":
+	Boss: Hmph. 
+	Boss: You only took pictures of less than a quarter of the Aberritions? 
+	Boss: Not great.
+	Boss: Try better next time.
+	=> total
+# 25%
+elif text_to_display["Percentages"].get("perc_range") == "EQ25":
+	Boss: You only took pictures of a quarter of the Aberritions?
+	Boss: Not great.
+	Boss: Try better next time.
+	=> total
+	
+# between 25% and 50%
+elif text_to_display["Percentages"].get("perc_range") == "BT25and50":
+	Boss: You only took pictures of about half of the Aberritions?
+	Boss: Not great.
+	Boss: But could've been worse, I suppose.
+	=> total
+elif text_to_display["Percentages"].get("perc_range") == "EQ50":
+	Boss: You took pictures of half of the Aberritions?
+	Boss: Not bad. Could've done better, though.
+	Boss: I expect more from you in the future.
+	=> total
+
+#between 50 and 75
+elif text_to_display["Percentages"].get("perc_range") == "BT50and75":
+	Boss: You took pictures of over half?
+	Boss: Not bad.
+	Boss: Some room for improvement, but this is acceptable.
+	=> total
+elif text_to_display["Percentages"].get("perc_range") == "EQ75":
+	Boss: You took pictures three quarters of the Aberritions?
+	Boss: Pretty good.
+	Boss: Some room for improvement. But overall, not bad work.
+	=> total
+	
+# between 75 and 100
+elif text_to_display["Percentages"].get("perc_range") == "BT75and100":
+	Boss: I see you got pictures of most of the Aberritions.
+	Boss: Good Job.
+	Boss: This is kind of effort I like to see. 
+	=> total
+
+elif text_to_display["Percentages"].get("perc_range") == 5:
+	Boss: Very well done.
+	Boss: I see a picture for every Aberrition here.
+	Boss: [wave amp=25 freq=5]Exemplary[/wave] Work.
+	Boss: You've earned this.
+	Received ${{text_to_display["Score"].get("all_abs_picd_bonus")}} as a bonus
+	=> total
+	
+
+if text_to_display["Aberrations_missed"].get("amount") > 0:
+	Boss: I also see that you failed to take a picture of {{text_to_display["Aberrations_missed"].get("amount")}} Aberritions.
+	Boss: For that, I'm subtracting ${{text_to_display["Aberrations_missed"].get("penalty")}} from your final pay.
+
+if text_to_display["Blank_images"].get("amount") > 0:
+	Boss: I also see that you submitted {{text_to_display["Blank_images"].get("amount")}} pictures with no Aberritions in them.
+	Boss: That doesn't amuse me.
+	Boss: For that, I'm subtracting ${{text_to_display["Blank_images"].get("penalty")}} from your final pay.
+	
+if text_to_display["Score"].get("time_bonus") > 0:
+	Boss: I'll also be rewarding you ${{text_to_display["Score"].get("time_bonus")}} as a bonus for finishing this job quickly.
+
+~ total
+if text_to_display["Score"].get("final_total") > 0:
+	${{text_to_display["Score"].get("final_total")}} added to your bank.
+else:
+	${{text_to_display["Score"].get("final_total")}} subtracted from your bank.
+
+You now have $butt
+=> END
+
+
 
 => END

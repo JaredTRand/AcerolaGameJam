@@ -1,5 +1,5 @@
 extends Node3D
-@onready var resource = load("res://Dialogue/end_level.dialogue")
+@onready var dialogue = load("res://Dialogue/end_level.dialogue")
 @onready var fadetoblack = $Camera3D/fadeToBlack/AnimationPlayer
 @onready var dialoguetimer = $dialogue_start_timer
 @onready var endtimer = $sceneendtimer
@@ -21,7 +21,7 @@ func _on_dialogue_start_timer_timeout():
 	ringring.play()
 	
 func _on_ringring_finished():
-	DialogueManager.show_dialogue_balloon(resource, "start")
+	DialogueManager.show_dialogue_balloon(dialogue, "start")
 	
 func _on_dialogue_manager_dialogue_ended(resource: DialogueResource):
 	fadetoblack.play("fade_to_black")

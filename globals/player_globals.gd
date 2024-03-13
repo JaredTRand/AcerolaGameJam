@@ -59,21 +59,47 @@ func calculate_score():
 	var miss_abs_penalty = 20 * missed_abs
 	var blank_img_penalty = 10 * images_wo_ab.size()
 	var time_bonus = 1000 - ( (total_time.get("minute") * 60) + total_time.get("second") )
+	var all_abs_picd_bonus = abs_img_score/2
 	
 	final_score = abs_img_score - miss_abs_penalty - blank_img_penalty
 	
-	if miss_abs_penalty > 0:
-		time_bonus = 0
+	#if miss_abs_penalty > 0:
+		#time_bonus = 0
 	cash += final_score
 
 	print_debug("bonus of $" + str(time_bonus))
 	print_debug("you got $" + str(final_score))
-
+	var abs_picd:float = float(aberrations_pictured.size())
+	var abs_all:float = float(all_aberrations.size())
+	var perc_of_abs:float = float(abs_picd / abs_all)
+	var perc_range:String
+	if perc_of_abs < .25:
+		perc_range = "LT25"
+	elif perc_of_abs == .25:
+		perc_range = "EQ25"
+	elif perc_of_abs >.25 and perc_of_abs < .5:
+		perc_range = "BT25and50"
+	elif perc_of_abs == .5:
+		perc_range = "EQ50"
+	elif perc_of_abs >.5 and perc_of_abs < .75:
+		perc_range = "BT50and75"
+	elif perc_of_abs == .75:
+		perc_range = "EQ75"
+	elif perc_of_abs >.75 and perc_of_abs < 1:
+		perc_range = "BT75and100"
+	elif perc_of_abs == 1:
+		perc_range = "EQ100"
 	## set all text to display #################################################################################################################################################
 	text_to_display = {
 	"Aberrations_imaged":{"title":"Aberrations Pictured", "amount":aberrations_pictured.size(), "total_abs":all_aberrations.size(), "points":abs_img_score
 	},
 	"Aberrations_missed":{"title":"Aberrations Missed", "amount":missed_abs, "penalty":miss_abs_penalty
+	},
+	"Images_submitted":{"Title":"Images Submitted", "amount":count_images
+	},
+	"Percentages":{"perc_of_abs_picd":perc_of_abs, "perc_range":perc_range
+	},
+	"Score":{"final_total":final_score, "time_bonus":time_bonus, "all_abs_picd_bonus":all_abs_picd_bonus, "time_elapsed_min":total_time.get("minute"), "time_elapsed:sec":total_time.get("second")
 	},
 	"Blank_images":{"title":"Images Submitted Without Aberration", "amount":images_wo_ab.size(), "penalty":blank_img_penalty
 	},
@@ -85,7 +111,7 @@ func calculate_score():
 	#text_to_display["Blank_images"]	      = {"title":"Images Submitted Without Aberration", "amount":images_wo_ab.size(), "penalty":blank_img_penalty }
 	#text_to_display["Time_elapsed"]	      = {"title":"Time Elapsed", "minutes":total_time.get("minute"), "seconds":total_time.get("second"), "bonus_gotten":time_bonus > 0, "bonus_amount":time_bonus}
 	############################################################################################################################################################################
-
+	print_debug(text_to_display["Aberrations_imaged"].get("amount"))
 	return final_score
 	
 func delete_image(image_to_del:Aberration_Image):
