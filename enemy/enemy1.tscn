@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1sl0igxx8mlt"]
+[gd_scene load_steps=9 format=3 uid="uid://b1sl0igxx8mlt"]
 
 [ext_resource type="Script" path="res://enemy/enemy1.gd" id="1_exy1n"]
 [ext_resource type="Material" uid="uid://bu8q3kga2i7pk" path="res://enemy/new_standard_material_3d.tres" id="2_evxyf"]
+[ext_resource type="AudioStream" uid="uid://bgiqha3jhcfcq" path="res://enemy/sounds/enemy_activated.ogg" id="3_wwaq7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6bfec"]
 
@@ -67,10 +68,23 @@ shape = SubResource("SphereShape3D_jvxf6")
 
 [node name="enemy_danger_near" type="Area3D" parent="areas"]
 transform = Transform3D(8.30709, 0, 0, 0, 8.30709, 0, 0, 0, 8.30709, 0, -7.27299, 0)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="areas/enemy_danger_near"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("SphereShape3D_jvxf6")
 
+[node name="enemy_activated" type="Timer" parent="."]
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_wwaq7")
+
 [connection signal="body_entered" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_entered"]
 [connection signal="body_exited" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_exited"]
+[connection signal="area_entered" from="areas/enemy_danger_close" to="." method="_on_enemy_danger_close_area_entered"]
+[connection signal="body_entered" from="areas/enemy_danger_close" to="." method="_on_enemy_danger_close_body_entered"]
+[connection signal="body_shape_entered" from="areas/enemy_danger_near" to="." method="_on_enemy_danger_near_body_shape_entered"]
+[connection signal="timeout" from="enemy_activated" to="." method="_on_enemy_activated_timeout"]

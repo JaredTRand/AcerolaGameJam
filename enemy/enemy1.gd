@@ -3,6 +3,7 @@ extends CharacterBody3D
 @onready var nav_agent:NavigationAgent3D = $NavigationAgent3D
 @export var SPEED:float
 var is_activated:bool = false
+@onready var audio_plr := $AudioStreamPlayer3D
 
 var body_entered
 var noise_fading_in
@@ -34,15 +35,23 @@ func _on_enemy_hurt_area_body_exited(body):
 		player_left_hurt_zone.emit()
 		fade_out_noise()
 
-func _on_enemy_danger_close_area_body_entered(body):
+func _on_enemy_danger_close_body_entered(body):
+	if body.is_in_group("Player") and is_activated:
+			pass
 	if body.is_in_group("Flashlight") and is_activated:
 		body.break_light()
 
+func _on_enemy_danger_near_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	pass # Replace with function body.
+	
 func fade_up_noise():
 	noise_fading_in = true
 
 func fade_out_noise():
 	noise_fading_in = false
 
-func _on_enemy_activated_timer_timeout():
+func _on_enemy_activated_timeout():
 	is_activated = true
+	audio_plr.stream = load("res://enemy/sounds/enemy_activated.ogg")
+	audio_plr.volume_db = 2
+	audio_plr.play()

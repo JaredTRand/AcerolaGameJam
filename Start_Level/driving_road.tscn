@@ -1,0 +1,186 @@
+[gd_scene load_steps=17 format=3 uid="uid://cqw2wt3fbqhm"]
+
+[ext_resource type="PackedScene" uid="uid://bwdoa3tdnag0v" path="res://Start_Level/circular_road/circular_road.tscn" id="1_svwj7"]
+[ext_resource type="Script" path="res://Start_Level/driving_road.gd" id="1_xeajk"]
+[ext_resource type="PackedScene" uid="uid://ktno3vba53qw" path="res://environment/scenes/car/car.tscn" id="3_n3yry"]
+[ext_resource type="Texture2D" uid="uid://4cp4keildw7t" path="res://player/cam/black2.png" id="4_8uudw"]
+[ext_resource type="Shader" path="res://Level_One/Level_One_skyshader.gdshader" id="4_q0do7"]
+[ext_resource type="AudioStream" uid="uid://bl4o3f5ayneyi" path="res://Start_Level/521249__djones__ringtone1.ogg" id="6_r333e"]
+
+[sub_resource type="Animation" id="Animation_je56h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:transparency")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_24era"]
+resource_name = "fade_in"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:transparency")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.13, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_o8uoo"]
+resource_name = "fade_to_black"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:transparency")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rsuu8"]
+resource_name = "leave_location"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:transparency")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_s2lpl"]
+resource_name = "pass_out"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1, 0), Vector3(0, 2, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:transparency")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.1, 2.3, 2.9, 3.3, 3.8, 4.3, 4.9, 6.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_gwgvt"]
+resource_name = "wake_up"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:transparency")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.1, 2.7, 3.8, 4.6, 5.1, 5.3, 5.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f88nj"]
+_data = {
+"RESET": SubResource("Animation_je56h"),
+"fade_in": SubResource("Animation_24era"),
+"fade_to_black": SubResource("Animation_o8uoo"),
+"leave_location": SubResource("Animation_rsuu8"),
+"pass_out": SubResource("Animation_s2lpl"),
+"wake_up": SubResource("Animation_gwgvt")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mlj4g"]
+shader = ExtResource("4_q0do7")
+shader_parameter/skyColor = Color(0.0431373, 0.0431373, 0.0431373, 1)
+shader_parameter/horizonColor = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_mnpm1"]
+sky_material = SubResource("ShaderMaterial_mlj4g")
+
+[sub_resource type="Environment" id="Environment_6gfl8"]
+background_mode = 2
+sky = SubResource("Sky_mnpm1")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[node name="world" type="Node3D"]
+script = ExtResource("1_xeajk")
+
+[node name="geometry" type="Node3D" parent="."]
+
+[node name="circular_road" parent="geometry" instance=ExtResource("1_svwj7")]
+speed = 0.004
+
+[node name="Car2" parent="." instance=ExtResource("3_n3yry")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.191146, 171.677)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.221242, 1.7021, 172.018)
+current = true
+
+[node name="fadeToBlack" type="Sprite3D" parent="Camera3D"]
+transform = Transform3D(0.0951371, 0, 0, 0, 0.0951371, 0, 0, 0, 0.0951371, 0, 0, -0.0815553)
+transparent = false
+double_sided = false
+no_depth_test = true
+texture = ExtResource("4_8uudw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D/fadeToBlack"]
+libraries = {
+"": SubResource("AnimationLibrary_f88nj")
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6gfl8")
+
+[node name="dialogue_start_timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="ringring" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.112943, 1.4283, 171.715)
+stream = ExtResource("6_r333e")
+max_db = 2.0
+
+[node name="sceneendtimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="animation_finished" from="Camera3D/fadeToBlack/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="dialogue_start_timer" to="." method="_on_dialogue_start_timer_timeout"]
+[connection signal="finished" from="ringring" to="." method="_on_ringring_finished"]
+[connection signal="timeout" from="sceneendtimer" to="." method="_on_sceneendtimer_timeout"]

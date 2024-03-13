@@ -16,6 +16,7 @@ collide_with_areas = true
 debug_shape_custom_color = Color(0.647059, 0.819608, 0.921569, 1)
 
 [node name="player_cam" parent="." instance=ExtResource("1_exhrd")]
+flash_brightness = 3.0
 ads_pos = Vector3(-0.17, 0.032, -0.12)
 
 [node name="Flashlight" parent="." instance=ExtResource("2_tl0t2")]

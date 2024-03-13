@@ -135,7 +135,9 @@ radius = 0.275
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_xe8ql")
+SPEED = 3.0
 HEAD_BOB_FREQUENCY = 0.2
+KEY_BIND_MOUSE_SENS = 0.003
 
 [node name="Head" parent="." instance=ExtResource("2_4hhew")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.566418, 0)
