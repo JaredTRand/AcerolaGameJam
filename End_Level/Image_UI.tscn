@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://chvsijxcm8pge"]
+
+[ext_resource type="Texture2D" uid="uid://dawu6hgpniafv" path="res://imagetest.png" id="1_6f57v"]
+
+[sub_resource type="Theme" id="Theme_t8t5n"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1775, 1175)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6, 5.376)
+theme = SubResource("Theme_t8t5n")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_6f57v")
+expand_mode = 3
