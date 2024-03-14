@@ -37,6 +37,8 @@ Boss: Any Questions?
 	Boss: The Aberrations are not visible to the human eye.
 	Boss: But they do appear in digital photographs.
 	Boss: You will need to locate them using the camera we’ve provided you, photograph as many as you can find, then submit those photos to me.
+	Boss: Feel free to take as many pictures as you want. After all, you'll need to do so to find the Aberritions.
+	
 	=> question_loop
 - How do I know if what I'm looking at is an Aberration?
 	Boss: It's quite simple, really.
