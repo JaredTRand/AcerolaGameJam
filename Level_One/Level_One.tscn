@@ -143,10 +143,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 125)
 [node name="firstFloor" parent="NavigationRegion3D/Level/house" instance=ExtResource("9_5368n")]
 
 [node name="secondFllor" parent="NavigationRegion3D/Level/house" instance=ExtResource("10_lqq54")]
-visible = false
 
 [node name="roof" parent="NavigationRegion3D/Level/house" instance=ExtResource("11_8n3i1")]
-visible = false
 
 [node name="SpawnPoints" type="Node3D" parent="."]
 
@@ -246,6 +244,7 @@ top_level = true
 z_index = 5
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
+visible = false
 offset_right = 328.0
 offset_bottom = 467.0
 text = "WASD To Move

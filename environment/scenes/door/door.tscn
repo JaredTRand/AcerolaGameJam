@@ -71,8 +71,6 @@ transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0.506863
 
 [node name="StaticBody3D" type="StaticBody3D" parent="hinge" groups=["interactable"]]
 transform = Transform3D(1, 0, 0, 0, 0.999999, 0, -1.19209e-07, 0, 1, -0.506863, 0, 3.02114e-08)
-collision_layer = 2
-collision_mask = 2
 script = ExtResource("1_xvx12")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D"]
