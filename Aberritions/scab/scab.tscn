@@ -1003,7 +1003,7 @@ _data = {
 "Walk": SubResource("Animation_485cp")
 }
 
-[node name="maxdamage_scab-low-poly" type="StaticBody3D" groups=["Aberrition"]]
+[node name="maxdamage_scab-low-poly" type="StaticBody3D" groups=["Aberration"]]
 collision_layer = 16
 collision_mask = 16
 script = ExtResource("1_dkk0v")

@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://1n1ek1bowmxy"]
+[gd_scene load_steps=3 format=3 uid="uid://1n1ek1bowmxy"]
 
 [ext_resource type="PackedScene" uid="uid://0ld8pwehg1ek" path="res://environment/models/firstFloor.glb" id="1_64iu7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7py10"]
 
 [node name="firstFloor" type="Node3D"]
 
 [node name="firstFloor" parent="." instance=ExtResource("1_64iu7")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="firstFloor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="firstFloor/StaticBody3D"]
+transform = Transform3D(1.32018, 0, 0, 0, 8.35134, 0.149831, 0, -8.35134, 0.149831, -39.1299, -1.19076, 4.31189)
+shape = SubResource("BoxShape3D_7py10")

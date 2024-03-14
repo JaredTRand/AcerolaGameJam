@@ -195,7 +195,7 @@ func move_player(delta):
 		accel = ACCEL
 		
 		if footstepTimer.is_stopped() and currently_moving:
-			play_sound(load("res://player/sounds/627913__mikefozzy98__01-footstep.wav"), [-8.5, -11], [1, 2])
+			play_sound(load("res://player/sounds/627913__mikefozzy98__01-footstep.wav"), [-3, -5], [1, 2.5])
 			if Input.is_action_pressed("sprint"):
 				footstepTimer.start(.25)
 			else:
@@ -240,9 +240,9 @@ func play_sound(sound, max_db_rng:Array = [0,0], pitch_rng:Array = [0,0], skip_w
 			playerSounds.set_pitch_scale(RandomNumberGenerator.new().randf_range(pitch_rng[0], pitch_rng[1]))
 			
 		if max_db_rng[0] == max_db_rng[1]:
-			playerSounds.set_max_db(max_db_rng[0])
+			playerSounds.volume_db = max_db_rng[0]
 		else:
-			playerSounds.set_max_db(RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1]))
+			playerSounds.volume_db = RandomNumberGenerator.new().randf_range(max_db_rng[0], max_db_rng[1])
 		playerSounds.play()
 
 

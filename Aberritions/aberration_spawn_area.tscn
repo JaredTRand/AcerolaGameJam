@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwcb5f1lbybal"]
+[gd_scene load_steps=8 format=3 uid="uid://bwcb5f1lbybal"]
 
 [ext_resource type="Script" path="res://Aberritions/aberration_spawn_area.gd" id="1_cwhe4"]
 [ext_resource type="PackedScene" uid="uid://cnh4j6l7y76yk" path="res://Aberritions/lightpoleAberrition/lightpoleAberrition.tscn" id="2_uaucx"]
 [ext_resource type="PackedScene" uid="uid://bk5dne0vlak1r" path="res://Aberritions/scary_man_1/scary_man_1.tscn" id="3_4pi7q"]
 [ext_resource type="PackedScene" uid="uid://dvv0jvd1ntuyj" path="res://Aberritions/scab/scab.tscn" id="4_pysye"]
+[ext_resource type="PackedScene" uid="uid://if5xkcyi5j28" path="res://Aberritions/funnystarman/funnystarman.tscn" id="5_55pr5"]
+[ext_resource type="PackedScene" uid="uid://d2psgaob0hxt6" path="res://Aberritions/RAT/rat.tscn" id="6_7qecv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p5o7u"]
 
 [node name="AberrationSpawnArea" type="Node3D" groups=["spawner"]]
 script = ExtResource("1_cwhe4")
-aberration_list = Array[PackedScene]([ExtResource("2_uaucx"), ExtResource("3_4pi7q"), ExtResource("4_pysye")])
+aberration_list = Array[PackedScene]([ExtResource("2_uaucx"), ExtResource("3_4pi7q"), ExtResource("4_pysye"), ExtResource("5_55pr5"), ExtResource("6_7qecv")])
 
 [node name="Area3D" type="Area3D" parent="."]
 

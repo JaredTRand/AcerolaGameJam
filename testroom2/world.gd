@@ -26,11 +26,12 @@ func _physics_process(delta):
 
 
 func _on_car_2_player_leave_location():
-	PlayerGlobals.calculate_score()
+	#PlayerGlobals.calculate_score()
 	player.leaving_location()
 
 func next_scene():
-	get_tree().change_scene_to_file("res://End_Level/end_level_driving.tscn")
+	#get_tree().change_scene_to_file("res://End_Level/end_level_driving.tscn")
+	get_tree().change_scene_to_file("res://End_Level/end_level.tscn")
 	
 func make_spawned_abs_over_limit():
 	var unspawned = get_unspawned_spawners()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1sl0igxx8mlt"]
+[gd_scene load_steps=13 format=3 uid="uid://b1sl0igxx8mlt"]
 
 [ext_resource type="Script" path="res://enemy/enemy1.gd" id="1_exy1n"]
 [ext_resource type="AudioStream" uid="uid://bgiqha3jhcfcq" path="res://enemy/sounds/enemy_activated.ogg" id="3_wwaq7"]
@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://cysu0rvuwudfw" path="res://enemy/sounds/creepywhispers.ogg" id="4_psnp2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m2lgg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fe6mc"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jvxf6"]
 radius = 1.65267
@@ -420,8 +422,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.143026, 0)
 collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="areas/enemy_hurt_area"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("SphereShape3D_jvxf6")
+transform = Transform3D(1.73767, 0, 0, 0, 1.73767, 0, 0, 0, 1.73767, 0, 1, 0)
+shape = SubResource("BoxShape3D_fe6mc")
 
 [node name="enemy_danger_close" type="Area3D" parent="areas"]
 transform = Transform3D(2.87139, 0, 0, 0, 2.87139, 0, 0, 0, 2.87139, 0, -1.86307, 0)

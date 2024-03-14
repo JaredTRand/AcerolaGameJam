@@ -35,18 +35,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0.566418, 0)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../CollisionShape3D/headshape:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0.997131, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_24era"]
 resource_name = "fade_in"
@@ -122,18 +110,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 0.566418, 0), Vector3(0, 1.566, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../CollisionShape3D/headshape:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0.997131, 0), Vector3(0, 1.997, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_gwgvt"]

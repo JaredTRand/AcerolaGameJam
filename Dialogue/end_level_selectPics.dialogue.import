@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bnh16chkl7pxe"
+path="res://.godot/imported/end_level_selectPics.dialogue-07b3824c6ff282a09dff07df27300c55.tres"
+
+[deps]
+
+source_file="res://Dialogue/end_level_selectPics.dialogue"
+dest_files=["res://.godot/imported/end_level_selectPics.dialogue-07b3824c6ff282a09dff07df27300c55.tres"]
+
+[params]
+
+defaults=true

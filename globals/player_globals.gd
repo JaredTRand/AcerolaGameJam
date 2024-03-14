@@ -62,8 +62,7 @@ func calculate_score():
 	var all_abs_picd_bonus = abs_img_score/2
 
 
-	print_debug("bonus of $" + str(time_bonus))
-	print_debug("you got $" + str(final_score))
+
 	var abs_picd:float = float(aberrations_pictured.size())
 	var abs_all:float = float(all_aberrations.size())
 	var perc_of_abs:float = float(abs_picd / abs_all)
@@ -91,7 +90,8 @@ func calculate_score():
 	final_score = abs_img_score - (miss_abs_penalty - blank_img_penalty) + (time_bonus + all_abs_picd_bonus)
 	save_to_bank(final_score) #save cash
 	var cash_in_bank = get_from_bank()
-	
+	print_debug("bonus of $" + str(time_bonus))
+	print_debug("you got $" + str(final_score))
 	## set all text to display #################################################################################################################################################
 	text_to_display = {
 	"Aberrations_imaged":{"title":"Aberrations Pictured", "amount":aberrations_pictured.size(), "total_abs":all_aberrations.size(), "points":abs_img_score
