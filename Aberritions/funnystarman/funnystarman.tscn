@@ -135,7 +135,6 @@ stream = ExtResource("2_p1ly4")
 volume_db = 6.0
 max_db = 6.0
 autoplay = true
-stream_paused = true
 max_distance = 3.0
 
 [node name="funnystarman" type="Node3D" parent="."]

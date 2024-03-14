@@ -37,7 +37,8 @@ Boss: Any Questions?
 	Boss: The Aberrations are not visible to the human eye.
 	Boss: But they do appear in digital photographs.
 	Boss: You will need to locate them using the camera we’ve provided you, photograph as many as you can find, then submit those photos to me.
-	Boss: Feel free to take as many pictures as you want. After all, you'll need to do so to find the Aberritions.
+	Boss: Feel free to take as many pictures as you want. You'll need to do so to find them.
+	Boss: But only submit the ones with Aberrations in them.
 	
 	=> question_loop
 - How do I know if what I'm looking at is an Aberration?
@@ -60,6 +61,10 @@ Boss: Any Questions?
 	Boss: If you finish your job before a certain time, I'll pay you a bonus.
 	Boss: Granted, I'll only pay the bonus if you bring me a picture of every Aberration in that location.
 	Boss: How much? Well, that depends on how quickly you finish.
+	=> question_loop
+- How do I submit the pictures to you?
+	Boss: Once you have pictures of all the Aberrations, get back in your car. 
+	Boss: I'll give you a call and explain how to submit them.
 	=> question_loop
 - No questions.
 

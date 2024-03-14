@@ -18,38 +18,38 @@ if text_to_display["Images_submitted"].get("amount") == 0:
 # less than 25% pic'd
 if text_to_display["Percentages"].get("perc_range") == "LT25":
 	Boss: Hmph. 
-	Boss: You only took pictures of less than a quarter of the Aberritions? 
+	Boss: You only took pictures of less than a quarter of the Aberrations? 
 	Boss: Not great.
 	Boss: Try better next time.
 # 25%
 elif text_to_display["Percentages"].get("perc_range") == "EQ25":
-	Boss: You only took pictures of a quarter of the Aberritions?
+	Boss: You only took pictures of a quarter of the Aberrations?
 	Boss: Not great.
 	Boss: Try better next time.
 	
 # between 25% and 50%
 elif text_to_display["Percentages"].get("perc_range") == "BT25and50":
-	Boss: You only took pictures of about half of the Aberritions?
+	Boss: You only took pictures of about half of the Aberrations?
 	Boss: Not great.
 	Boss: But could've been worse, I suppose.
 elif text_to_display["Percentages"].get("perc_range") == "EQ50":
-	Boss: You took pictures of half of the Aberritions?
+	Boss: You took pictures of half of the Aberrations?
 	Boss: Not bad. Could've done better, though.
 	Boss: I expect more from you in the future.
 
 #between 50 and 75
 elif text_to_display["Percentages"].get("perc_range") == "BT50and75":
-	Boss: You took pictures of over half of the Aberritions?
+	Boss: You took pictures of over half of the Aberrations?
 	Boss: Not bad.
 	Boss: Some room for improvement, but this is acceptable.
 elif text_to_display["Percentages"].get("perc_range") == "EQ75":
-	Boss: You took pictures three quarters of the Aberritions?
+	Boss: You took pictures three quarters of the Aberrations?
 	Boss: Pretty good.
 	Boss: Some room for improvement. But overall, not bad work.
 	
 # between 75 and 100
 elif text_to_display["Percentages"].get("perc_range") == "BT75and100":
-	Boss: I see you got pictures of most of the Aberritions.
+	Boss: I see you got pictures of most of the Aberrations.
 	Boss: Good Job.
 	Boss: This is kind of effort I like to see. 
 elif text_to_display["Percentages"].get("perc_range") == "EQ100":
@@ -61,11 +61,11 @@ elif text_to_display["Percentages"].get("perc_range") == "EQ100":
 	
 ~ subtractions
 if text_to_display["Aberrations_missed"].get("amount") > 0:
-	Boss: I also see that you failed to take a picture of {{text_to_display["Aberrations_missed"].get("amount")}} Aberritions.
+	Boss: I also see that you failed to take a picture of {{text_to_display["Aberrations_missed"].get("amount")}} Aberrations.
 	Boss: For that, I'm subtracting ${{text_to_display["Aberrations_missed"].get("penalty")}} from your final pay.
 
 if text_to_display["Blank_images"].get("amount") > 0:
-	Boss: I also see that you submitted {{text_to_display["Blank_images"].get("amount")}} pictures with no Aberritions in them.
+	Boss: I also see that you submitted {{text_to_display["Blank_images"].get("amount")}} pictures with no Aberrations in them.
 	Boss: That doesn't amuse me.
 	Boss: For that, I'm subtracting ${{text_to_display["Blank_images"].get("penalty")}} from your final pay.
 	

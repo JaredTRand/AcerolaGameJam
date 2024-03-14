@@ -14,7 +14,6 @@ radius = 1.65267
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dg017"]
 resource_name = "Humanoid_NotOverlapping"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("4_id0id")
 metallic = 0.4
 
