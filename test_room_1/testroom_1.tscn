@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4r6ifs4lgynx"]
+[gd_scene load_steps=8 format=3 uid="uid://b4r6ifs4lgynx"]
 
 [ext_resource type="PackedScene" uid="uid://b3am2a0bka858" path="res://test_room_1/testroom1.blend" id="1_7ikgs"]
 [ext_resource type="PackedScene" uid="uid://bw7w8oxmfq7w7" path="res://test_room_1/testblock.blend" id="2_rl1sa"]
 [ext_resource type="PackedScene" uid="uid://dpmurlitcdsi7" path="res://main_player.tscn" id="3_x8qxv"]
+[ext_resource type="PackedScene" uid="uid://b1sl0igxx8mlt" path="res://enemy/enemy1.tscn" id="4_2fhbv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxjf1"]
 transparency = 1
@@ -80,5 +81,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1732, 0, 0)
 floor_max_angle = 1.0472
 SPEED = 4.0
 KEY_BIND_MOUSE_SENS = 0.002
+
+[node name="Enemy" parent="." index="10" instance=ExtResource("4_2fhbv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8368, 0, 4.91704)
 
 [editable path="testblock4"]

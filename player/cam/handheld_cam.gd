@@ -142,7 +142,10 @@ func raycast_camera(amount:int):
 			
 			if collision == null:
 				continue
-			
+			if collision.is_in_group("Aberration"):
+				print_debug("aberration picd")
+			if collision.is_in_group("enemies"):
+				print_debug("enemies picd")
 			if collision.is_in_group("Aberration"):
 				all_collisions.append(collision)
 				

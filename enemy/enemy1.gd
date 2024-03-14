@@ -43,8 +43,6 @@ func _on_enemy_hurt_area_body_exited(body):
 		fade_out_noise()
 
 func _on_enemy_danger_close_body_entered(body):
-	if body.is_in_group("Player") and is_activated:
-			pass
 	if body.is_in_group("Flashlight") and is_activated:
 		body.break_light()
 
@@ -71,7 +69,7 @@ func _on_enemy_activated_timeout():
 
 func _on_player_passing_out():
 	audio_plr.stream = load("res://enemy/sounds/572618__blandy8521__ghost-scream-ver-3.wav")
-	audio_plr.volume_db = 1
+	audio_plr.volume_db = .75
 	audio_plr.max_db = 2
 	audio_plr.play()
 

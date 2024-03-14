@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://p7hrqn11yq1m" path="res://enemy/enemy_with_walk-4a1306bf27327a7b993734f1586a1855_creepy_clustered-Holes.jpg" id="4_id0id"]
 [ext_resource type="AudioStream" uid="uid://cysu0rvuwudfw" path="res://enemy/sounds/creepywhispers.ogg" id="4_psnp2"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6bfec"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m2lgg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jvxf6"]
 radius = 1.65267
@@ -397,15 +397,16 @@ _data = {
 "mixamo_com": SubResource("Animation_4me0o")
 }
 
-[node name="Enemy" type="CharacterBody3D" groups=["enemies"]]
+[node name="Enemy" type="CharacterBody3D" groups=["Aberration", "enemies"]]
 collision_layer = 16
+collision_mask = 16
 script = ExtResource("1_exy1n")
 SPEED = 0.5
 TURN_SPEED = 0.3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Aberration"]]
-transform = Transform3D(0.853578, 0, 0, 0, 0.853578, 0, 0, 0, 0.853578, 0, 0.877916, 0)
-shape = SubResource("CapsuleShape3D_6bfec")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736945, 0)
+shape = SubResource("CapsuleShape3D_m2lgg")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
@@ -416,6 +417,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.985078, 0.981387)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.143026, 0)
 
 [node name="enemy_hurt_area" type="Area3D" parent="areas"]
+collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="areas/enemy_hurt_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -423,6 +425,7 @@ shape = SubResource("SphereShape3D_jvxf6")
 
 [node name="enemy_danger_close" type="Area3D" parent="areas"]
 transform = Transform3D(2.87139, 0, 0, 0, 2.87139, 0, 0, 0, 2.87139, 0, -1.86307, 0)
+collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="areas/enemy_danger_close"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -434,14 +437,6 @@ stream = ExtResource("4_psnp2")
 volume_db = 1.0
 max_db = 4.0
 max_distance = 5.0
-
-[node name="enemy_danger_near" type="Area3D" parent="areas"]
-transform = Transform3D(8.30709, 0, 0, 0, 8.30709, 0, 0, 0, 8.30709, 0, -7.27299, 0)
-visible = false
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="areas/enemy_danger_near"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("SphereShape3D_jvxf6")
 
 [node name="enemy_activated" type="Timer" parent="."]
 wait_time = 60.0
@@ -747,6 +742,7 @@ bones/40/rotation = Quaternion(6.32398e-11, 2.04914e-17, 3.46945e-18, 1)
 bones/40/scale = Vector3(1, 1, 1)
 
 [node name="HumanoidBase_NotOverlapping" type="MeshInstance3D" parent="Root Scene/RootNode/Skeleton3D"]
+layers = 16
 mesh = SubResource("ArrayMesh_sg1ug")
 skin = SubResource("Skin_vn3av")
 
@@ -757,7 +753,5 @@ libraries = {
 
 [connection signal="body_entered" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_entered"]
 [connection signal="body_exited" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_exited"]
-[connection signal="area_entered" from="areas/enemy_danger_close" to="." method="_on_enemy_danger_close_area_entered"]
 [connection signal="body_entered" from="areas/enemy_danger_close" to="." method="_on_enemy_danger_close_body_entered"]
-[connection signal="body_shape_entered" from="areas/enemy_danger_near" to="." method="_on_enemy_danger_near_body_shape_entered"]
 [connection signal="timeout" from="enemy_activated" to="." method="_on_enemy_activated_timeout"]

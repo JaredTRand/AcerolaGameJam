@@ -104,7 +104,7 @@ func _ready():
 	enemy.player_in_hurt_zone.connect(_on_enemy_player_in_hurt_zone)
 	enemy.player_left_hurt_zone.connect(_on_enemy_player_left_hurt_zone)
 	
-	start_level()
+	#start_level()
 
 func _physics_process(delta):
 	if Engine.is_editor_hint():
@@ -250,8 +250,8 @@ func pass_out():
 	animation_plr.play("fade_to_black")
 
 #Show dialogue. when done, start fade in timer. when done, start fading in. when done, start the level timer 
-func start_level():
-	await get_tree().process_frame
+#func start_level():
+	#await get_tree().process_frame
 	#DialogueManager.show_dialogue_balloon(resource, "start")
 
 func _on_dialogue_manager_dialogue_ended(resource: DialogueResource):
