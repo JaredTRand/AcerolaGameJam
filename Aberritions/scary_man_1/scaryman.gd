@@ -1,10 +1,9 @@
 extends Node3D
-@export var ab_id = "scab"
-@onready var animation_plr:AnimationPlayer = $AnimationPlayer
-
+@export var ab_id = "scaryman"
+@onready var animation_plr:AnimationPlayer = $"Root Scene/AnimationPlayer"
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	animation_plr.play("Idle")
+	animation_plr.play("mixamo_com")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

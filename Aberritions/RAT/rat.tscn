@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2psgaob0hxt6"]
+[gd_scene load_steps=9 format=3 uid="uid://d2psgaob0hxt6"]
 
 [ext_resource type="Texture2D" uid="uid://de4cw8704w0gy" path="res://Aberritions/RAT/RAT_LPoly-Pallete_Texture.jpg" id="1_2qfd6"]
+[ext_resource type="Script" path="res://Aberritions/RAT/rat.gd" id="1_nq01v"]
 [ext_resource type="AudioStream" uid="uid://c2lyx6xyjate3" path="res://Aberritions/RAT/536753__egomassive__rat.ogg" id="2_hcuu5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_veb7w"]
@@ -80,6 +81,7 @@ shadow_mesh = SubResource("ArrayMesh_6foif")
 transform = Transform3D(-0.0475545, 0.310118, 2.71114e-08, 0.310118, 0.0475545, 4.15735e-09, 2.3032e-22, 2.74283e-08, -0.313743, 0.0620247, 0.395785, 0)
 collision_layer = 16
 collision_mask = 16
+script = ExtResource("1_nq01v")
 
 [node name="Rat2" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.34134, 0, 0, 0, -1.19496e-06, -3.34134, 0, 3.34134, -1.19496e-06, -0.0973579, -0.410183, 1.5305)

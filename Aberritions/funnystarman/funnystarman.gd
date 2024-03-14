@@ -1,4 +1,5 @@
 extends StaticBody3D
+@export var ab_id = "funnystarman"
 @onready var animation_plr:AnimationPlayer = $funnystarman/AnimationPlayer
 
 

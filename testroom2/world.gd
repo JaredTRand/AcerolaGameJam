@@ -17,6 +17,7 @@ func _ready():
 		var unspawned = get_unspawned_spawners()
 	
 	PlayerGlobals.aberritions_in_scene = get_tree().get_nodes_in_group("Aberration").size()
+	PlayerGlobals.all_aberrations = get_tree().get_nodes_in_group("Aberration")
 	DialogueManager.show_dialogue_balloon(resource, "start")
 
 
@@ -31,7 +32,8 @@ func _on_car_2_player_leave_location():
 
 func next_scene():
 	#get_tree().change_scene_to_file("res://End_Level/end_level_driving.tscn")
-	get_tree().change_scene_to_file("res://End_Level/end_level.tscn")
+	PlayerGlobals.calculate_score()
+	get_tree().change_scene_to_file("res://End_Level/end_level_driving.tscn")
 	
 func make_spawned_abs_over_limit():
 	var unspawned = get_unspawned_spawners()

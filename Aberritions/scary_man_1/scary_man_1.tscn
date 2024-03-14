@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bk5dne0vlak1r"]
 
-[ext_resource type="Script" path="res://Aberritions/scary_man_1/aberrition.gd" id="1_ana54"]
 [ext_resource type="Texture2D" uid="uid://c4xc648xl1lbc" path="res://Aberritions/scary_man_1/scary_man_1-2a0a60b3a0eec6fbb2881f2db849cb28_Roof 1 - 128x128.png" id="1_hyggk"]
+[ext_resource type="Script" path="res://Aberritions/scary_man_1/scaryman.gd" id="1_n74c3"]
 [ext_resource type="AudioStream" uid="uid://c3cu2b5lj1iec" path="res://Aberritions/scary_man_1/379500__juliusmabe__soft-growling-creature-laugh.ogg" id="3_i32jj"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mr5a3"]
@@ -393,7 +393,7 @@ _data = {
 }
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_ana54")
+script = ExtResource("1_n74c3")
 
 [node name="Root Scene" type="Node3D" parent="."]
 

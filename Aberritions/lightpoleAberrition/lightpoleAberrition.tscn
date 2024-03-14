@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnh4j6l7y76yk"]
+[gd_scene load_steps=13 format=3 uid="uid://cnh4j6l7y76yk"]
 
+[ext_resource type="Script" path="res://Aberritions/lightpoleAberrition/lightpoleAberrition.gd" id="1_rb0ox"]
 [ext_resource type="Texture2D" uid="uid://besqg6owarj34" path="res://environment/models/telepole_Concrete_01.jpg" id="1_uqdmm"]
 [ext_resource type="Texture2D" uid="uid://c2amgoccladwf" path="res://environment/models/telepole_Metal_05.jpg" id="2_hweos"]
 [ext_resource type="AudioStream" uid="uid://bii82tqy8m0eh" path="res://Aberritions/lightpoleAberrition/18825__futureprobe__buzz_002.ogg" id="3_sumnc"]
@@ -136,6 +137,7 @@ shadow_mesh = SubResource("ArrayMesh_s2rus")
 [node name="LightpoleAberrition" type="StaticBody3D" groups=["Aberration"]]
 collision_layer = 16
 collision_mask = 16
+script = ExtResource("1_rb0ox")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.613121, 0, 0, 0, 0.58633, -0.179259, 0, 0.179259, 0.58633, 0, 2.88576, 0.798029)

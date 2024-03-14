@@ -439,6 +439,8 @@ volume_db = 1.0
 max_db = 4.0
 max_distance = 5.0
 
+[node name="speed_up_timer" type="Timer" parent="."]
+
 [node name="enemy_activated" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
@@ -755,4 +757,5 @@ libraries = {
 [connection signal="body_entered" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_entered"]
 [connection signal="body_exited" from="areas/enemy_hurt_area" to="." method="_on_enemy_hurt_area_body_exited"]
 [connection signal="body_entered" from="areas/enemy_danger_close" to="." method="_on_enemy_danger_close_body_entered"]
+[connection signal="timeout" from="speed_up_timer" to="." method="_on_speed_up_timer_timeout"]
 [connection signal="timeout" from="enemy_activated" to="." method="_on_enemy_activated_timeout"]

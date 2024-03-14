@@ -1,5 +1,5 @@
 extends Node3D
-
+@export var ab_id = 4
 @onready var animation_plr:AnimationPlayer = $"Root Scene/AnimationPlayer"
 # Called when the node enters the scene tree for the first time.
 func _ready():

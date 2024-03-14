@@ -63,8 +63,8 @@ Boss: Any Questions?
 	Boss: How much? Well, that depends on how quickly you finish.
 	=> question_loop
 - How do I submit the pictures to you?
-	Boss: Once you have pictures of all the Aberrations, get back in your car. 
-	Boss: I'll give you a call and explain how to submit them.
+	Boss: Once you have pictures of all the Aberrations, star each one you want to submit before you get back in your car. 
+	Boss: I'll give you a call after and we'll discuss.
 	=> question_loop
 - No questions.
 

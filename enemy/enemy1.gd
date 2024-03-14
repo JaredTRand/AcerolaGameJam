@@ -1,9 +1,15 @@
 extends CharacterBody3D
+@export var ab_id = "enemyholeman"
 
 @onready var nav_agent:NavigationAgent3D = $NavigationAgent3D
 @export var SPEED:float
+var orig_speed:float
 @export var TURN_SPEED:float
 @export var activation_timer_time:int = 120
+@export var speed_increase:float = .03
+@export var speed_increase_max:float = 2.0
+@export var speed_increase_timer_time = 10
+@onready var speed_increase_timer:Timer = $speed_up_timer
 @onready var activation_timer:Timer = $enemy_activated
 var is_activated:bool = false
 @onready var audio_plr := $AudioStreamPlayer3D
@@ -14,6 +20,10 @@ var body_entered
 var noise_fading_in
 signal player_in_hurt_zone
 signal player_left_hurt_zone
+
+func _ready():
+	orig_speed = SPEED
+
 func _physics_process(delta):
 	if is_activated:
 		face_dir.look_at(nav_agent.target_position, Vector3.UP)
@@ -64,6 +74,9 @@ func _on_enemy_activated_timeout():
 	
 	animation_plr.play("mixamo_com")
 	
+	speed_increase_timer.wait_time = speed_increase_timer_time
+	speed_increase_timer.start()
+	
 	whispers.play()
 
 
@@ -72,8 +85,15 @@ func _on_player_passing_out():
 	audio_plr.volume_db = .75
 	audio_plr.max_db = 2
 	audio_plr.play()
+	
+	SPEED = orig_speed
 
 
 func _on_player_player_started_level():
 	activation_timer.wait_time = activation_timer_time
 	activation_timer.start()
+
+
+func _on_speed_up_timer_timeout():
+	if SPEED < speed_increase_max:
+		SPEED += speed_increase

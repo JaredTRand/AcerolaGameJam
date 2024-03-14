@@ -12,7 +12,8 @@ var initial_player_pos
 var player_can_move := false
 var player_passout_count:int
 var save_path = "user://score.save"
-
+var all_aberrations
+#var total_aberrations_pictured:Array
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -31,7 +32,6 @@ func calculate_score():
 	var images_wo_ab:Array
 	var aberrations_pictured:Array
 	
-	var all_aberrations = get_tree().get_nodes_in_group("Aberration")
 	
 	for image:Aberration_Image in self.all_images:
 		# only submit starred pics
@@ -51,7 +51,7 @@ func calculate_score():
 	
 	print_debug(str(count_images) + " images submitted")
 	print_debug("Images without abs:  " + str(images_wo_ab.size()))
-	print_debug("abs Pictured " + str(aberrations_pictured.size()) + " out of total " + str(all_aberrations.size()) )
+	print_debug("abs Pictured " + str(aberrations_pictured.size()) + " out of total " + str(self.all_aberrations.size()) )
 	print_debug("Time Elapsed: " + str(total_time.get("minute")) + "mins, " + str(total_time.get("second")) + " secs")
 
 	var abs_img_score = 500 * aberrations_pictured.size()
@@ -147,3 +147,4 @@ func get_from_bank():
 	else:
 		print("file not found")
 		return 0
+

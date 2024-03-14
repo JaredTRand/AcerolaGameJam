@@ -9,3 +9,4 @@ var prev_img:Aberration_Image
 var next_img:Aberration_Image
 
 var aberrations_pictured:Array
+var aberrations_pictured_ids:Array
