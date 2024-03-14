@@ -142,26 +142,50 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 125)
 [node name="firstFloor" parent="NavigationRegion3D/Level/house" instance=ExtResource("9_5368n")]
 
 [node name="secondFllor" parent="NavigationRegion3D/Level/house" instance=ExtResource("10_lqq54")]
+visible = false
 
 [node name="roof" parent="NavigationRegion3D/Level/house" instance=ExtResource("11_8n3i1")]
 visible = false
 
 [node name="SpawnPoints" type="Node3D" parent="."]
 
-[node name="AberrationSpawnArea" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6947, 0, 9.6348)
+[node name="bottomfloor" type="Node3D" parent="SpawnPoints"]
 
-[node name="AberrationSpawnArea2" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2111, 0, 9.6348)
+[node name="AberrationSpawnArea" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.8755, 0.558064, 4.65934)
 
-[node name="AberrationSpawnArea3" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.4133, 0, 9.6348)
+[node name="AberrationSpawnArea9" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.967, 0.558064, 1.3642)
 
-[node name="AberrationSpawnArea4" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.7396, 0, 9.6348)
+[node name="AberrationSpawnArea10" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6707, 0.558064, -3.96286)
 
-[node name="AberrationSpawnArea5" parent="SpawnPoints" instance=ExtResource("5_j7o1l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.5604, 0, 9.6348)
+[node name="AberrationSpawnArea11" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.2506, 0.558064, -6.81422)
+
+[node name="AberrationSpawnArea12" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.128, 0.558064, -6.64381)
+
+[node name="AberrationSpawnArea2" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.2488, 0.558064, -1.36771)
+
+[node name="AberrationSpawnArea3" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.278, 0.558064, -3.28825)
+
+[node name="AberrationSpawnArea4" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.569, 0.558064, -0.760022)
+
+[node name="AberrationSpawnArea5" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1183, 0.558064, 2.27455)
+
+[node name="AberrationSpawnArea6" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.627, 0.558064, -11.3955)
+
+[node name="AberrationSpawnArea7" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5691, 0.558064, -3.70789)
+
+[node name="AberrationSpawnArea8" parent="SpawnPoints/bottomfloor" instance=ExtResource("5_j7o1l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8691, 1.45171, -9.70789)
 
 [node name="Node2D" type="Node2D" parent="."]
 top_level = true

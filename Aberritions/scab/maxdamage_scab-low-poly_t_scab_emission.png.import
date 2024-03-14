@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4liw4psw3ovo"
-path.s3tc="res://.godot/imported/volvo.jpg-28dc28ec3bea446009e44a24a9afc20e.s3tc.ctex"
+uid="uid://c00fwbfmphbwf"
+path.s3tc="res://.godot/imported/maxdamage_scab-low-poly_t_scab_emission.png-1037993d869d5f9ac9557c509b256b77.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/- Classic 64 Asset Pack 0.6/Vehicles/textures/volvo.jpg"
-dest_files=["res://.godot/imported/volvo.jpg-28dc28ec3bea446009e44a24a9afc20e.s3tc.ctex"]
+source_file="res://Aberritions/scab/maxdamage_scab-low-poly_t_scab_emission.png"
+dest_files=["res://.godot/imported/maxdamage_scab-low-poly_t_scab_emission.png-1037993d869d5f9ac9557c509b256b77.s3tc.ctex"]
 
 [params]
 
